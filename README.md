@@ -134,6 +134,7 @@ descriptions:
 
 MIT. See [LICENSE.MD](https://github.com/eye-division/neat-whiskey/blob/master/LICENSE.md).
 
+[centrarium]: https://github.com/bencentra/centrarium
 [bencentra]: http://bencentra.com
 [bourbon]: http://bourbon.io/
 [neat]: http://neat.bourbon.io/
