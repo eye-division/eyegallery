@@ -8,11 +8,10 @@ exclude:
 
 # Site settings
 title: Neat Whiskey
-subtitle: "A simple yet classy theme for your Jekyll website or blog"
+subtitle: A base theme built on Bourbon and Neat
 email: neil@eyedivision.com
 name: Neil C Smith
-description: > 
-  A simple yet classy theme for your Jekyll website or blog.
+description: A base theme built on Bourbon and Neat
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
@@ -26,6 +25,7 @@ markdown: kramdown
 paginate: 5
 paginate_path: "/page:num/"
 inter_post_navigation: false
+permalink: pretty
 
 # Disqus comments
 # disqus_shortname:
