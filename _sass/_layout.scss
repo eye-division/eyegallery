@@ -19,6 +19,27 @@ html, body {
     width: 100%;
 }
 
+/* sticky footer from https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/ */
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    @include display(flex);
+    @include flex-direction(column);
+}
+
+.navigation, .site-footer {
+    @include flex(none);
+}
+
+.page-content {
+    @include flex(1 0 auto);
+}
+
+
 ol.default {
     @extend %default-ol;
 }
