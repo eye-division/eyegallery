@@ -27,6 +27,22 @@ paginate_path: "/page:num/"
 inter_post_navigation: false
 permalink: pretty
 
+# Collections Example
+collections:
+    things:
+        output: true
+        permalink: /things/:path/
+
+
+# Defaults Example
+defaults:
+    -
+        scope:
+            path: ""
+            type: "things"
+        values:
+            layout: "page"
+            
 # Disqus comments
 # disqus_shortname:
 
