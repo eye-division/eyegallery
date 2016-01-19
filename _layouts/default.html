@@ -3,7 +3,9 @@
 
   {% include head.html %}
 
-  <body>
+  {% assign section = page.url | split: '/' %}
+  
+  <body class="{% if section[1] %}{{section[1]}}{% else %}front{% endif %}">
 
     {% include header.html %}
 
