@@ -1,0 +1,5 @@
+{% if jekyll.environment == "production" %}
+{{include.src}}?crop=entropy{% if include.width %}&amp;width={{include.width}}{% endif %}{% if include.height %}&amp;height={{include.height}}{% endif %}
+{% else %}
+{{include.src}}
+{% endif %}
