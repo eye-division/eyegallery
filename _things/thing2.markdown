@@ -1,7 +1,7 @@
 ---
 title:  "Dummy Thing 2"
 description: "Yet another dummy thing"
-date: 2016-04-01
+thing_date: 2016-04-01
 ---
 
 This is just _another_ dummy thing. Lorem ipsum and all the rest.

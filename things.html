@@ -5,14 +5,14 @@ permalink: /things/
 ---
 
 <ul class="posts-list">
-  {% assign things = site.things | sort: 'date' %}  
+  {% assign things = site.things | sort: 'thing_date' | reverse %}  
   {% for thing in things %}
     <li>
       <strong>
         <a href="{{ thing.url | prepend: site.baseurl }}">{{ thing.title }}</a>
       </strong>
-      {% if thing.date %}
-        <span class="post-date">- {{ thing.date | date: '%B %Y' }}</span>
+      {% if thing.thing_date %}
+        <span class="post-date">- {{ thing.thing_date | date: '%B %Y' }}</span>
       {% endif %}
       {% if thing.description %}
         <br><span class="post-description">{{ thing.description }}</span>

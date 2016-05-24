@@ -1,7 +1,7 @@
 ---
 title:  "Dummy Thing 1"
 description: "Just our first thing"
-date: 2016-05-01
+thing_date: 2016-05-01
 ---
 
 This is just a dummy thing. Lorem ipsum and all the rest.
