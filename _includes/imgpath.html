@@ -1,0 +1,5 @@
+{% if jekyll.environment == "production" %}
+http://imagecdn.eyedivision.com{{include.src}}?fit=crop&amp;crop=entropy{% if include.width %}&amp;w={{include.width}}{% endif %}{% if include.height %}&amp;h={{include.height}}{% endif %}
+{% else %}
+{{include.src}}
+{% endif %}

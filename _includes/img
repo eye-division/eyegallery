@@ -1,1 +1,0 @@
-<img src="{% include imgpath %}" alt="{{include.alt}}" {% if include.width %}width="{{include.width}}" {% endif %}{% if include.height %}height="{{include.height}}" {% endif %}/>
