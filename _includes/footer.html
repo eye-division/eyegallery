@@ -2,18 +2,6 @@
 
   <div class="wrapper">
 
-    <div class="site-navigation">
-      
-      <p><strong>Site Map</strong></p>
-      <ul class="pages">
-        {% for page in site.pages %}
-        {% if page.title and page.main_nav != false %}
-          <li class="nav-link"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-
     <div class="site-contact">
 
       <p><strong>Contact</strong></p>
@@ -40,7 +28,6 @@
     </div>
 
     <div class="site-signature">
-      <p class="rss-subscribe text"><strong>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></strong></p>
       <p class="text">{{ site.description }}</p>
     </div>
 
@@ -51,7 +38,8 @@
 <!-- Scripts -->
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+<script src="/js/featherlight.min.js"></script>
+<script src="/js/featherlight.gallery.min.js"></script>
 <script src="/js/main.js"></script>
 
 {% if site.ga_tracking_id %}

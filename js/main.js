@@ -16,6 +16,17 @@
         }
       });
     });
+
+    // featherlight gallery options
+    $('.galleryphoto').featherlightGallery({
+      gallery: {
+        fadeIn: 300,
+        fadeOut: 300
+      },
+      openSpeed: 300,
+      closeSpeed: 300
+    });
+
   });
 
 })(jQuery); // End of use strict

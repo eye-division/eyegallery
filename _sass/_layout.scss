@@ -1,5 +1,6 @@
 // Primary site layout for Centrarium Theme
-
+// this is imported last from /css/main.scss
+//
 /*
 *	Variables
 */
@@ -9,6 +10,7 @@ $b2: 768px;
 $tablet: $b2;
 $b1: 960px;
 $desktop: $b1;
+
 
 /*
 *	Globals
@@ -92,7 +94,6 @@ pre code.hljs {
 
 .site-header-container, .post-header-container {
     width: 100%;
-    text-align: center;
     &.has-cover {
         color: $white;
         text-shadow: 0 2px 1px rgba(0,0,0,0.67) !important;
@@ -109,9 +110,13 @@ pre code.hljs {
         padding: 3em 1em;
         &.has-cover {
             background-color: rgba(0,0,0,0.2);
-            padding: 6em 1em !important;
+            padding: 0 0 6em  !important;
             @include media($tablet) {
-                padding: 9em 1em !important;
+                padding: 0 1em 9em !important;
+            }
+            .site-header {
+                background-color: rgba(0, 0, 0, 0.2);
+                padding: 0 1em !important;
             }
         }
     }
@@ -215,9 +220,10 @@ pre code.hljs {
 *	Body
 */
 .page-content {
-    .wrapper {
+    .home, .page {
         @include outer-container;
         padding: 1em;
+        background-color: #E5E5E5;
     }
     /*
     *	index.html
@@ -361,6 +367,19 @@ pre code.hljs {
             margin: auto;
             padding-bottom: 0.5em;
         }
+        /*
+        * Gallery
+         */
+        .gallery {
+            @include outer-container;
+            .gallery-box {
+                @include span-columns(6);
+            }
+            .last {
+                @include omega();
+            }
+        }
+
     }
 }
 
@@ -368,16 +387,16 @@ pre code.hljs {
 *	Footer
 */
 .site-footer {
-    $link-color: $white;
+    //$link-color: $white;
     padding: 1em 1em 2em 1em;
-    background-color: $highlight-color;
-    color: $white;
+    //background-color: $highlight-color;
+    //color: $white;
     a {
-        color: $link-color;
+        //color: $link-color;
         &:active,
             &:focus,
             &:hover {
-            color: darken($link-color, 10%);
+            //color: darken($link-color, 10%);
         }
         &:active,
             &:focus {
@@ -446,4 +465,28 @@ pre code.hljs {
             text-decoration: underline;
         }
     }
+}
+
+/*
+ * Featherlight customisations
+ */
+.featherlight {
+    background: #fff;
+    /* IE8 "hack" for nested featherlights */
+    background: rgba(255, 255, 255, 0);
+ }
+.featherlight:last-of-type {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/*
+ * Featherlight gallery customisations
+ */
+ .featherlight-next:hover,
+.featherlight-previous:hover {
+    background: rgba(255,255,255,0);
+}
+.featherlight-next span,
+.featherlight-previous span {
+    font-size: 40px;
 }
