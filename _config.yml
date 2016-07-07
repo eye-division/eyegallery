@@ -19,7 +19,7 @@ baseurl: ""
 # the base hostname & protocol for your site
 url: "http://0.0.0.0:4000/"
 cover: "/assets/images/in_the_mediterranean_syrianboydreaming.jpg"
-logo: "/assets/logo.png"
+logo:
 
 # Build settings
 markdown: kramdown

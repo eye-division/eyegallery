@@ -6,12 +6,14 @@ gallery_date: 2016-05-01
 permalink: /gallery/various/
 ---
 
-This is just a dummy thing. Lorem ipsum and all the rest.
-<div class="gallery">
+<div class="gallery" data-featherlight-gallery  data-featherlight-filter="a">
   {% for image in site.photos %}
     {% if image.gallery == "Various" %}
         <div class="gallery-box{% cycle '', ' last' %}">
-        <a href="#" class="galleryphoto"><img src="{{ image.image_path }}" alt="{{ image.title}}"/></a>
+            <figure>
+                <a href="#" class="galleryphoto" data-featherlight="{{ image.image_path }}.jpg"><img src="{{ image.image_path }}_th.jpg" alt="{{ image.title}}"/></a>
+                <figcaption>{{ image.title}}</figcaption>
+            </figure>
         </div>
     {% endif %}
   {% endfor %}

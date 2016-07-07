@@ -12,8 +12,11 @@ This series features poets who have been exiles and a poem which expresses issue
   {% for image in site.photos %}
     {% if image.gallery == "Poet in Exile" %}
         <div class="gallery-box{% cycle '', ' last' %}">
-        <a href="#" class="galleryphoto" data-featherlight="{{ image.image_path }}"><img src="{{ image.image_path }}" alt="{{ image.title}}"/></a>
-         </div>
+        <figure>
+            <a href="#" class="galleryphoto" data-featherlight="{{ image.image_path }}.jpg"><img src="{{ image.image_path }}_th.jpg" alt="{{ image.title}}"/></a>
+            <figcaption>{{ image.title}}</figcaption>
+        </figure>
+        </div>
     {% endif %}
   {% endfor %}
 </div>

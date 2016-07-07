@@ -1,6 +1,6 @@
 ---
 title: Mahmoud Darwish - 'To my Mother'
-image_path: /assets/images/poet_in_exile_darwish_th.jpg
+image_path: /assets/images/poet_in_exile_darwish
 gallery: Poet in Exile
 ---
 

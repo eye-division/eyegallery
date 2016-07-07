@@ -126,7 +126,7 @@ pre code.hljs {
 *	Header
 */
 .navigation {
-    box-shadow: 0 2px $highlight-color;
+    /*box-shadow: 0 2px $highlight-color;*/
     padding: 0 1em;
     margin: 0;
     /*
@@ -148,10 +148,11 @@ pre code.hljs {
         @include outer-container;
         @include clearfix;
         position: relative;
+        background-color: $kbgray;
     }
     .logo {
         float: left;
-        height: 4em;
+        height: 6em;
         @include media ($tablet) {
             padding-left: $em-base;
         }
@@ -162,6 +163,19 @@ pre code.hljs {
         }
         span {
             font-size: 1.25em;
+        }
+        h1 {
+            margin-bottom: 0;
+        }
+        &:active,
+        &:focus,
+        &:hover {
+            text-decoration: none;
+            //color: darken($link-color, 10%);
+        }
+        &:active,
+        &:focus {
+            outline: none;
         }
     }
     nav {
@@ -345,9 +359,16 @@ pre code.hljs {
     *	Pages
     */
     .page {
+        a {
+            color: darken($camouflage, 10%);
+            text-decoration: underline;
+        }
         .post-header {
-            padding: 0.5em 1em 1em 1em;
-            text-align: center;
+            padding: 0;
+            h1 {
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
         }
         .posts-list {
             @extend %default-ul;
@@ -371,12 +392,16 @@ pre code.hljs {
         * Gallery
          */
         .gallery {
-            @include outer-container;
-            .gallery-box {
-                @include span-columns(6);
-            }
-            .last {
-                @include omega();
+             @include media ($tablet) {
+                @include outer-container;
+                .gallery-box {
+                    @include span-columns(6);
+                    text-align: center;
+                    padding-bottom: 1em;
+                }
+                .last {
+                    @include omega();
+                }
             }
         }
 
@@ -389,6 +414,7 @@ pre code.hljs {
 .site-footer {
     //$link-color: $white;
     padding: 1em 1em 2em 1em;
+    border-top: 1px solid $camouflage;
     //background-color: $highlight-color;
     //color: $white;
     a {
@@ -436,10 +462,7 @@ pre code.hljs {
             margin-top: 0;
             margin-right: 0;
         }
-        @include media ($tablet) {
-            @include span-columns(4);
-            margin-top: 0;
-        }
+
         font-size: 0.9em;
         i {
             width: 1.25em;

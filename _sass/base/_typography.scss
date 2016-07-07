@@ -8,7 +8,11 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
 }
-
+h1,
+h2,
+h3 {
+    color: $camouflage;
+}
 h1,
 h2,
 h3,
@@ -20,6 +24,7 @@ h6 {
   line-height: $heading-line-height;
   margin: 0 0 $base-font-size;
   margin: 0 0 rem($base-font-size);
+
 }
 h1 {
 	font-size: modular-scale(4);

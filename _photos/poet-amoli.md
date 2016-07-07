@@ -1,6 +1,6 @@
 ---
 title: Jade Amoli-Jackson - 'Moving a Country'
-image_path: /assets/images/poet_in_exile_amoli_th.jpg
+image_path: /assets/images/poet_in_exile_amoli
 gallery: Poet in Exile
 ---
 

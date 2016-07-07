@@ -1,6 +1,6 @@
 ---
 title: Faiz Ahmed Faiz - 'Beirut'
-image_path: /assets/images/poet_in_exile_faiz_th.jpg
+image_path: /assets/images/poet_in_exile_faiz
 gallery: Poet in Exile
 ---
 
