@@ -1,6 +1,16 @@
 - title: "About"
   href: "/about/"
 
-
 - title: "Galleries"
   href: "/gallery/"
+  subcategories:
+    - subtitle: "In the Mediterranean"
+      subhref: "/gallery/in-the-mediterranean/"
+    - subtitle: "Poet in Exile"
+      subhref: "/gallery/poet-in-exile/"
+    - subtitle: "Sufi Stories"
+      subhref: "/gallery/sufi-stories/"
+    - subtitle: "Women in Science"
+      subhref: "/gallery/women-in-science/"
+    - subtitle: "Various"
+      subhref: "/gallery/various/"

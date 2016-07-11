@@ -5,13 +5,13 @@
     <div class="site-contact">
 
       <ul class="social-media-list">
-        <li>
+        <!-- <li>
           <a href="mailto:{{ site.email }}">
             <i class="fa fa-envelope-o"></i>
             <span class="username">{{ site.email }}</span>
           </a>
         </li>
-
+        -->
         {% for social in site.social %}
           {% if social.url != null %}
           <li>
@@ -26,6 +26,10 @@
       </ul>
     </div>
 
+
+    <div class="site-signature">
+      <p class="text"><strong>Site by <a href="https://www.eyedivision.com">Eye Division</a></strong></p>
+    </div>
 
 
   </div>

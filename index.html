@@ -7,6 +7,7 @@ layout: default
       <header class="site-header">
         <h1 class="title">{{ site.title }}</h1>
         {% if site.subtitle %}<p class="subtitle">{{ site.subtitle }}</p>{% endif %}
+
       </header>
     </div>
   </div>
@@ -19,7 +20,7 @@ layout: default
       {% for gallery in site.gallery%}
 
            <div class="gallery-box{% cycle '', ' last' %}">
-                <h3>{{ gallery.title }}</h3>
+            <a href="{{ gallery.permalink }}"><h3>{{ gallery.title }}</h3></a>
                 <a href="{{ gallery.permalink }}"><img src="{{ gallery.image_path }}" alt="{{ gallery.title }}"/></a>
 
 

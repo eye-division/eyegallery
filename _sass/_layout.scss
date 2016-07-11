@@ -11,7 +11,22 @@ $tablet: $b2;
 $b1: 960px;
 $desktop: $b1;
 
+// navigation
+$base-border-color: gainsboro !default;
+$base-border-radius: 3px !default;
+$action-color: #477DCA !default;
+$dark-gray: #333 !default;
+$large-screen: $tablet !default;
+$navigation-padding: 1em;
+$navigation-background: $kbgray;
+$navigation-color: transparentize($camouflage, 0.3);
+$navigation-color-hover: white;
+$navigation-height: 30px;
 
+$navigation-active-link-color: transparentize(white, 0.5);
+$navigation-submenu-padding: 1em;
+$navigation-submenu-width: 20em;
+$horizontal-bar-mode: $large-screen;
 /*
 *	Globals
 */
@@ -31,6 +46,7 @@ body {
     height: 100%;
     @include display(flex);
     @include flex-direction(column);
+    background-color: $kbgray;
 }
 
 .navigation, .site-footer {
@@ -228,6 +244,135 @@ pre code.hljs {
             }
         }
     }
+    // Sub menus
+
+  li.more.nav-link {
+    padding-right: 0;
+
+    @include media($horizontal-bar-mode) {
+      padding-right: $navigation-submenu-padding;
+    }
+
+    > ul > li:first-child a  {
+      padding-top: 1em;
+    }
+
+    a {
+      margin-right: $navigation-submenu-padding;
+    }
+
+    > a {
+      padding-right: 0.6em;
+    }
+
+    > a::after {
+      @include position(absolute, auto -0.4em auto auto);
+      color: $navigation-color;
+      content: "\25BE";
+    }
+  }
+
+  li.more {
+    overflow: visible;
+    padding-right: 0;
+
+    a {
+      padding-right: 0.8em;
+    }
+
+    > a {
+      padding-right: 1.6em;
+      position: relative;
+
+      @include media($horizontal-bar-mode) {
+        margin-right: $navigation-submenu-padding;
+      }
+
+      &::after {
+        content: "›";
+        font-size: 1.2em;
+        position: absolute;
+        right: $navigation-submenu-padding / 2;
+      }
+    }
+
+    &:focus > .submenu,
+    &:hover > .submenu {
+      display: block;
+    }
+
+    @include media($horizontal-bar-mode) {
+      padding-right: 0.8em;
+      position: relative;
+    }
+  }
+
+  ul.submenu {
+    display: none;
+    padding-left: 0;
+
+    @include media($horizontal-bar-mode) {
+      left: -$navigation-submenu-padding;
+      position: absolute;
+      top: 1.5em;
+    }
+
+    .submenu.fly-out-right {
+      @include media($horizontal-bar-mode) {
+        left: $navigation-submenu-width - 0.2em;
+        top: 0;
+      }
+    }
+
+    .submenu.fly-out-left {
+      @include media($horizontal-bar-mode) {
+        left: -$navigation-submenu-width + 0.2em;
+        top: 0;
+      }
+    }
+
+    .submenu {
+      @include media($horizontal-bar-mode) {
+        left: $navigation-submenu-width - 0.2em;
+        top: 0;
+      }
+    }
+
+    li {
+      display: block;
+      padding-right: 0;
+
+      @include media($horizontal-bar-mode) {
+        line-height: $navigation-height / 1.3;
+
+        &:first-child > a {
+          border-top-left-radius: $base-border-radius;
+          border-top-right-radius: $base-border-radius;
+        }
+
+        &:last-child > a {
+          border-bottom-left-radius: $base-border-radius;
+          border-bottom-right-radius: $base-border-radius;
+          padding-bottom: 0.7em;
+        }
+      }
+
+      a {
+        background-color: darken($navigation-background, 3%);
+        display: inline-block;
+        text-align: right;
+        width: 100%;
+
+        @include media($horizontal-bar-mode) {
+          background-color: $navigation-background;
+          padding-left: $navigation-submenu-padding;
+          text-align: left;
+          width: $navigation-submenu-width;
+        }
+      }
+    }
+  }
+
 }
 
 /*
@@ -237,7 +382,10 @@ pre code.hljs {
     .home, .page {
         @include outer-container;
         padding: 1em;
-        background-color: #E5E5E5;
+        background-color: $kbgray;
+    }
+    h1 {
+        font-size: modular-scale(3);
     }
     /*
     *	index.html
@@ -287,7 +435,7 @@ pre code.hljs {
     img {
         display: block;
         margin: auto;
-        max-width: 90%;
+        max-width: 100%;
     }
     /*
     *	Posts
@@ -359,15 +507,12 @@ pre code.hljs {
     *	Pages
     */
     .page {
-        a {
-            color: darken($camouflage, 10%);
-            text-decoration: underline;
-        }
+
         .post-header {
             padding: 0;
             h1 {
                 padding-bottom: 0;
-                margin-bottom: 0;
+                /*margin-bottom: 0;*/
             }
         }
         .posts-list {
@@ -392,12 +537,21 @@ pre code.hljs {
         * Gallery
          */
         .gallery {
-             @include media ($tablet) {
+            .gallery-box {
+                padding-bottom: 1em;
+                text-align: center;
+            }
+            .galleryphoto {
+                img {
+                    opacity: 1;
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+
+            @include media ($tablet) {
                 @include outer-container;
                 .gallery-box {
                     @include span-columns(6);
-                    text-align: center;
-                    padding-bottom: 1em;
                 }
                 .last {
                     @include omega();
@@ -477,9 +631,10 @@ pre code.hljs {
     */
     .site-signature {
         margin-top: 1em;
+        text-align: right;
         @include span-columns(12);
         @include media ($tablet) {
-            @include span-columns(4);
+            @include span-columns(6);
             margin-right: 0;
             margin-top: 0;
         }
@@ -512,4 +667,10 @@ pre code.hljs {
 .featherlight-next span,
 .featherlight-previous span {
     font-size: 40px;
+}
+.featherlight .legend {
+    position: absolute;
+    bottom: 0;
+    font-size: larger;
+    color: white;
 }
