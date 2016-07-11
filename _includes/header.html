@@ -18,7 +18,7 @@
           {% if link.subcategories != null %}
             <ul class="submenu">
             {% for subcategory in link.subcategories %}
-                 <li><a href="{{ site.url }}{{ subcategory.subhref }}">{{ subcategory.subtitle }}</a></li>
+                 <li><a href="{{ subcategory.subhref | prepend: site.baseurl }}">{{ subcategory.subtitle }}</a></li>
             {% endfor %}
           </ul>
           {% endif %}
