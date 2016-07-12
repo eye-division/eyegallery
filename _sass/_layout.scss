@@ -141,6 +141,9 @@ pre code.hljs {
 /*
 *	Header
 */
+body > header {
+    border-bottom: 1px solid $camouflage;
+}
 .navigation {
     /*box-shadow: 0 2px $highlight-color;*/
     padding: 0 1em;
@@ -283,7 +286,7 @@ pre code.hljs {
     > a {
       padding-right: 1.6em;
       position: relative;
-
+      transition: all 0.2s ease-in-out;
       @include media($horizontal-bar-mode) {
         margin-right: $navigation-submenu-padding;
       }
@@ -310,6 +313,7 @@ pre code.hljs {
   ul.submenu {
     display: none;
     padding-left: 0;
+    transition: all 0.2s ease-in-out;
 
     @include media($horizontal-bar-mode) {
       left: -$navigation-submenu-padding;
@@ -341,7 +345,7 @@ pre code.hljs {
     li {
       display: block;
       padding-right: 0;
-
+      transition: all 0.2s ease-in-out;
       @include media($horizontal-bar-mode) {
         line-height: $navigation-height / 1.3;
 
@@ -358,16 +362,21 @@ pre code.hljs {
       }
 
       a {
-        background-color: darken($navigation-background, 3%);
+        background-color: darken($navigation-background, 10%);
         display: inline-block;
         text-align: right;
         width: 100%;
-
+        transition: all 0.2s ease-in-out;
         @include media($horizontal-bar-mode) {
           background-color: $navigation-background;
           padding-left: $navigation-submenu-padding;
           text-align: left;
           width: $navigation-submenu-width;
+        }
+        &hover,
+        &active,
+        &focus {
+            background-color: $white;
         }
       }
     }
@@ -384,9 +393,7 @@ pre code.hljs {
         padding: 1em;
         background-color: $kbgray;
     }
-    h1 {
-        font-size: modular-scale(3);
-    }
+
     /*
     *	index.html
     */
@@ -548,6 +555,21 @@ pre code.hljs {
                 }
             }
 
+            a {
+                h3 {
+                    color: $base-font-color;
+                }
+
+                &:active,
+                &:focus,
+                &:hover {
+                    text-decoration: none;
+                    color: darken($action-color, 20%);
+                    h3 {
+                        color: $camouflage;
+                    }
+                }
+            }
             @include media ($tablet) {
                 @include outer-container;
                 .gallery-box {
@@ -559,6 +581,11 @@ pre code.hljs {
             }
         }
 
+    }
+    input {
+        @include media ($tablet) {
+            width: 50%;
+        }
     }
 }
 
@@ -643,6 +670,7 @@ pre code.hljs {
             text-decoration: underline;
         }
     }
+
 }
 
 /*

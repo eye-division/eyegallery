@@ -21,7 +21,7 @@ I’m fascinated by the synergy between different art forms, especially poetry a
 * Summer 2016, Botley Arts at the Old Tattoo Parlour, Westway, <a href="/gallery/in-the-mediterranean/">In the Mediterranean series</a>
 * May 2016, Group exhibition ‘Experiments with Light’, *4 Sufi Stories about Light* (<a href="/gallery/sufi-stories/">pictures and explanations</a>)
 * Jan-March 2016 Nuffield Orthopaedic Hospital, with Alex Singleton and Malcolm Hayden-Smith
-* Dec 2015 – Feb 2016, P Café moving to Peace Hub, Birmingham *Moving a Country* painted in  response to poem of the same name for ‘Displacement: Stories of Hope’  film at: https://leaveners.wordpress.com/our-work/projects/  
+* Dec 2015 – Feb 2016, P Café moving to Peace Hub, Birmingham *Moving a Country* painted in response to poem of the same name for ‘Displacement: Stories of Hope’ -  [View the film](https://leaveners.wordpress.com/our-work/projects/)  
 * May 2015 – Aug 2015, Botley Arts Inaugural Exhibition ( St. Peter & St.Paul’s Church, Westway, Botley, Oxford) Group exhibition, featuring <a href="/gallery/in-the-mediterranean/">In the Mediterranean series</a>
 
 

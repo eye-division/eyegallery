@@ -14,3 +14,6 @@
       subhref: "/gallery/women-in-science/"
     - subtitle: "Various"
       subhref: "/gallery/various/"
+
+- title: "Contact"
+  href: "/contact/"
