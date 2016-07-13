@@ -672,33 +672,3 @@ body > header {
     }
 
 }
-
-/*
- * Featherlight customisations
- */
-.featherlight {
-    background: #fff;
-    /* IE8 "hack" for nested featherlights */
-    background: rgba(255, 255, 255, 0);
- }
-.featherlight:last-of-type {
-    background: rgba(255, 255, 255, 0.8);
-}
-
-/*
- * Featherlight gallery customisations
- */
- .featherlight-next:hover,
-.featherlight-previous:hover {
-    background: rgba(255,255,255,0);
-}
-.featherlight-next span,
-.featherlight-previous span {
-    font-size: 40px;
-}
-.featherlight .legend {
-    position: absolute;
-    bottom: 0;
-    font-size: larger;
-    color: white;
-}

@@ -8,12 +8,12 @@ permalink: /gallery/sufi-stories/
 
 Four Sufi stories about light.
 
-<div class="gallery" data-featherlight-gallery  data-featherlight-filter="a">
+<div class="gallery">
   {% for image in site.photos %}
     {% if image.gallery == "Sufi Stories" %}
     <div class="gallery-box{% cycle '', ' last' %}">
-        <a href="#" class="galleryphoto" data-featherlight="{{ image.image_path }}.jpg" title="{{ image.title}}"><img src="{{ image.image_path }}_th.jpg" alt="{{ image.title}}"/></a>
-        <figcaption><a href="#" class="galleryphoto" data-featherlight="{{ image.image_path }}.jpg">{{ image.title}}</a></figcaption>
+        <a href="{{ image.image_path }}.jpg" class="galleryphoto"  data-lightbox="poets" data-title="{{ image.title}}"><img src="{{ image.image_path }}_th.jpg" alt="{{ image.title}}"/></a>
+        <figcaption><a href="{{ image.image_path }}.jpg" data-lightbox="poets" data-title="{{ image.title}}">{{ image.title}}</a></figcaption>
     </div>
     {% endif %}
   {% endfor %}
