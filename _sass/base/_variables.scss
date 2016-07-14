@@ -35,6 +35,7 @@ $purple: #8e44ad;			// Wisteria
 $orange: #d35400;			// Pumpkin
 $red:	#c0392b;				// Pomegranate
 $gray: #7f8c8d;				// Asbestos
+$dark-gray: #333 !default;
 // Even more colors
 $bc-red: #bc0000;
 $camouflage: #9a9a5d;
@@ -51,6 +52,7 @@ $gallery-image-hover-color: $camouflage;
 // Border
 $base-border-color: $camouflage;
 $base-border: 1px solid $base-border-color;
+$base-border-radius: 3px !default;
 
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);

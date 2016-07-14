@@ -35,7 +35,9 @@ collections:
         permalink: /gallery/:path/
     photos:
         output: true
-
+    poems:
+        output: true
+        permalink: /poems/:path/
 
 # Defaults Example
 defaults:
@@ -43,6 +45,13 @@ defaults:
         scope:
             path: ""
             type: "gallery"
+        values:
+            layout: "page"
+
+    -
+        scope:
+            path: "poems"
+            type: "pages"
         values:
             layout: "page"
 
