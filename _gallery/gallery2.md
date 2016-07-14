@@ -16,7 +16,7 @@ This series features poets who have been exiles and a poem which expresses issue
         <figcaption>
             <a href="{{ image.image_path }}.jpg" data-lightbox="poets" data-title="{{ image.title}}">{{ image.title}}</a>
             {% if image.poem %}
-            <a href="{{ image.poemlink }}">{{ image.poem }}</a>
+            <a href="{{ image.poemlink }}"> - {{ image.poem }}</a>
             {% endif %}
         </figcaption>
     </div>
