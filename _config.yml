@@ -90,10 +90,10 @@ social:
 # These are for automatically generating sharing metadata for FB and Twitter
 # OS Protocol is for sharing the source of your site, if you're interested. For more, see osprotocol.com
 protocols:
-    fb_image: "/assets/logo.png"
-    fb_image_width: 612
-    fb_image_height: 605
-    fb_image_type: "image/png"
+    fb_image: "/assets/in_the_mediterranean_syrianboydreaming.jpg"
+    fb_image_width: 1024
+    fb_image_height: 307
+    fb_image_type: "image/jpg"
 
-    twitter_image: "/assets/logo.png"
+    twitter_image: "/assets/in_the_mediterranean_syrianboydreaming.jpg"
 
