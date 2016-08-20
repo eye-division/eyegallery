@@ -35,9 +35,6 @@ collections:
         permalink: /gallery/:path/
     photos:
         output: true
-    poems:
-        output: true
-        permalink: /poems/:path/
 
 # Defaults Example
 defaults:
@@ -59,7 +56,7 @@ defaults:
 # disqus_shortname:
 
 # Google analytics
-ga_tracking_id: "UA-80597965-1"
+ga_tracking_id: ""
 
 
 # Social icons and sharing options
@@ -81,8 +78,8 @@ social:
 
   - name: Facebook
     icon: facebook
-    username: Karima Brooke Paintings
-    url: https://www.facebook.com/profile.php?id=100010015202043&fref=ts
+    username: A Painter
+    url:
     desc: Like on Facebook
     share: true
 
