@@ -1,0 +1,60 @@
+// Gallery layout
+// this is imported last from /css/main.scss
+
+/*
+* Gallery
+ */
+.gallery {
+    .gallery-box,
+    .gallery-box-large {
+        padding-bottom: 1em;
+        text-align: center;
+    }
+    .galleryphoto {
+
+    }
+
+    a {
+        img {
+            opacity: 1;
+            transition: all 0.2s ease-in-out;
+            &:hover,
+            &:active,
+            &:focus {
+                opacity: 0.8;
+                transition: all 0.2s ease-in-out
+            }
+        }
+        h3 {
+            color: $base-font-color;
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+            text-decoration: none;
+            color: darken($action-color, 20%);
+            h3 {
+                color: $camouflage;
+            }
+        }
+    }
+    @include media ($tablet) {
+        @include outer-container;
+        .gallery-box {
+            @include span-columns(6);
+        }
+        .last {
+            @include omega();
+        }
+    }
+}
+/*
+ * Lightbox
+ */
+
+.lb-dataContainer {
+    background: $black;
+    padding: 1em
+}
+

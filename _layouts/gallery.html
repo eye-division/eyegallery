@@ -21,15 +21,15 @@ layout: default
 {% if with_media %}
   <aside class="media">
 
-
-
     {% if page.images[0].image_path %}
-    <section class="image-gallery">
+    <section class="gallery">
       {% for image in page.images %}
         {% if image.image_path %}
-        <a href="{% include imgpath.html src=image.image_path width=1280 %}" data-lightbox="gallery" data-title="{{ image.description }}">
-            {% include img.html src=image.image_path width=120 height=120 alt=image.description %}
-        </a>
+        <div class="gallery-box{% cycle '', ' last' %}">
+          <a href="{% include imgpath.html src=image.image_path width=1280 %}" class="galleryphoto" data-lightbox="gallery" data-title="{{ image.description }}">
+            {% include img.html src=image.image_path width=280 height=280 alt=image.description %}
+          </a>
+        </div>
         {% endif %}
       {% endfor %}
     </section>
