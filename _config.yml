@@ -30,9 +30,9 @@ permalink: pretty
 
 # Image CDN
 imagecdn:
-  #staging: "http://ed-dev.imgix.net"
-  #production: "http://ed.imgix.net"
-  #
+  staging: "http://ed-eyegallery-dev.imgix.net"
+  #production: "http://ed-eyegallery.imgix.net"
+
 # Collections Example
 collections:
     gallery:
