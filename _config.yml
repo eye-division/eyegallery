@@ -7,17 +7,17 @@ exclude:
   - "/vendor/"
 
 # Site settings
-title: Karima Brooke
-subtitle: Community artist
-email: karimabrooke.paintings@hotmail.com
-name: Karima Brooke
-description: Community artist
+title: A Painter
+subtitle: Great artist
+email: support@eyedivision.com
+name: A Painter
+description: Great artist
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
 baseurl: ""
 # the base hostname & protocol for your site
-url: "https://www.karima-brooke.co.uk/"
+url: "http://http://black-hare.cloudvent.net/"
 cover: "/assets/images/in_the_mediterranean_syrianboydreaming.jpg"
 logo:
 
