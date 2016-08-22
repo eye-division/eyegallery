@@ -28,6 +28,11 @@ paginate_path: "/page:num/"
 inter_post_navigation: false
 permalink: pretty
 
+# Image CDN
+imagecdn:
+  #staging: "http://ed-dev.imgix.net"
+  #production: "http://ed.imgix.net"
+  #
 # Collections Example
 collections:
     gallery:
@@ -43,7 +48,7 @@ defaults:
             path: ""
             type: "gallery"
         values:
-            layout: "page"
+            layout: "gallery"
 
     -
         scope:

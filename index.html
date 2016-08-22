@@ -20,8 +20,14 @@ layout: default
       {% for gallery in site.gallery%}
 
            <div class="gallery-box{% cycle '', ' last' %}">
-            <a href="{{ gallery.permalink }}"><h3>{{ gallery.title }}</h3></a>
-                <a href="{{ gallery.permalink }}"><img src="{{ gallery.image_path }}" alt="{{ gallery.title }}"/></a>
+            <a href="{{ gallery.url }}">
+              <h3>{{ gallery.title }}</h3>
+              {% if gallery.main_image_path %}
+              {% include img.html src=gallery.main_image_path width=400 height=300 %}
+              {% else %}
+              {% include img.html src="/siteicon.png" width=400 height=300 %}
+              {% endif %}
+            </a>
 
 
            </div>
