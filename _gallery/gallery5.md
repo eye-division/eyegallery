@@ -6,8 +6,8 @@ permalink: /gallery/testing/
 list: true
 main_image_path: /assets/images/3522-cr_0337.jpg
 images:
-  - image_path:
-    description:
+  - image_path: /assets/images/in-the-mediterranean-triptych.jpg
+    description: The Shipwreck series
 _comments:
   title: add a Gallery title
   permalink: page URL name
