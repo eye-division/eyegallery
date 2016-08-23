@@ -38,8 +38,6 @@ collections:
     gallery:
         output: true
         permalink: /gallery/:path/
-    photos:
-        output: true
 
 # Defaults Example
 defaults:
