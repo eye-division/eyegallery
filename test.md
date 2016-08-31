@@ -7,6 +7,6 @@ permalink: /test/
 
 ## Header 2
 
-Text here
+Editing on the test page here.
 
 ## &nbsp;
