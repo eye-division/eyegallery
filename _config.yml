@@ -17,7 +17,7 @@ description: Great artist
 # root of your server.
 baseurl: ""
 # the base hostname & protocol for your site
-url: "http://http://black-hare.cloudvent.net/"
+url: "http://black-hare.cloudvent.net/"
 cover: "/assets/images/in_the_mediterranean_syrianboydreaming.jpg"
 logo:
 

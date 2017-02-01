@@ -13,5 +13,4 @@ _comments:
   permalink: page URL name
 ---
 
-
 Test content
