@@ -32,6 +32,8 @@ imagecdn:
   staging: "http://ed-eyegallery-dev.imgix.net"
   #production: "http://ed-eyegallery.imgix.net"
 
+
+
 # Collections Example
 collections:
     gallery:
@@ -55,6 +57,8 @@ defaults:
 # Google analytics
 ga_tracking_id: ""
 
+#Google Recaptcha for contact form
+recaptcha_site_key: 6LcNYBQUAAAAAALGOjCFo1CKxb65aFTFelMJo1YF
 
 # Social icons and sharing options
 #
