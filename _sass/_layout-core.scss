@@ -148,19 +148,7 @@ pre code.hljs {
  * page specific
  */
 
-.about {
-    h2 {
-        @extend .pink;
-        border-bottom: none;
-        text-align: center;
-    }
-    blockquote {
-        @extend .pink;
-    }
-}
-.pink {
-    color: rgb(255,0,255);
-}
+
 .half {
     @include span-columns(12);
     @include media ($mobile) {
