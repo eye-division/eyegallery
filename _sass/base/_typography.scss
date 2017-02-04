@@ -1,5 +1,3 @@
-@include font-face(Merriweather, '/assets/fonts/Merriweather/Merriweather-Regular', $file-formats: ttf );
-@include font-face(Merriweather_Sans, '/assets/fonts/Merriweather_Sans/MerriweatherSans-Regular', bold, $file-formats: ttf );
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -8,11 +6,7 @@ body {
   font-size: $base-font-size;
   line-height: $base-line-height;
 }
-h1,
-h2,
-h3 {
-    color: $camouflage;
-}
+
 h1,
 h2,
 h3,
@@ -27,7 +21,7 @@ h6 {
   font-weight: 300;
 }
 h1 {
-	font-size: modular-scale(4);
+	font-size: modular-scale(3);
 }
 h2 {
 	font-size: modular-scale(3);

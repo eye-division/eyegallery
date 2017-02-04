@@ -2,38 +2,32 @@
 layout: default
 ---
 
-  <div class="site-header-container {% if site.cover %}has-cover{% endif %}" {% if site.cover %}style="background-image: url({{ site.cover | prepend: site.baseurl }});"{% endif %}>
-    <div class="scrim {% if site.cover %}has-cover{% endif %}">
-      <header class="site-header">
-        <h1 class="title">{{ site.title }}</h1>
-        {% if site.subtitle %}<p class="subtitle">{{ site.subtitle }}</p>{% endif %}
-
-      </header>
-    </div>
-  </div>
-
   <div class="page">
 
-      <p class="editable">Mine is painting with a passion. There is generally a strong narrative element, a story which is important to me. Rothko said: ‘There’s no such thing as a good painting about nothing’. I don’t want you to see what I see (impossible in any case), or feel what I feel – this is not Art as Dictatorship. I just want you to look and feel and ask questions. However as Edward Hopper said, ‘If I could say it in words there would be no reason to paint’. Maybe your question would be the prompt for another painting!</p>
+    <div class="editable">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, in magnam placeat. Ex illo ipsa libero voluptatem necessitatibus modi fugit odit omnis. Sequi voluptatem mollitia voluptatum ipsum placeat, quaerat laudantium!</p>
+    </div>
 
       <div class="gallery">
-      {% for gallery in site.gallery%}
+      {% for gallery in site.gallery %}
 
-           <div class="gallery-box{% cycle '', ' last' %}">
-            <a href="{{ gallery.url }}">
-              <h3>{{ gallery.title }}</h3>
-              {% if gallery.main_image_path %}
-              {% include img.html src=gallery.main_image_path width=400 height=300 %}
-              {% else %}
-              {% include img.html src="/siteicon.png" width=400 height=300 %}
-              {% endif %}
-            </a>
+           <div class="gallery-box gallery-box-home {% cycle '', ' last' %}">
+              <a href="{{ gallery.url }}">
 
+                {% if gallery.main_image_path %}
+                  {% include img.html src=gallery.main_image_path width=400 height=300 %}
+                {% else %}
+                  {% include img.html src="/siteicon.png" width=400 height=300 %}
+                {% endif %}
+
+                <h3>{{ gallery.title }}</h3>
+              </a>
 
            </div>
 
       {% endfor %}
       </div>
+
       <div class="editor-link">
         <!-- Editor Link to site status -->
         <a href="cloudcannon:status">Link to Site Status and Recent Activity</a>

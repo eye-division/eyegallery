@@ -5,13 +5,9 @@
 * Gallery
  */
 .gallery {
-    .gallery-box,
-    .gallery-box-large {
-        padding-bottom: 1em;
-        text-align: center;
-    }
-    .galleryphoto {
 
+    @include media ($tablet) {
+        //@include outer-container;
     }
 
     a {
@@ -35,18 +31,28 @@
             text-decoration: none;
             color: darken($action-color, 20%);
             h3 {
-                color: $camouflage;
+                //color: $camouflage;
             }
         }
     }
+
+}
+.gallery-box,
+.gallery-box-large {
+    padding-bottom: 1em;
+    text-align: center;
     @include media ($tablet) {
-        @include outer-container;
-        .gallery-box {
-            @include span-columns(6);
-        }
-        .last {
-            @include omega();
-        }
+        @include span-columns(4);
+    }
+}
+.gallery-box-home {
+    @include media ($tablet) {
+        @include span-columns(6);
+    }
+}
+.last {
+    @include media ($tablet) {
+        @include omega();
     }
 }
 /*

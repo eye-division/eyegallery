@@ -1,0 +1,257 @@
+/*
+*   Navigation Menu - http://refills.bourbon.io/unstyled/ (see "Navigation")
+*/
+
+.navigation {
+    margin: 0;
+    @include outer-container;
+    padding: 0 1em;
+    background-color: $white;
+}
+// Nav menu
+.navigation-wrapper {
+    //@include outer-container;
+    @include clearfix;
+    position: relative;
+    background-color: $white;
+}
+
+// logo
+.logo {
+
+    //float: left;
+    //height: 6em;
+
+    span {
+        font-size: 1.25em;
+    }
+    h1 {
+        margin-bottom: 0;
+    }
+    &:active,
+    &:focus,
+    &:hover {
+        text-decoration: none;
+        //color: darken($link-color, 10%);
+    }
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+
+// Mobile view
+.navigation-menu-button {
+    display: block;
+    float: right;
+    margin: 0;
+    font-size: 1.5em;
+    padding-top: 0.5em;
+    @include media ($tablet) {
+        display: none;
+    }
+}
+
+
+nav {
+    float: none;
+    padding: 1.25em 0;
+    @include media ($tablet) {
+        float: right;
+        line-height: 1.5em;
+    }
+}
+
+ul.navigation-menu {
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+    @include media ($tablet) {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    &.show {
+        display: block;
+    }
+}
+// Nav items
+
+li.nav-link {
+    display: block;
+    text-align: right;
+    width: 100%;
+    padding: 0.25em 0;
+    @include media ($tablet) {
+        background: transparent;
+        display: inline;
+        text-decoration: none;
+        width: auto;
+    }
+    a {
+        color: $navigation-color;
+        display: inline-block;
+        @include media ($tablet) {
+            padding-right: 1.5em;
+        }
+        &:hover {
+            color: $navigation-color-hover;
+            text-decoration: none;
+        }
+    }
+
+    &:last-child a {
+        @include media ($tablet) {
+            padding-right: 1em;
+        }
+    }
+}
+
+li.active {
+    a {
+        color: $black;
+    }
+}
+li.more {
+    overflow: visible;
+    padding-right: 0;
+
+    a {
+      padding-right: 0.8em;
+    }
+
+    > a {
+      padding-right: 1.6em;
+      position: relative;
+      transition: all 0.2s ease-in-out;
+      @include media ($tablet) {
+        margin-right: $navigation-submenu-padding;
+      }
+
+      &::after {
+        content: "›";
+        font-size: 1.2em;
+        position: absolute;
+        right: $navigation-submenu-padding / 2;
+      }
+    }
+    &:focus > .submenu,
+    &:hover > .submenu {
+      display: block;
+    }
+
+    @include media ($tablet) {
+      padding-right: 0.8em;
+      position: relative;
+    }
+}
+
+li.more.nav-link {
+
+    padding-right: 0;
+
+    @include media ($tablet) {
+      padding-right: $navigation-submenu-padding;
+    }
+
+    > ul > li:first-child a  {
+      padding-top: 1em;
+    }
+
+    a {
+      margin-right: $navigation-submenu-padding;
+    }
+
+    > a {
+      padding-right: 0.6em;
+    }
+
+    > a::after {
+      @include position(absolute, auto -0.4em auto auto);
+      color: $navigation-color;
+      content: "\25BE";
+    }
+}
+
+
+ul.submenu {
+    padding-left: 0;
+
+    @include media ($tablet) {
+      left: -7em;
+      position: absolute;
+      top: 1em;
+    }
+
+    .submenu {
+        @include media ($tablet) {
+            left: $navigation-submenu-width - 0.2em;
+            top: 0;
+        }
+    }
+    li {
+        display: block;
+        padding-right: 0;
+        line-height: 2em;
+        &:last-child > a {
+            padding-bottom: 0.7em;
+        }
+
+        a {
+            background-color: $navigation-background;
+            display: inline-block;
+            width: 100%;
+            transition: all 0.2s ease-in-out;
+            text-decoration: none;
+            @include media ($tablet) {
+              padding-left: 1em;
+              text-align: left;
+              width: $navigation-submenu-width;
+            }
+            &:hover,
+            &:active,
+            &:focus {
+                transition: all 0.2s ease-in-out;
+                background-color: $white;
+                text-decoration: none;
+            }
+        }
+
+    } // end li
+}
+
+
+
+
+
+
+.menu__container {
+    display: inline-block;
+}
+
+.menuclick {
+    display: none;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    .menu__container.is-active &,
+    .menu__container.is-hovered & {
+        display: block;
+        @include media ($tablet) {
+            display: inline-block;
+        }
+    }
+}
+
+.menu__button {
+    font-weight: 700;
+    &:hover {
+        opacity: 0.8;
+    }
+    .menu__container.is-active & {
+        color: #333;
+    }
+}

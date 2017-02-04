@@ -1,13 +1,8 @@
+- title: Home
+  href: /
 - title: About
   href: /about/
-- title: Galleries
-  href: /gallery/
-  subcategories:
-    - subtitle: In the Mediterranean
-      subhref: /gallery/in-the-mediterranean/
-    - subtitle: Testing
-      subhref: /gallery/testing/
+- title: Gallery 1
+  href: /gallery/test/
 - title: Contact
   href: /contact/
-- title: Test
-  href: /test/

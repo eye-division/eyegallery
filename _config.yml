@@ -11,15 +11,14 @@ title: A Painter
 subtitle: Great artist
 email: support@eyedivision.com
 name: A Painter
-description: Great artist
+description: Demo Eye Gallery site
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
 baseurl: ""
 # the base hostname & protocol for your site
 url: "http://black-hare.cloudvent.net/"
-cover: "/assets/images/in_the_mediterranean_syrianboydreaming.jpg"
-logo:
+logo: "/assets/logo.png"
 
 # Build settings
 markdown: kramdown
@@ -38,6 +37,7 @@ collections:
     gallery:
         output: true
         permalink: /gallery/:path/
+        _hide_content: true
 
 # Defaults Example
 defaults:
@@ -48,12 +48,6 @@ defaults:
         values:
             layout: "gallery"
 
-    -
-        scope:
-            path: "poems"
-            type: "pages"
-        values:
-            layout: "page"
 
 # Disqus comments
 # disqus_shortname:
@@ -80,20 +74,34 @@ ga_tracking_id: ""
 social:
 
   - name: Facebook
-    icon: facebook
-    username: A Painter
-    url:
+    icon: icon-facebook_sign
+    username: eyedivision
+    url: https://www.facebook.com/eyedivision
     desc: Like on Facebook
+    share: true
+
+  - name: Instagram
+    icon: icon-instagram
+    username: eyedivision
+    url: https://instagram.com/eyedivision
+    desc: Follow me on Instagram
+    share: false
+
+  - name: Twitter
+    icon: icon-twitter_sign
+    username: eyedivision
+    url: https://twitter.com/EyeDivision
+    desc: Follow us on Twitter
     share: true
 
 # Social sharing protocols
 # These are for automatically generating sharing metadata for FB and Twitter
 # OS Protocol is for sharing the source of your site, if you're interested. For more, see osprotocol.com
 protocols:
-    fb_image: "/assets/in_the_mediterranean_syrianboydreaming.jpg"
-    fb_image_width: 1024
-    fb_image_height: 307
-    fb_image_type: "image/jpg"
+    fb_image: "/assets/logo.png"
+    fb_image_width: 612
+    fb_image_height: 605
+    fb_image_type: "image/png"
 
-    twitter_image: "/assets/in_the_mediterranean_syrianboydreaming.jpg"
+    twitter_image: "/assets/logo.png"
 

@@ -2,11 +2,6 @@
 layout: default
 ---
 
-{% assign with_media = false %}
-{% if page.images[0].image_path %}
-  {% assign with_media = true %}
-{% endif %}
-
 <header id="content-header">
   <section id="page-title">
     <h1>{{ page.title }}</h1>
@@ -14,29 +9,25 @@ layout: default
 </header>
 
 <article id="content">
-  <section class="main-content {% if with_media %}with-media{% endif %}">
-    {{ content }}
+  <section class="main-content">
+    {% if page.description_markdown %}{{ page.description_markdown | markdownify }}{% endif %}
   </section>
 
-{% if with_media %}
-  <aside class="media">
+  {% if page.images[0].image_path %}
+  <section class="gallery">
+    {% for image in page.images %}
+      {% if image.image_path %}
+      <div class="gallery-box {% cycle 'alpha', '', 'last' %}">
+        <a href="{% include imgpath.html src=image.image_path width=1280 %}" class="galleryphoto" data-lightbox="gallery" data-title="{{ image.image_description }}">
+          {% include img.html src=image.image_path width=200 height=200 fit=crop alt=image.image_description %}
+        </a>
+        <caption>{{ image.image_title }}</caption>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </section>
+  {% endif %}
 
-    {% if page.images[0].image_path %}
-    <section class="gallery">
-      {% for image in page.images %}
-        {% if image.image_path %}
-        <div class="gallery-box{% cycle '', ' last' %}">
-          <a href="{% include imgpath.html src=image.image_path width=1280 %}" class="galleryphoto" data-lightbox="gallery" data-title="{{ image.description }}">
-            {% include img.html src=image.image_path width=280 height=280 alt=image.description %}
-          </a>
-        </div>
-        {% endif %}
-      {% endfor %}
-    </section>
-    {% endif %}
 
-  </aside>
-{% endif %}
 
 </article>
-

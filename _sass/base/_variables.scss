@@ -2,8 +2,8 @@
 //@import url(//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300|Roboto:400,700,300|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300);
 
 // Typography
-$base-font-family: "Merriweather_Sans", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; // $helvetica;
-$heading-font-family: "Merriweather", "Helvetica Neue", "Helvetica", "Arial", sans-serif; // $base-font-family;
+$base-font-family: "Georgia", "Helvetica Neue", "Helvetica", "verdana", "Arial", sans-serif; // $helvetica;
+$heading-font-family: "Georgia", "Helvetica Neue", "Helvetica", "verdana", "Arial", sans-serif; // $base-font-family;
 
 // Font Sizes
 $base-font-size: $em-base; // 16px
@@ -39,21 +39,60 @@ $gray: #7f8c8d;				// Asbestos
 $dark-gray: #333 !default;
 // Even more colors
 $bc-red: #bc0000;
-$camouflage: #9a9a5d;
+
+/* SASS / Social Media Brand Colors */
+$twitter: #00aced;
+$facebook: #3b5998;
+$googleplus: #dd4b39;
+$pinterest: #cb2027;
+$linkedin: #007bb6;
+$youtube: #bb0000;
+$vimeo: #1ab7ea;
+$tumblr: #32506d;
+$instagram: #bc2a8d;
+$flickr: #ff0084;
+$dribbble: #ea4c89;
+$quora: #a82400;
+$foursquare: #0072b1;
+$forrst: #5B9A68;
+$vk: #45668e;
+$wordpress: #21759b;
+$stumbleupon: #EB4823;
+$yahoo: #7B0099;
+$blogger: #fb8f3d;
+$soundcloud: #ff3a00;
+
 // Font Colors
 $base-background-color: #fff;
 $base-font-color: $dark-gray;
-$action-color: $camouflage;
+$action-color: $black;
 $highlight-color: tint($action-color, 33%);
 
 // Image hover
 $gallery-image-hover-opacity: 0.7;
-$gallery-image-hover-color: $camouflage;
+$gallery-image-hover-color: $medium-gray;
 
 // Border
-$base-border-color: $camouflage;
+$base-border-color: $medium-gray;
 $base-border: 1px solid $base-border-color;
 $base-border-radius: 3px !default;
+
+$b3: 480px;
+$mobile: $b3;
+$b2: 768px;
+$tablet: $b2;
+$b1: 960px;
+$desktop: $b1;
+
+// navigation
+$navigation-padding: 1em;
+$navigation-background: $kbgray;
+$navigation-color: $black;
+$navigation-color-hover: $medium-gray;
+$navigation-height: 30px;
+$navigation-active-link-color: transparentize(white, 0.5);
+$navigation-submenu-padding: 1em;
+$navigation-submenu-width: 15em;
 
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);

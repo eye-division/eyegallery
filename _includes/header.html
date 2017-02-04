@@ -9,7 +9,7 @@
       {% endif %}
     </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
-      <i class="fa fa-bars"></i>
+      <svg class="icon"><use xlink:href="#icon-reorder" /></svg>
     </a>
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
@@ -18,7 +18,7 @@
 
           {% if link.subcategories != null %}
 
-          <li class="nav-link menu__container more" id="menu__container">
+          <li class="nav-link{% if page.url == link.href %} active{% endif %} menu__container more" id="menu__container">
             <a href="#menu" id="menu__button" class="menu__button">{{ link.title }}</a>
             <div id="menuclick" class="menuclick">
               <ul class="submenu">

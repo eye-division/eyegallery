@@ -10,7 +10,7 @@
           {% if social.url != null %}
           <li>
             <a href="{{ social.url }}" title="{{ social.desc }}">
-              <i class="fa fa-{{ social.icon }}"></i>
+              <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
               <span class="username">{% if social.username %}{{ social.username }}{% else %}{{ social.name }}{% endif %}</span>
             </a>
           </li>
@@ -22,7 +22,8 @@
 
 
     <div class="site-signature">
-      <p class="text"><strong>Site by <a href="https://www.eyedivision.com">Eye Division</a></strong></p>
+      <p class="text">&copy; All work is copyright the artist, no reproduction without permission.<br />
+      {% include img.html src="/assets/eyegallery.gif" alt="Eye Division site" %}<br />site by <a href="https://www.eyedivision.com">Eye Division</a></p>
     </div>
 
 
@@ -31,6 +32,7 @@
 </footer>
 
 <!-- Scripts -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
