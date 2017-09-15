@@ -6,8 +6,9 @@
  */
 .gallery {
 
+
     @include media ($tablet) {
-        //@include outer-container;
+        @include outer-container;
     }
 
     a {

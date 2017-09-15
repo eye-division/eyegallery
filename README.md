@@ -1,6 +1,6 @@
 # Eye Gallery
 
-Eye Gallery is a (work in progress) base theme and configuration for [Jekyll](http://jekyllrb.com/), based on Bourbon and Neat. It is a fork of the [Centratrium][centrarium] custom theme by [Ben Centra][bencentra].
+Eye Gallery from [Eye Division][ed] is a (work in progress) base theme and configuration for [Jekyll](http://jekyllrb.com/), based on Bourbon and Neat. It is a fork of the [Centratrium][centrarium] custom theme by [Ben Centra][bencentra].
 
 Built with these awesome libraries: 
 * [Bourbon][bourbon] 
@@ -170,6 +170,7 @@ MIT. See [LICENSE.MD](https://github.com/eye-division/neat-whiskey/blob/master/L
 [centrarium]: https://github.com/bencentra/centrarium
 [bencentra]: http://bencentra.com
 [bourbon]: http://bourbon.io/
+[ed]: https://eyedivision.com/
 [flexslider]: https://github.com/woocommerce/FlexSlider
 [neat]: http://neat.bourbon.io/
 [bitters]: http://bitters.bourbon.io/

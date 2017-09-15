@@ -1,14 +1,46 @@
 ---
-layout: default
+layout: page
+
+carousel:
+  - image: /assets/images/advert-customers.jpg
+    caption: Customers
+    link:
+  - image: /assets/images/advert-impregnable.jpg
+    caption: Impregnable
+    link:
 ---
 
-  <div class="page">
-
     <div class="editable">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, in magnam placeat. Ex illo ipsa libero voluptatem necessitatibus modi fugit odit omnis. Sequi voluptatem mollitia voluptatum ipsum placeat, quaerat laudantium!</p>
+    <p>This is the demo editable first paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, in magnam placeat. Ex illo ipsa libero voluptatem necessitatibus modi fugit odit omnis. Sequi voluptatem mollitia voluptatum ipsum placeat, quaerat laudantium!</p>
     </div>
 
-      <div class="gallery">
+    {% if page.carousel %}
+    <!-- <div class="two-thirds no-gutter"> -->
+    <section class="">
+      <h2>This is a demo slideshow</h2>
+      <div class="flexslider">
+          <ul class="slides">
+            {% for slides in page.carousel %}
+            <li>
+              {% if slides.link %}
+              <a href="{{ site.baseurl }}{{ slides.link }}" title="View project">
+              {% endif %}
+              {% include img.html src=slides.image width=960 alt=slides.caption %}
+              {% if slides.link %}
+              </a>
+            {% endif %}
+              {% if slides.caption %}
+              <p class="flex-caption">{% if slides.link %}<a href="{{ site.baseurl }}{{ slides.link }}" title="View project">{% endif %}{{ slides.caption }}{% if slides.link %}&nbsp;<svg class="icon icon__white icon--readmore"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-double_angle_right" /></svg></a>{% endif %}</p>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </section>
+      <!-- </div> -->
+      {% endif %}
+
+      <section class="gallery">
       {% for gallery in site.gallery %}
 
            <div class="gallery-box gallery-box-home {% cycle '', ' last' %}">
@@ -26,10 +58,10 @@ layout: default
            </div>
 
       {% endfor %}
-      </div>
+      </section>
 
       <div class="editor-link">
         <!-- Editor Link to site status -->
         <a href="cloudcannon:status">Link to Site Status and Recent Activity</a>
       </div>
-  </div>
+

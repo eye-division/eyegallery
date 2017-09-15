@@ -2,6 +2,7 @@
 gems:
  # - jekyll-archives # Sorry, not GitHub pages friendly!
   - jekyll-sitemap
+  - jekyll-paginate
 
 exclude:
   - "/vendor/"
@@ -26,6 +27,7 @@ paginate: 5
 paginate_path: "/page:num/"
 inter_post_navigation: false
 permalink: /posts/:title
+highlightjs_theme: "monokai-sublime"
 
 # Image CDN
 imagecdn:
@@ -100,7 +102,7 @@ social:
 
 # Social sharing protocols
 # These are for automatically generating sharing metadata for FB and Twitter
-# OS Protocol is for sharing the source of your site, if you're interested. For more, see osprotocol.com
+
 protocols:
     fb_image: "/assets/logo.png"
     fb_image_width: 612

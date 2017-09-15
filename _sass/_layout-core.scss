@@ -25,7 +25,9 @@ body {
     //@include flex(1 0 auto);
 }
 
-
+section {
+    padding: 1rem 0;
+}
 ol.default {
     @extend %default-ol;
 }
