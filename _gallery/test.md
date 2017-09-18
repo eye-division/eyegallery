@@ -1,9 +1,9 @@
 ---
 title: Test
-description_markdown:
+description_markdown: Testing images
 _gallery_date:
 _permalink:
-main_image_path:
+main_image_path: /assets/images/e-la-nave-va_21390829511_o.jpg
 images:
   - image_path:
     image_title:
