@@ -18,6 +18,11 @@ _options:
     height: 600
     resize_style: "contain"
     mime_type: "image/jpeg"
+  main_image_path:
+    width: 1200
+    height: 800
+    resize_style: "contain"
+    mime_type: "image/jpeg"
 _comments:
     title: Add a Gallery title
     main_image_path: This is the image used to represent your gallery
