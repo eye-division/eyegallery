@@ -20,4 +20,7 @@ images:
   - image_path: '/assets/images/Keen of Hamar, Unst.jpg'
     image_title: Test resized image
     image_description: Test resized
+  - image_path: '/assets/images/Keen of Hamar, Unst.jpg'
+    image_title: Resized to 600
+    image_description: Resized to 600 square max
 ---
