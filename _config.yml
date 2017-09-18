@@ -34,8 +34,6 @@ imagecdn:
   staging: "http://ed-eyegallery-dev.imgix.net"
   #production: "http://ed-eyegallery.imgix.net"
 
-
-
 # Collections Example
 collections:
     gallery:
@@ -52,6 +50,18 @@ defaults:
         values:
             layout: "gallery"
 
+# CloudCannon auto image resizing on upload
+# see https://docs.cloudcannon.com/editing/options/#image-uploads
+
+_options:
+  image_path:
+    width: 600
+    resize_style: "contain"
+    mime_type: "image/jpeg"
+  main_image_path:
+    width: 1200
+    resize_style: "contain"
+    mime_type: "image/jpeg"
 
 # Disqus comments
 # disqus_shortname:
