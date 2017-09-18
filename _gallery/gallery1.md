@@ -6,7 +6,7 @@ description_markdown: >-
   expedita rerum autem vel est pariatur, quibusdam consectetur, aliquam!
 _gallery_date: 2016-05-01 00:00:00
 permalink: /gallery/test/
-main_image_path: /assets/images/advert-impregnable.jpg
+main_image_path: /assets/images/e-la-nave-va_21390829511_o.jpg
 images:
   - image_path: /assets/images/advert-customers.jpg
     image_title: Graveyard
