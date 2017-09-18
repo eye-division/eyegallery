@@ -1,5 +1,5 @@
 ---
-title: Test
+title: Test 2
 description_markdown: Testing images
 _gallery_date:
 permalink: /gallery/test2/
@@ -10,10 +10,10 @@ images:
     image_description: sky wall
 _options:
   image_path:
-    width: 600
-    height: 600
+    width: 1200
+    height: 1200
     resize_style: contain
-    mime_type: image/jpeg
+    mime_type: "image/jpeg"
   main_image_path:
     width: 1200
     height: 800
@@ -23,4 +23,5 @@ _comments:
   title: add a Gallery title
   main_image_path: This is the image used to represent your gallery
   images: Add and edit your gallery images here
+  image_description: Add a description
 ---

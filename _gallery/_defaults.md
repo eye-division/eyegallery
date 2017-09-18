@@ -14,8 +14,8 @@ images:
     resize_style: "contain"
 _options:
   image_path:
-    width: 600
-    height: 600
+    width: 1200
+    height: 1200
     resize_style: "contain"
     mime_type: "image/jpeg"
   main_image_path:
@@ -27,4 +27,5 @@ _comments:
     title: Add a Gallery title
     main_image_path: This is the image used to represent your gallery
     images: Add and edit your gallery images here
+
 ---

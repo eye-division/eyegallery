@@ -25,8 +25,8 @@ images:
     image_description: Resized to 600 square max
 _options:
   image_path:
-    width: 600
-    height: 600
+    width: 1200
+    height: 1200
     resize_style: "contain"
     mime_type: "image/jpeg"
   main_image_path:
