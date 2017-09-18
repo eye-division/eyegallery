@@ -20,8 +20,9 @@ _options:
     resize_style: "contain"
     mime_type: "image/jpeg"
 _comments:
-  title: add a Gallery title
-  main_image_path: This is the image used to represent your gallery
+  title: Gallery title
+  permalink: Be careful editing this
+  main_image_path: Image used to represent your gallery
   images: Add and edit your gallery images here
-  image_description: Add a description
+  image_description: May only be used in the close up of an image
 ---
