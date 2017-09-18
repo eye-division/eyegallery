@@ -13,6 +13,15 @@ layout: default
     {% if page.description_markdown %}{{ page.description_markdown | markdownify }}{% endif %}
   </section>
 
+  {% if page.main_image_path %}
+    <figure>
+    {% assign alt_text = page.title %}
+    {% if page.image_caption %} {% assign alt_text = page.image_caption %} {% endif %}
+    {% include img.html src=page.main_image_path alt=alt_text %}
+    <figcaption>{{ alt_text }}</figcaption>
+    </figure>
+  {% endif %}
+
   {% if page.images[0].image_path %}
   <section class="gallery">
     {% for image in page.images %}
