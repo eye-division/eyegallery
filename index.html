@@ -8,6 +8,8 @@ carousel:
   - image: /assets/images/advert-impregnable.jpg
     caption: Impregnable
     link:
+carousel_delay_number:
+carousel_colour:
 
 _options:
   image:
@@ -18,6 +20,9 @@ _options:
 _comments:
   carousel: Edit the slideshow
   link: Optional web link from the slide
+  carousel_delay_number: Slide delay in seconds
+  caption: optional caption
+  carousel_colour: background colour for caption
 ---
 
     <div class="editable">
@@ -69,9 +74,4 @@ _comments:
 
       {% endfor %}
       </section>
-
-      <div class="editor-link">
-        <!-- Editor Link to site status -->
-        <a href="cloudcannon:status">Link to Site Status and Recent Activity</a>
-      </div>
 
