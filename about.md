@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+main_image_path:
 image_caption:
 _options:
   main_image_path:
