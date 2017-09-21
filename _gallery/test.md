@@ -3,9 +3,9 @@ title: Test 2
 description_markdown: Testing images
 _gallery_date:
 permalink: /gallery/test2/
-main_image_path: /assets/images/e-la-nave-va_21390829511_o.jpg
+main_image_path: /assets/images/IMG_3317.jpg
 images:
-  - image_path: /uploads/wall1.jpg
+  - image_path: '/assets/images/Keen of Hamar, Unst.jpg'
     image_title: Sky wall
     image_description: sky wall
 _options:
@@ -13,12 +13,12 @@ _options:
     width: 1200
     height: 1200
     resize_style: contain
-    mime_type: "image/jpeg"
+    mime_type: image/jpeg
   main_image_path:
     width: 1200
     height: 800
-    resize_style: "contain"
-    mime_type: "image/jpeg"
+    resize_style: contain
+    mime_type: image/jpeg
 _comments:
   title: Gallery title
   permalink: Be careful editing this
