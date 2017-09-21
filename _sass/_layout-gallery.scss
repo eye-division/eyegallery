@@ -51,6 +51,11 @@
         @include span-columns(6);
     }
 }
+.alpha {
+    @include media ($tablet) {
+        clear: both;
+    }
+}
 .last {
     @include media ($tablet) {
         @include omega();
