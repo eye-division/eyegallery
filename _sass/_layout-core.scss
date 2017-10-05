@@ -227,72 +227,7 @@ pre code.hljs {
         margin: auto;
         max-width: 100%;
     }
-    /*
-    *	Posts
-    */
-    .post {
-        ul {
-            margin-bottom: 1em;
-        }
-        .post-header-container {
-            .scrim {
-                padding: 2em 1em 1em 1em;
-            }
-        }
-        .post-meta {
-            padding-bottom: 1em;
-        }
-        .post-content {
-            padding: 1em 0;
-        }
-        .tags {
-            font-size: 0.9em;
-        }
-        .rss {
-            margin: 1em 0 0 0;
-            @include span-columns(12);
-            @include media ($tablet) {
-                margin: 1em 0;
-                @include span-columns(6);
-            }
-        }
-        .share {
-            font-weight: bold;
-            margin: 0 0 1em 0;
-            @include span-columns(12);
-            @include media ($tablet) {
-                @include span-columns(6);
-                margin: 1em 0;
-                text-align: right;
-            }
-            a {
-                width: 1em;
-                padding: 0 0.25em;
-                text-decoration: none;
-            }
-        }
-        .disqus {
-            @include span-columns(12);
-        }
-        .post-navigation {
-            font-size: 0.9em;
-            display: block;
-            width: auto;
-            .prev-post {
-                display: block;
-                width: 50%;
-                float: left;
-                margin: 1em 0;
-            }
-            .next-post {
-                display: block;
-                width: 50%;
-                float: left;
-                margin: 1em 0;
-                text-align: right;
-            }
-        }
-    }
+
     /*
     *	Pages
     */
@@ -332,7 +267,86 @@ pre code.hljs {
         }
     }
 }
-
+/*
+*   Posts
+*/
+.post {
+    ul {
+        margin-bottom: 1em;
+    }
+    .post-header-container {
+        .scrim {
+            padding: 2em 1em 1em 1em;
+        }
+    }
+    .post-meta {
+        padding-bottom: 1em;
+    }
+    .post-content {
+        padding: 1em 0;
+    }
+    .tags {
+        font-size: 0.9em;
+    }
+    .rss {
+        margin: 1em 0 0 0;
+        @include span-columns(12);
+        @include media ($tablet) {
+            margin: 1em 0;
+            @include span-columns(6);
+        }
+    }
+    .share {
+        font-weight: bold;
+        margin: 0 0 1em 0;
+        @include span-columns(12);
+        @include media ($tablet) {
+            @include span-columns(6);
+            margin: 1em 0;
+            text-align: right;
+        }
+        a {
+            width: 1em;
+            padding: 0 0.25em;
+            text-decoration: none;
+        }
+    }
+    .disqus {
+        @include span-columns(12);
+    }
+    .post-navigation {
+        font-size: 0.9em;
+        display: block;
+        width: auto;
+        .prev-post {
+            display: block;
+            width: 50%;
+            float: left;
+            margin: 1em 0;
+        }
+        .next-post {
+            display: block;
+            width: 50%;
+            float: left;
+            margin: 1em 0;
+            text-align: right;
+        }
+    }
+}
+.post-nav {
+    text-align: center;
+    border-top: 1px solid $light-gray;
+    padding: 1em 0;
+}
+a.next, a.prev {
+    border: 1px solid $light-gray;
+    padding: 0.5em;
+    display: inline-block;
+    svg {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
 /*
 *	Footer
 */
