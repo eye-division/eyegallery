@@ -46,6 +46,13 @@
         @include span-columns(4);
     }
 }
+.gallery-box-50 {
+    padding-bottom: 1em;
+    text-align: center;
+    @include media ($tablet) {
+        @include span-columns(6);
+    }
+}
 .gallery-box-home {
     @include media ($tablet) {
         @include span-columns(6);
