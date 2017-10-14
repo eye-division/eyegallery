@@ -9,7 +9,7 @@ Built with these awesome libraries:
 * [Refills][refills]
 * [Font Awesome][fontawesome]
 * [HighlightJS][highlightjs]
-* [Lightbox][lightbox]
+* [Lightbox2][lightbox]
 * [Flexslider][flexslider]
 
 ## Features
@@ -33,6 +33,8 @@ This theme comes with a number of features, including:
 * Designed for use on CloudCannon hosting for customer editing
 * uses imgIX as image CDN on staging and production
 
+
+
 ## Installation
 
 If you're just getting started with Jekyll, you can use this repository as a starting point for your own site. Just [download this project](https://github.com/eye-division/eyegallery/archive/master.zip) and add all the files to your project. Add your blog posts to the `posts/` directory, and create your pages with the proper Jekyll front matter (see `posts.html` for an example).
@@ -53,6 +55,8 @@ gem install bundler
 bundle install
 ```
 
+Information on [Bundler][bundler]
+
 ## Updating Styles
 
 If you want change the CSS of the theme, you'll probably want to check out these files in the `_sass/` directory:
@@ -60,6 +64,11 @@ If you want change the CSS of the theme, you'll probably want to check out these
 * `base/_variables.scss`: Common values found throughout the project, including base font size, font families, colors, and more.
 * `base/_typography.scss`: Base typography values for the site (see `typography.html` for a demonstration)
 * `_layout.scss`: The primary styles for the layout and design of the theme. This file calls various sub-files for different pages / elements.
+* various `_layout.scss` files written for specific pages and components_
+
+### SASS
+
+We're using the [SASS writing guidelines][sass] by Hugo Giraudel, and SassDOC  
 
 ### Important Variables
 
@@ -170,6 +179,7 @@ MIT. See [LICENSE.MD](https://github.com/eye-division/neat-whiskey/blob/master/L
 [centrarium]: https://github.com/bencentra/centrarium
 [bencentra]: http://bencentra.com
 [bourbon]: http://bourbon.io/
+[bundler]: http://bundler.io/
 [ed]: https://eyedivision.com/
 [flexslider]: https://github.com/woocommerce/FlexSlider
 [neat]: http://neat.bourbon.io/
@@ -182,7 +192,8 @@ MIT. See [LICENSE.MD](https://github.com/eye-division/neat-whiskey/blob/master/L
 [lightbox]: http://lokeshdhakar.com/projects/lightbox2/
 [cover]: https://www.flickr.com/photos/79666107@N00/3796678503/in/photolist-6MuYfc-61Rtft-8XzPmY-a6Cozm-54eSMs-6oMJmk-aepZQq-9YkPHp-fiAEGE-dVP4Z5-oxPyJP-atKUFJ-9YHWA5-9YF2f2-9YF2gR-9YHVGN-9YHVvs-qZYYQ6-4JqP2i-a2peGy-9YHVUm-9YHVF7-9YHVCL-9YF3NK-cYteMo-aiPmb9-69dtAi-9YF21x-4aWpmn-7SLiUL-77pqVX-8vXbYv-4HGDSH-a2h5P1-8LsZrQ-9aj1ez-auPZ7q-9YHVMd-9YF2bi-9YF23D-8LpWpn-9an6KL-9YHVZL-dqZ3Cz-2GuvnX-9YHWUo-9YHVWd-p5Roh5-i1zTbv-6sYrUT
 [disqus]: https://disqus.com/
-[ga]: http://www.google.com/analytics/
+[ga]: https://www.google.com/analytics/
 [gr]: https://www.google.com/recaptcha/admin#list
 [archives]: https://github.com/jekyll/jekyll-archives
 [sitemap]: https://github.com/jekyll/jekyll-sitemap
+[sass]: https://sass-guidelin.es/

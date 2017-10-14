@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.front {
+
+    .page-content {
+        @include outer-container(100%);
+    }
+    .scrim {
+        padding: 0 0 20em 0;
+    }
+    .gallery {
+        padding: 0 1em 1em;
+        background: rgba(255,255,255,0.8);
+    }
+
+}

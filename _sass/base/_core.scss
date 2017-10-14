@@ -1,0 +1,88 @@
+///	Globals
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    //@include display(flex); // don't need flexbox on this simple gallery replica
+    //@include flex-direction(column);
+    background-color: $base-background-color;
+}
+
+.navigation, .site-footer {
+    //@include flex(none);
+    //@include flex(1 0 auto);
+}
+
+.page-content {
+    //@include flex(1 0 auto);
+}
+
+section {
+    clear: both;
+    padding: 1rem 0;
+}
+
+ol.default {
+    @extend %default-ol;
+}
+
+ul.default {
+    @extend %default-ul;
+}
+
+pre code.hljs {
+    font-size: modular-scale(-1);
+}
+
+// layout elements
+
+.half {
+    @include span-columns(12);
+    @include media ($small) {
+        @include span-columns(6);
+    }
+}
+.textright {
+    text-align: right;
+}
+
+///	Body
+
+.page-content {
+
+    @include outer-container;
+    padding: 1em;
+    background-color: $white;
+    .home, .page {
+
+        @include media ($medium) {
+            padding: 1em 0;
+        }
+    }
+    ///	index.html
+    .site-header-container {
+        color: $white;
+        text-shadow: 0 2px 1px rgba(0,0,0,0.33);
+        background-color: $highlight-color;
+        .site-header{
+            .title {
+                font-size: modular-scale(6);
+            }
+            .subtitle {
+                font-style: italic;
+                font-size: modular-scale(1);
+            }
+        }
+    }
+    img {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+    }
+}
+

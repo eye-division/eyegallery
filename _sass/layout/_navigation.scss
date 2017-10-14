@@ -1,6 +1,6 @@
-/*
-*   Navigation Menu - http://refills.bourbon.io/unstyled/ (see "Navigation")
-*/
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the navigation
+// -----------------------------------------------------------------------------
 
 .navigation {
     margin: 0;
@@ -8,7 +8,7 @@
     padding: 0 1em;
     background-color: $white;
 }
-// Nav menu
+/// Nav menu
 .navigation-wrapper {
     //@include outer-container;
     @include clearfix;
@@ -16,48 +16,43 @@
     background-color: $white;
 }
 
-// logo
-.logo {
-
-    //float: left;
-    //height: 6em;
-
-    span {
-        font-size: 1.25em;
-    }
-    h1 {
-        margin-bottom: 0;
-    }
-    &:active,
-    &:focus,
-    &:hover {
-        text-decoration: none;
-        //color: darken($link-color, 10%);
-    }
-    &:active,
-    &:focus {
-        outline: none;
-    }
-}
-
-
-// Mobile view
+/// small view
 .navigation-menu-button {
     display: block;
     float: right;
     margin: 0;
     font-size: 1.5em;
     padding-top: 0.5em;
-    @include media ($tablet) {
+    color: $navigation-color;
+    text-decoration: none;
+    .icon-menu {
+        fill : $navigation-color;
+    }
+    &:link {
+        color: $navigation-color;
+        text-decoration: none;
+    }
+    &:hover, &:active {
+        text-decoration: none;
+        color: tint($navigation-color,20%);
+        /// menu icon
+        .icon-menu {
+            fill : tint($navigation-color,20%);
+        }
+    }
+    @include media ($medium) {
         display: none;
     }
 }
-
+.menu-title {
+    font-size: 0.9em;
+    font-weight: 700;
+}
 
 nav {
     float: none;
     padding: 1.25em 0;
-    @include media ($tablet) {
+    @include media ($medium) {
         float: right;
         line-height: 1.5em;
     }
@@ -70,7 +65,7 @@ ul.navigation-menu {
     overflow: visible;
     padding: 0;
     width: 100%;
-    @include media ($tablet) {
+    @include media ($medium) {
         display: block;
         margin: 0;
         padding: 0;
@@ -79,14 +74,15 @@ ul.navigation-menu {
         display: block;
     }
 }
-// Nav items
+
+/// Nav items
 
 li.nav-link {
     display: block;
     text-align: right;
     width: 100%;
     padding: 0.25em 0;
-    @include media ($tablet) {
+    @include media ($medium) {
         background: transparent;
         display: inline;
         text-decoration: none;
@@ -95,7 +91,7 @@ li.nav-link {
     a {
         color: $navigation-color;
         display: inline-block;
-        @include media ($tablet) {
+        @include media ($medium) {
             padding-right: 1.5em;
         }
         &:hover {
@@ -105,12 +101,12 @@ li.nav-link {
     }
 
     &:last-child a {
-        @include media ($tablet) {
+        @include media ($medium) {
             padding-right: 1em;
         }
     }
 }
-
+li.nav-link.active,
 li.active {
     a {
         color: $black;
@@ -128,7 +124,7 @@ li.more {
       padding-right: 1.6em;
       position: relative;
       transition: all 0.2s ease-in-out;
-      @include media ($tablet) {
+      @include media ($medium) {
         margin-right: $navigation-submenu-padding;
       }
 
@@ -144,7 +140,7 @@ li.more {
       display: block;
     }
 
-    @include media ($tablet) {
+    @include media ($medium) {
       padding-right: 0.8em;
       position: relative;
     }
@@ -154,7 +150,7 @@ li.more.nav-link {
 
     padding-right: 0;
 
-    @include media ($tablet) {
+    @include media ($medium) {
       padding-right: $navigation-submenu-padding;
     }
 
@@ -181,14 +177,14 @@ li.more.nav-link {
 ul.submenu {
     padding-left: 0;
 
-    @include media ($tablet) {
+    @include media ($medium) {
       left: -7em;
       position: absolute;
       top: 1em;
     }
 
     .submenu {
-        @include media ($tablet) {
+        @include media ($medium) {
             left: $navigation-submenu-width - 0.2em;
             top: 0;
         }
@@ -207,7 +203,7 @@ ul.submenu {
             width: 100%;
             transition: all 0.2s ease-in-out;
             text-decoration: none;
-            @include media ($tablet) {
+            @include media ($medium) {
               padding-left: 1em;
               text-align: left;
               width: $navigation-submenu-width;
@@ -220,14 +216,8 @@ ul.submenu {
                 text-decoration: none;
             }
         }
-
     } // end li
 }
-
-
-
-
-
 
 .menu__container {
     display: inline-block;
@@ -240,7 +230,7 @@ ul.submenu {
     .menu__container.is-active &,
     .menu__container.is-hovered & {
         display: block;
-        @include media ($tablet) {
+        @include media ($medium) {
             display: inline-block;
         }
     }

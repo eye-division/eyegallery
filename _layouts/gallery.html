@@ -26,9 +26,11 @@ layout: default
       {% if image.image_path %}
       <div class="gallery-box {% cycle 'alpha', '', 'last' %}">
         <a href="{% include imgpath.html src=image.image_path max-w=1280 %}" class="galleryphoto" data-lightbox="gallery" data-title="{{ image.image_title }} - {{ image.image_description }}">
-          {% include img.html src=image.image_path width=200 height=200 fit=crop alt=image.image_description %}
+          {% include img.html src=image.image_path width=600 fit=clip alt=image.image_title %}
         </a>
-        <caption>{{ image.image_title }}</caption>
+        {% if page.display_title %}
+          <caption>{{ image.image_title }}</caption>
+        {% endif %}
       </div>
       {% endif %}
     {% endfor %}
@@ -39,7 +41,20 @@ layout: default
     {% if page.description_markdown %}{{ page.description_markdown | markdownify }}{% endif %}
   </section>
 
+{% if page.videos %}
 
+    {% for video in page.videos %}
+      {% if video.videoid %}
+        {% include youtubeplayer.html id=video.videoid %}
+        {% if video.description %}
+          <p class="description">{{ video.description }}</p>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+{% endif %}
+
+</article>
 </article>
 
 <!-- optional pagination between pages in collection -->

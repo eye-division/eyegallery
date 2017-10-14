@@ -4,8 +4,12 @@ description_markdown: >-
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime voluptate,
   dicta ex incidunt harum id vitae itaque alias voluptates pariatur! Aliquid
   expedita rerum autem vel est pariatur, quibusdam consectetur, aliquam!
+homepage_description_markdown: 
+frontpage: true
 _gallery_date: 2016-05-01 00:00:00
 permalink: /gallery/test/
+archive: false
+display_title: true
 main_image_path: /assets/images/e-la-nave-va_21390829511_o.jpg
 images:
   - image_path: /assets/images/advert-customers.jpg
@@ -39,5 +43,8 @@ _comments:
   permalink: Be careful editing this
   main_image_path: Image used to represent your gallery
   images: Add and edit your gallery images here
-  image_description: May only be used in the close up of an image
+  image_description: Might only be shown in the close up of an image
+  archive: Not used yet!
+  frontpage: Show this gallery on the homepage
+  homepage_description_markdown: Text used on homepage if shown
 ---

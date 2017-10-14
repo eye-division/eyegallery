@@ -1,14 +1,28 @@
-// Gallery layout
-// this is imported last from /css/main.scss
+// -----------------------------------------------------------------------------
+// This file contains styles for gallery elements
+// -----------------------------------------------------------------------------
 
-/*
-* Gallery
- */
+/// 100% Gallery blocks
+.gallery-cover {
+    margin: 0 auto 1em auto;
+    max-width: 1200px;
+    a {
+        color: $action-color;
+        &:active,
+        &:focus,
+        &:hover {
+            text-decoration: none;
+            color: $highlight-color;
+            .gallery {
+                background: rgba(255,255,255,1);
+            }
+        }
+    }
+}
+
 .gallery {
-
-
-    @include media ($tablet) {
-        @include outer-container;
+    @include media ($medium) {
+        //@include outer-container;
     }
 
     a {
@@ -30,50 +44,41 @@
         &:focus,
         &:hover {
             text-decoration: none;
-            color: darken($action-color, 20%);
+            color: shade($action-color, 20%);
             h3 {
                 //color: $camouflage;
             }
         }
     }
-
 }
+
 .gallery-box,
 .gallery-box-large {
     padding-bottom: 1em;
     text-align: center;
-    @include media ($tablet) {
+    @include media ($medium) {
         @include span-columns(4);
     }
 }
 .gallery-box-50 {
     padding-bottom: 1em;
     text-align: center;
-    @include media ($tablet) {
+    @include media ($medium) {
         @include span-columns(6);
     }
 }
 .gallery-box-home {
-    @include media ($tablet) {
+    @include media ($medium) {
         @include span-columns(6);
     }
 }
 .alpha {
-    @include media ($tablet) {
+    @include media ($medium) {
         clear: both;
     }
 }
 .last {
-    @include media ($tablet) {
+    @include media ($medium) {
         @include omega();
     }
 }
-/*
- * Lightbox
- */
-
-.lb-dataContainer {
-    background: $black;
-    padding: 1em
-}
-

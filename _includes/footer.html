@@ -35,7 +35,6 @@
 {% if site.recaptcha_site_key %}
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 {% endif %}
-<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <script src="/js/jquery.flexslider-min.js" defer></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
@@ -51,7 +50,7 @@
   ga('create', '{{ site.ga_tracking_id }}', 'auto');
   ga('send', 'pageview', {
     'page': '{{ page.url }}',
-    'title': '{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}'
+    'title': "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"
   });
 </script>
 {% endif %}

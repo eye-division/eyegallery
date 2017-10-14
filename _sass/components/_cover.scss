@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to cover images -
+// full width background images
+// -----------------------------------------------------------------------------
+
+///  Cover
+.site-header-container, .post-header-container {
+    width: 100%;
+
+}
+.has-cover {
+    background-position: 50% 50%;
+    background-size: cover;
+    .title {
+        font-size: modular-scale(4);
+    }
+}

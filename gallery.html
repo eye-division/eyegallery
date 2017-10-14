@@ -2,6 +2,21 @@
 layout: page
 title: "Galleries"
 permalink: /gallery/
+main_image_path:
+image_caption:
+frontpage: false
+description_markdown:
+frontpagetitle:
+_options:
+  main_image_path:
+    width: 1200
+    height: 1200
+    resize_style: "contain"
+    mime_type: "image/jpeg"
+_comments:
+  title: Gallery title
+  permalink: Be careful editing this
+  main_image_path: Image used to represent your gallery
 ---
 <div class="gallery">
 
@@ -10,7 +25,7 @@ permalink: /gallery/
      <div class="gallery-box{% cycle '', ' last' %}">
 
           <a href="{{ gallery.permalink }}" title="{{ gallery.title }}">
-	          {% include img.html src=gallery.image_path max-w=800 max-h=400 fit=crop alt=gallery.title %}
+	          {% include img.html src=gallery.main_image_path width=1200 max-h=400 fit=clip alt=gallery.title %}
 	          <h4>{{ gallery.title }}</h4>
           </a>
 
