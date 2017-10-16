@@ -21,6 +21,12 @@
 }
 
 .gallery {
+    /// make it a flexbox so items can be aligned vertically
+    display: flex;
+    align-items: flex-start;
+    // align-items: flex-end; // align bottom
+    flex-wrap: wrap;
+
     @include media ($medium) {
         //@include outer-container;
     }
