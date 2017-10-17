@@ -24,12 +24,13 @@
 @import 'components/cloudcannon';
 @import 'components/cover';
 @import 'components/product';
+@import 'components/svg';
 
 // 6. Page-specific
 @import	'pages/home';
 
 // 7. Themes
-
+@import 'theme/vanilla';
 
 // 8. Shame
 @import 'shame';

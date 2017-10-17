@@ -50,16 +50,16 @@
 }
 
 nav {
-    float: none;
-    padding: 1.25em 0;
+    float: right;
     @include media ($medium) {
-        float: right;
+        float: none;
         line-height: 1.5em;
     }
 }
 
 ul.navigation-menu {
     clear: both;
+    text-align: center;
     display: none;
     margin: 0 auto;
     overflow: visible;

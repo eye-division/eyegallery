@@ -11,3 +11,6 @@ Gemfile.lock
 .bundle/
 vendor/
 nbproject
+
+# Need to allow our SASS vendor folder
+!_sass/vendor/

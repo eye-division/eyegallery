@@ -1,3 +1,7 @@
+// -----------------------------------------------------------------------------
+// This file contains some basic styles - overriding Bourbon defaults
+// -----------------------------------------------------------------------------
+
 ///	Globals
 
 html, body {
@@ -6,20 +10,23 @@ html, body {
     width: 100%;
 }
 
+html {
+    height: 100%;
+}
 body {
     height: 100%;
-    //@include display(flex); // don't need flexbox on this simple gallery replica
-    //@include flex-direction(column);
+    @include display(flex);
+    @include flex-direction(column);
     background-color: $base-background-color;
 }
 
 .navigation, .site-footer {
-    //@include flex(none);
+    @include flex(none);
     //@include flex(1 0 auto);
 }
 
 .page-content {
-    //@include flex(1 0 auto);
+    @include flex(1 0 auto);
 }
 
 section {

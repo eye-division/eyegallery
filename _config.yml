@@ -74,7 +74,7 @@ appurl:
 ga_tracking_id: ""
 
 # Google Recaptcha used for contact form
-recaptcha_site_key: 6LcNYBQUAAAAAALGOjCFo1CKxb65aFTFelMJo1YF
+recaptcha_site_key: "6LcNYBQUAAAAAALGOjCFo1CKxb65aFTFelMJo1YF"
 
 # Social icons and sharing options
 #
@@ -86,7 +86,7 @@ recaptcha_site_key: 6LcNYBQUAAAAAALGOjCFo1CKxb65aFTFelMJo1YF
 #
 # social:
 #   - name: Twitter                         # Name of the service
-#     icon: twitter                         # Font Awesome icon to use (minus fa- prefix)
+#     icon: twitter                         # SVG icon to use
 #     username: "@TheBenCentra"             # (User) Name to display in the footer link
 #     url: https://twitter.com/TheBenCentra # URL of your profile (leave blank to not display in footer)
 #     desc: Follow me on Twitter            # Description to display as link title, etc
@@ -102,14 +102,14 @@ social:
 
   - name: Instagram
     icon: icon-instagram
-    username: eyedivision
+    username: '@eyedivision'
     url: https://instagram.com/eyedivision
     desc: Follow me on Instagram
     share: false
 
   - name: Twitter
     icon: icon-twitter_sign
-    username: eyedivision
+    username: '@eyedivision'
     url: https://twitter.com/EyeDivision
     desc: Follow us on Twitter
     share: true
