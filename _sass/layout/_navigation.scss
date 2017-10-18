@@ -112,136 +112,124 @@ li.active {
         color: $black;
     }
 }
-li.more {
-    overflow: visible;
-    padding-right: 0;
 
-    a {
-      padding-right: 0.8em;
-    }
 
-    > a {
-      padding-right: 1.6em;
-      position: relative;
-      transition: all 0.2s ease-in-out;
-      @include media ($medium) {
-        margin-right: $navigation-submenu-padding;
-      }
 
-      &::after {
-        content: "›";
-        font-size: 1.2em;
-        position: absolute;
-        right: $navigation-submenu-padding / 2;
-      }
-    }
-    &:focus > .submenu,
-    &:hover > .submenu {
-      display: block;
-    }
+/// Drop down menu v2
+// http://refills.bourbon.io/components/
 
-    @include media ($medium) {
-      padding-right: 0.8em;
-      position: relative;
-    }
+.dropdown-container {
+  display: inline-block;
+  position: relative;
+  text-align: center;
 }
 
-li.more.nav-link {
+.dropdown-description {
+  background: $dropdown-background;
+  border-bottom: $dropdown-border;
+  border-bottom-left-radius: $base-border-radius;
+  border-left: $dropdown-border;
+  border-top-left-radius: $base-border-radius;
+  border-top: $dropdown-border;
+  color: $dropdown-description-color;
+  float: left;
+  //font-size: 0.7em;
+  //line-height: $dropdown-height;
+  margin: 0;
+  padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
 
-    padding-right: 0;
-
-    @include media ($medium) {
-      padding-right: $navigation-submenu-padding;
-    }
-
-    > ul > li:first-child a  {
-      padding-top: 1em;
-    }
-
-    a {
-      margin-right: $navigation-submenu-padding;
-    }
-
-    > a {
-      padding-right: 0.6em;
-    }
-
-    > a::after {
-      @include position(absolute, auto -0.4em auto auto);
-      color: $navigation-color;
-      content: "\25BE";
-    }
+  @include media($large-screen) {
+    font-size: 1em;
+  }
 }
 
+.dropdown-button {
+  cursor: pointer;
+  //float: right;
+  //line-height: $dropdown-height;
+  //margin: 0;
+  padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
+  position: relative;
 
-ul.submenu {
-    padding-left: 0;
-
-    @include media ($medium) {
-      left: -7em;
-      position: absolute;
-      top: 1em;
-    }
-
-    .submenu {
-        @include media ($medium) {
-            left: $navigation-submenu-width - 0.2em;
-            top: 0;
-        }
-    }
-    li {
-        display: block;
-        padding-right: 0;
-        line-height: 2em;
-        &:last-child > a {
-            padding-bottom: 0.7em;
-        }
-
-        a {
-            background-color: $navigation-background;
-            display: inline-block;
-            width: 100%;
-            transition: all 0.2s ease-in-out;
-            text-decoration: none;
-            @include media ($medium) {
-              padding-left: 1em;
-              text-align: left;
-              width: $navigation-submenu-width;
-            }
-            &:hover,
-            &:active,
-            &:focus {
-                transition: all 0.2s ease-in-out;
-                background-color: $white;
-                text-decoration: none;
-            }
-        }
-    } // end li
+  @include media($large-screen) {
+    font-size: 1em;
+    padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
+  }
 }
 
-.menu__container {
-    display: inline-block;
+.dropdown-button:hover {
+  //background-color: $dropdown-background-hover;
 }
 
-.menuclick {
-    display: none;
-    position: relative;
-    transition: all 0.2s ease-in-out;
-    .menu__container.is-active &,
-    .menu__container.is-hovered & {
-        display: block;
-        @include media ($medium) {
-            display: inline-block;
-        }
-    }
+.dropdown-button::after {
+  color: $base-font-color;
+  content: "\25BE";
+  display: block;
+  position: absolute;
+  right: $dropdown-padding;
+  top: $dropdown-arrow-top-distance;
+  @include media($large-screen) {
+    right: $dropdown-padding / 2;
+  }
 }
 
-.menu__button {
-    font-weight: 700;
-    &:hover {
-        opacity: 0.8;
+.dropdown-menu {
+  background: $dropdown-background;
+  border: $dropdown-border;
+  border-radius: $base-border-radius;
+  box-shadow: 0 2px 2px transparentize(black, 0.8);
+  color: $dropdown-color;
+  cursor: pointer;
+  display: none;
+  margin: 0;
+  overflow: visible;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: $dropdown-distance-from-menu;
+  transition: all 0.2s ease-in-out;
+  width: 228px;
+  z-index: 99999;
+
+  &::before {
+    @include position(absolute, 0 0 0 0);
+    color: $dropdown-background;
+    content: "\25b2";
+    font-size: 1.4em;
+    pointer-events: none;
+    text-shadow: 0 -2px 2px transparentize(black, 0.7);
+    top: -0.7em - $dropdown-padding / 2;
+    @include media($large-screen) {
+      right: 1em;
+      top: -0.8em;
     }
-    .menu__container.is-active & {
-        color: #333;
-    }
+  }
 }
+
+.dropdown-menu li {
+  border-bottom: $dropdown-inner-border;
+  color: $dropdown-color;
+  list-style: none;
+  padding: $dropdown-padding / 2;
+}
+
+.dropdown-menu li:hover {
+  background: $dropdown-background-hover;
+}
+
+.dropdown-menu li:first-child {
+  border-top-left-radius: $base-border-radius;
+  border-top-right-radius: $base-border-radius;
+}
+
+.dropdown-menu li:last-child {
+  border: 0;
+  border-bottom-left-radius: $base-border-radius;
+  border-bottom-right-radius: $base-border-radius;
+}
+
+.show-menu {
+  display: block;
+}
+
+// Inspired by code by www.HUSAMUI.com

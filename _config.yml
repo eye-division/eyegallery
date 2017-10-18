@@ -17,7 +17,7 @@ description: Demo Eye Gallery site
 # root of your server.
 baseurl: ""
 # the base hostname & protocol for your site
-url: "http://black-hare.cloudvent.net/"
+url: "http://black-hare.cloudvent.net"
 logo: "/assets/logo.png"
 email: a.ward@eyedivision.com
 
@@ -109,7 +109,7 @@ social:
 
   - name: Twitter
     icon: icon-twitter_sign
-    username: '@eyedivision'
+    username: '@EyeDivision'
     url: https://twitter.com/EyeDivision
     desc: Follow us on Twitter
     share: true

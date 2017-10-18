@@ -16,7 +16,7 @@
         }
       });
     });
-
+    // Drop down v1
     $(function() {
       $('#menu__button').on('click touchstart', function(e) {
         e.preventDefault();
@@ -24,6 +24,18 @@
       });
 
     });
+    // Drop down v2 - Bourbon
+    $(".dropdown-button").click(function() {
+      var $button, $menu;
+      $button = $(this);
+      $menu = $button.siblings(".dropdown-menu");
+      $menu.toggleClass("show-menu");
+      $menu.children("li").click(function() {
+        $menu.removeClass("show-menu");
+        $button.html($(this).html());
+      });
+    });
+
 
     // Lightbox2 options
     lightbox.option({
@@ -31,7 +43,7 @@
     });
 
     // fitvid on embed
-    //$('.media').fitVids();
+    $('.media').fitVids();
 
     // flexslider
     $('.flexslider').flexslider({
