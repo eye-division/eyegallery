@@ -3,7 +3,7 @@
   $(document).ready(function() {
 
     // Syntax highlighting
-    hljs.initHighlightingOnLoad();
+    //hljs.initHighlightingOnLoad();
 
     // Header
     var menuToggle = $('#js-mobile-menu').unbind();

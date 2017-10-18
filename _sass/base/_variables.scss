@@ -1,10 +1,9 @@
 // Google Fonts
-// @import url(//fonts.googleapis.com/css?family=Roboto+Slab:400,700,300|Roboto:400,700,300|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300);
-
+@import url(//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300|Lato:300,400);
 /// Typography
-$base-font-family: ('Georgia', 'Helvetica Neue', 'Helvetica', 'verdana', 'Arial', sans-serif); // $helvetica;
-$heading-font-family: ('Georgia', 'Helvetica Neue', 'Helvetica', 'verdana', 'Arial', sans-serif); // $base-font-family;
-$subheading-font-family: ('Georgia', 'Helvetica Neue', 'Helvetica', 'verdana', 'Arial', sans-serif);
+$base-font-family: ('Open Sans',  'Helvetica Neue', 'Helvetica', 'verdana', 'Arial', sans-serif); // $helvetica;
+$heading-font-family: ('Lato', 'Helvetica Neue', 'Helvetica', 'verdana', 'Arial', sans-serif); // $base-font-family;
+$subheading-font-family: ('Lato', 'Helvetica Neue', 'Helvetica', 'verdana', 'Arial', sans-serif);
 // Font Sizes
 $base-font-size: $em-base; // 16px
 
@@ -72,11 +71,6 @@ $aaa-link: rgb(51, 68, 221);
 $aaa-hover: rgb(181, 0, 16);
 $aaa-visited: rgb(128, 65, 128);
 
-// navigation colours
-$navigation-color: $black;
-$navigation-color-hover: $medium-gray;
-$navigation-active-link-color: transparentize(white, 0.5);
-
 // Gallery image hover
 $gallery-image-hover-opacity: 0.7;
 $gallery-image-hover-color: $medium-gray;
@@ -86,17 +80,18 @@ $base-border-color: $medium-gray;
 $base-border: 1px solid $base-border-color;
 $base-border-radius: 3px !default;
 
-
 // navigation
 $navigation-padding: 1em;
 $navigation-background: $kbgray;
-
 $navigation-height: 30px;
 $navigation-submenu-padding: 1em;
 $navigation-submenu-width: 15em;
+// navigation colours
+$navigation-color: $black;
+$navigation-color-hover: $medium-gray;
+$navigation-active-link-color: transparentize(white, 0.5);
 
 /// Forms
 $form-box-shadow: inset 0 1px 3px rgba(rgb(0, 0, 0), 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
-
 

@@ -5,7 +5,7 @@
 .navigation {
     margin: 0;
     @include outer-container;
-    padding: 0 1em;
+    padding: 1em 1em 0;
     background-color: $white;
 }
 /// Nav menu
@@ -19,7 +19,7 @@
 /// small view
 .navigation-menu-button {
     display: block;
-    float: right;
+    text-align: right;
     margin: 0;
     font-size: 1.5em;
     padding-top: 0.5em;
@@ -46,7 +46,7 @@
 }
 .menu-title {
     font-size: 0.9em;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 nav {
