@@ -17,6 +17,16 @@ body {
     height: 100%;
     @include display(flex);
     @include flex-direction(column);
+    // grid setup
+    display: grid;
+    grid-template-areas:
+      "header"
+      "page"
+      "footer";
+    grid-template-rows: minmax(180px, 10%) 1fr 20%;
+    grid-gap: 10px;
+    height: 100vh;
+    margin: 0;
     background-color: $base-background-color;
 }
 
@@ -24,9 +34,15 @@ body {
     @include flex(none);
     //@include flex(1 0 auto);
 }
-
+.navigation {
+    grid-area: header;
+}
+.site-footer {
+    grid-area: footer;
+}
 .page-content {
     @include flex(1 0 auto);
+    grid-area: page;
 }
 
 section {
@@ -65,11 +81,10 @@ figure {
 
 .page-content {
 
-    @include outer-container;
-    padding: 1em;
-    background-color: $white;
-    .home, .page {
-
+    .page {
+        @include outer-container;
+        padding: 1em;
+        background-color: $white;
         @include media ($medium) {
             padding: 1em 0;
         }

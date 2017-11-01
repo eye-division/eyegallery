@@ -2,7 +2,7 @@
 
 .flexslider {
   margin: 0;
-  background: $white;
+  background: transparent;
   //border: 4px solid $white;
   position: relative;
   zoom: 1;
@@ -40,6 +40,7 @@
 }
 .flex-direction-nav a {
   text-decoration: none;
+  line-height: 1;
   display: block;
   width: 40px;
   height: 40px;
@@ -59,14 +60,15 @@
   transition: all 0.3s ease-in-out;
 }
 .flex-direction-nav a:before {
-  font: normal normal normal 36px/1 FontAwesome;
+  font-family: "flexslider-icon";
+  font-size: 40px;
   display: inline-block;
-  content: '\f053';
+  content: '\f001';
   color: $white; //rgba(255, 255, 255, 0.8);
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 1);
 }
 .flex-direction-nav a.flex-next:before {
-  content: '\f054';
+  content: '\f002';
 }
 .flex-direction-nav .flex-prev {
   left: -50px;
@@ -189,7 +191,7 @@
 }
 /// RESPONSIVE
 
-@media screen and (max-width: 860px) {
+@include media ($medium) {
   .flex-direction-nav .flex-prev {
     opacity: 1;
     left: 10px;
@@ -197,25 +199,5 @@
   .flex-direction-nav .flex-next {
     opacity: 1;
     right: 10px;
-  }
-}
-
-/* caption */
-.flex-caption {
-  position: absolute;
-  //width: 100%;
-  left: 0;
-  bottom: 0;
-  margin-bottom: 0;
-  margin-right: 10px;
-  padding: 10px;
-  background: rgba(41,57,117,0.8);
-  color: $white;
-  font-size: large;
-  a {
-    color: $white;
-    &:hover {
-      text-decoration: none;
-    }
   }
 }

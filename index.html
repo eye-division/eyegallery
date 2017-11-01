@@ -2,8 +2,8 @@
 layout: home
 carousel:
   - image: /assets/images/advert-customers.jpg
-    caption:
-    link:
+    caption: "A test caption"
+    link: /gallery/test/
   - image: /assets/images/advert-impregnable.jpg
     caption:
     link:
@@ -61,16 +61,16 @@ _comments:
         {% endif %}
           <a href="{{ section.url | prepend: site.baseurl }}">
             <div class="scrim has-cover">
-            <article class="gallery">
-              <header class="gallery-header">
-                <h2 class="title">{{ section.frontpagetitle }}</h2>
-              </header>
-              {% if section.description_markdown %}
-                <p>{{ section.description_markdown | markdownify }}<br>
-                <span class="readmore">Read more <span>{{nextPost.title}} <svg class="icon"><use xlink:href="#icon-double_angle_right" /></svg></span>
-                </p>
-              {% endif %}
-          </article>
+              <article class="gallery--front">
+                <header class="gallery-header">
+                  <h2 class="title">{{ section.frontpagetitle }}</h2>
+                </header>
+                {% if section.homepage_description_markdown: %}
+                  {{ section.homepage_description_markdown:  | markdownify }}<br>
+                  <span class="readmore">Read more <span>{{nextPost.title}} <svg class="icon"><use xlink:href="#icon-double_angle_right" /></svg></span>
+
+                {% endif %}
+            </article>
           </div>
           </a>
         </section>
@@ -80,23 +80,21 @@ _comments:
     {% endfor %}
 
       <!-- Galleries -->
-
-      {% for gallery in site.gallery %}
-        {% if gallery.frontpage %}
-          <section class="gallery-cover {% if gallery.main_image_path %}has-cover{% endif %}" {% if gallery.main_image_path %}style="background-image: url({{ gallery.main_image_path | prepend: gallery.baseurl }});"{% endif %}>
-            <a href="{{ gallery.url }}">
-              <div class="scrim {% if gallery.main_image_path %}has-cover{% endif %}">
-              <article class="gallery">
-                <header class="gallery-header">
-                  <h2 class="title">{{ gallery.title }}</h2>
-                </header>
-                {% if gallery.homepage_markdown %}
-                  <p>{{ gallery.homepage_markdown | markdownify }}</p>
-                {% endif %}
-            </article>
-            </div>
-          </a>
-        </section>
-        {% endif %}
-      {% endfor %}
-
+    {% for gallery in site.gallery %}
+      {% if gallery.frontpage %}
+        <section class="gallery-cover {% if gallery.main_image_path %}has-cover{% endif %}" {% if gallery.main_image_path %}style="background-image: url({{ gallery.main_image_path | prepend: gallery.baseurl }});"{% endif %}>
+          <a href="{{ gallery.url }}">
+            <div class="scrim {% if gallery.main_image_path %}has-cover{% endif %}">
+            <article class="gallery--front">
+              <header class="gallery-header">
+                <h2 class="title">{{ gallery.title }}</h2>
+              </header>
+              {% if gallery.homepage_description_markdown:  %}
+                {{ gallery.homepage_description_markdown:  | markdownify }}
+              {% endif %}
+          </article>
+          </div>
+        </a>
+      </section>
+      {% endif %}
+    {% endfor %}

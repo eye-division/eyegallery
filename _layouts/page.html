@@ -21,5 +21,21 @@ layout: default
     {{ content }}
   </article>
 
+  {% if page.images[0].image_path %}
+    <section class="gallery">
+      {% for image in page.images %}
+        {% if image.image_path %}
+        <div class="gallery-box {% cycle 'alpha', '', 'last' %}">
+            {% include img.html src=image.image_path width=1200 alt=image.image_description %}
+          <caption>{{ image.image_title }}</caption>
+          {% if image.image_description %}
+            <p>{{ image.image_description }}</p>
+          {% endif %}
+        </div>
+        {% endif %}
+      {% endfor %}
+    </section>
+  {% endif %}
+
 </div>
 

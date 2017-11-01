@@ -29,6 +29,12 @@
     // align-items: flex-end; // align bottom
     @include flex-wrap(wrap);
 
+    // now, woah there, make it a grid like it's 2017
+
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
     @include media ($medium) {
         //@include outer-container;
     }
@@ -89,4 +95,13 @@
     @include media ($medium) {
         @include omega();
     }
+}
+/// Remove widths for grids
+@supports (display: grid) {
+  .gallery-box-50,
+  .gallery-box,
+  .gallery-box-large,
+  .gallery-box-home {
+    width: auto;
+  }
 }

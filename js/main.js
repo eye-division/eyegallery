@@ -16,14 +16,7 @@
         }
       });
     });
-    // Drop down v1
-    $(function() {
-      $('#menu__button').on('click touchstart', function(e) {
-        e.preventDefault();
-        $('#menu__container').toggleClass('is-active').removeClass('is-hovered');
-      });
 
-    });
     // Drop down v2 - Bourbon
     $(".dropdown-button").click(function() {
       var $button, $menu;
