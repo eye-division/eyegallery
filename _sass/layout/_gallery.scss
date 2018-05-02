@@ -22,12 +22,12 @@
 
 .gallery {
     /// make it a flexbox so items can be aligned vertically
-    @include display(flex);
+    /*@include display(flex);
     @include align-items(flex-start);
     @include flex-direction(row);
 
     // align-items: flex-end; // align bottom
-    @include flex-wrap(wrap);
+    @include flex-wrap(wrap);*/
 
     // now, woah there, make it a grid like it's 2017
 
@@ -35,9 +35,6 @@
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 
-    @include media ($medium) {
-        //@include outer-container;
-    }
 
     a {
         img {
@@ -70,30 +67,30 @@
 .gallery-box-large {
     padding-bottom: 1em;
     text-align: center;
-    @include media ($medium) {
-        @include span-columns(4);
+    @include grid-media ($medium) {
+        @include grid-column(4);
     }
 }
 .gallery-box-50 {
     padding-bottom: 1em;
     text-align: center;
-    @include media ($medium) {
-        @include span-columns(6);
+    @include grid-media ($medium) {
+        @include grid-column(6);
     }
 }
 .gallery-box-home {
-    @include media ($medium) {
-        @include span-columns(6);
+    @include grid-media ($medium) {
+        @include grid-column(6);
     }
 }
 .alpha {
-    @include media ($medium) {
+    @include grid-media ($medium) {
         clear: both;
     }
 }
 .last {
-    @include media ($medium) {
-        @include omega();
+    @include grid-media ($medium) {
+        //@include omega();
     }
 }
 /// Remove widths for grids

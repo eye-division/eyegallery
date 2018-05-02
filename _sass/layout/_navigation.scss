@@ -4,14 +4,14 @@
 
 .navigation {
     margin: 0;
-    @include outer-container;
+    @include grid-container;
     padding: 1em 1em 0;
     background-color: $white;
     z-index: 99; // to cover over flexslider
 }
 /// Nav menu
 .navigation-wrapper {
-    //@include outer-container;
+    //@include grid-container;
     @include clearfix;
     position: relative;
     background-color: $white;
@@ -41,7 +41,7 @@
             fill : tint($navigation-color,20%);
         }
     }
-    @include media ($medium) {
+    @include grid-media ($medium) {
         display: none;
     }
 }
@@ -52,7 +52,7 @@
 
 nav {
     float: right;
-    @include media ($medium) {
+    @include grid-media ($medium) {
         float: none;
         line-height: 1.5em;
     }
@@ -66,7 +66,7 @@ ul.navigation-menu {
     overflow: visible;
     padding: 0;
     width: 100%;
-    @include media ($medium) {
+    @include grid-media ($medium) {
         display: block;
         margin: 0;
         padding: 0;
@@ -83,7 +83,7 @@ li.nav-link {
     text-align: right;
     width: 100%;
     padding: 0.25em 0;
-    @include media ($medium) {
+    @include grid-media ($medium) {
         background: transparent;
         display: inline;
         text-decoration: none;
@@ -92,7 +92,7 @@ li.nav-link {
     a {
         color: $navigation-color;
         display: inline-block;
-        @include media ($medium) {
+        @include grid-media ($medium) {
             padding-right: 1.5em;
         }
         &:hover {
@@ -102,7 +102,7 @@ li.nav-link {
     }
 
     &:last-child a {
-        @include media ($medium) {
+        @include grid-media ($medium) {
             padding-right: 1em;
         }
     }
@@ -139,7 +139,7 @@ li.active {
   margin: 0;
   padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
 
-  @include media($large-screen) {
+  @include grid-media($large) {
     font-size: 1em;
   }
 }
@@ -152,7 +152,7 @@ li.active {
   padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
   position: relative;
 
-  @include media($large-screen) {
+  @include grid-media($large) {
     font-size: 1em;
     padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
   }
@@ -169,7 +169,7 @@ li.active {
   position: absolute;
   right: $dropdown-padding;
   top: $dropdown-arrow-top-distance;
-  @include media($large-screen) {
+  @include grid-media($large) {
     right: $dropdown-padding / 2;
   }
 }
@@ -200,7 +200,7 @@ li.active {
     pointer-events: none;
     text-shadow: 0 -2px 2px transparentize(black, 0.7);
     top: -0.7em - $dropdown-padding / 2;
-    @include media($large-screen) {
+    @include grid-media($large) {
       right: 1em;
       top: -0.8em;
     }

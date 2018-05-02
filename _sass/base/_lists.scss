@@ -1,36 +1,19 @@
 ul,
 ol {
-
-  &%default-ul,
-  &%default-ol {
-  	list-style-type: none;
-	  margin: 0;
-	  padding: 0;
-  }
-  
-}
-
-ul {
-	list-style-type: disc;
-  margin-bottom: $small-spacing;
-  padding-left: $base-spacing;
-}
-
-ol {
-	list-style-type: decimal;
-  margin-bottom: $small-spacing;
-  padding-left: $base-spacing;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 dl {
-  margin-bottom: $small-spacing;
+  margin: 0;
+}
 
-  dt {
-    font-weight: bold;
-    margin-top: $small-spacing;
-  }
+dt {
+  font-weight: 600;
+  margin: 0;
+}
 
-  dd {
-    margin: 0;
-  }
+dd {
+  margin: 0;
 }

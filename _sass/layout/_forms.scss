@@ -4,7 +4,7 @@
 
 
 input {
-    @include media ($medium) {
+    @include grid-media ($medium) {
         width: 50%;
     }
 }

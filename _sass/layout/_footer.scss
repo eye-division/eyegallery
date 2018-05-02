@@ -3,11 +3,11 @@
 // -----------------------------------------------------------------------------
 
 .site-footer {
-    @include outer-container;
+    @include grid-container;
     padding: 1em;
     background-color: $white;
     .wrapper {
-        @include outer-container;
+        @include grid-container;
         padding: 0 1em;
     }
     a {
@@ -27,13 +27,13 @@
 ///  Site Navigation (left)
 
 .site-navigation {
-    @include span-columns(12);
-    @include media ($small) {
-        @include span-columns(6);
+    @include grid-column(12);
+    @include grid-media ($small) {
+        @include grid-column(6);
     }
     font-size: 0.9em;
     ul {
-        @extend %default-ul;
+        @extend %default-ul !optional;
     }
 }
 
@@ -42,9 +42,9 @@
 .site-signature {
     margin-top: 1em;
     text-align: center;
-    @include span-columns(12);
-    @include media ($medium) {
-        @include span-columns(6);
+    @include grid-column(12);
+    @include grid-media ($medium) {
+        @include grid-column(6);
         margin-right: 0;
         margin-top: 0;
     }
@@ -58,9 +58,9 @@
 
 .site-contact {
     margin-top: 1em;
-    @include span-columns(12);
-    @include media ($small) {
-        @include span-columns(6);
+    @include grid-column(12);
+    @include grid-media ($small) {
+        @include grid-column(6);
         margin-top: 0;
         margin-right: 0;
     }
@@ -71,7 +71,7 @@
         text-align: center;
     }
     ul {
-        @extend %default-ul;
+        @extend %default-ul !optional;
     }
 }
 .site-copyright {

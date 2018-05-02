@@ -4,7 +4,7 @@
 
 
 .product-description {
-  @include media($medium) {
+  @include grid-media ($medium) {
     width: 400px;
   }
   padding: 25px;
@@ -22,18 +22,18 @@
   box-shadow: 0 0 0 0;
 }
 .product-details {
-  @include media($medium) {
-    display: flex;
-    flex-direction: row;
+  @include grid-media ($medium) {
+    /*display: flex;
+    flex-direction: row;*/
     justify-content: center;
     align-items: center;
   }
 }
 
 .product {
-  @include media($small) {
-    display: flex;
-    flex-direction: column;
+  @include grid-media ($small) {
+    /*display: flex;
+    flex-direction: column;*/
     align-items: center;
     justify-content: center;
   }

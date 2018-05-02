@@ -1,24 +1,23 @@
-// Google Fonts
-@import url(//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300|Lato:300,400);
-/// Typography
-$base-font-family: ('Open Sans',  'Helvetica Neue', 'Helvetica', 'verdana', 'Arial', sans-serif); // $helvetica;
-$heading-font-family: ('Lato', 'Helvetica Neue', 'Helvetica', 'verdana', 'Arial', sans-serif); // $base-font-family;
+// Typography
+$base-font-family: $font-stack-system;
+$heading-font-family: $base-font-family;
 $subheading-font-family: ('Lato', 'Helvetica Neue', 'Helvetica', 'verdana', 'Arial', sans-serif);
-// Font Sizes
-$base-font-size: $em-base; // 16px
 
-// Adjust modular scale ratio
-$modular-scale-ratio: $minor-third;
-
-/// Line height
-$base-line-height: 1.8;
-$heading-line-height: 1.8;
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
 
 // Other Sizes
 $base-border-radius: 3px;
-$base-spacing: $base-line-height * $em-base;
+$base-spacing: 1.5em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
+
+// Colors
+$blue: #1565c0;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
 
 /// Colors
 $black: rgb(17, 17, 17);
@@ -28,13 +27,13 @@ $light-gray: rgb(221, 221, 221);
 $white: rgb(255, 255, 255);
 $kbgray: rgb(229, 229, 229);
 // Flat UI Colors. For more, see http://flatuicolors.com/
-$turquoise: rgb(26, 188, 156);	// Turqoise
-$green: rgb(39, 174, 96);	  	// Nephritis
-$blue: rgb(41, 128, 185);				// Belize Hole
-$purple: rgb(142, 68, 173);			// Wisteria
-$orange: rgb(211, 84, 0);			// Pumpkin
-$red:	rgb(192, 57, 43);				// Pomegranate
-$gray: rgb(127, 140, 141);				// Asbestos
+$turquoise: rgb(26, 188, 156);  // Turqoise
+$green: rgb(39, 174, 96);     // Nephritis
+$blue: rgb(41, 128, 185);       // Belize Hole
+$purple: rgb(142, 68, 173);     // Wisteria
+$orange: rgb(211, 84, 0);     // Pumpkin
+$red: rgb(192, 57, 43);       // Pomegranate
+$gray: rgb(127, 140, 141);        // Asbestos
 $dark-gray: rgb(51, 51, 51) !default;
 
 // Social Media Brand Colors */
@@ -59,12 +58,34 @@ $yahoo: rgb(123, 0, 153);
 $blogger: rgb(251, 143, 61);
 $soundcloud: rgb(255, 58, 0);
 
+// Font Colors
+$base-font-color: $dark-gray;
+$action-color: $blue;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$viewport-background-color: #fff;
+
+// Focus
+$focus-outline-color: transparentize($action-color, 0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 2px;
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+// OLD THINGS to be removed
 // Font colours
 $base-background-color: rgb(255, 255, 255);
 $base-font-color: $dark-gray;
 
-// link colours
-$action-color: $black;
+$base-border-radius: 3px !default;
+
 $highlight-color: tint($action-color, 33%);
 // Accessible link colours
 $aaa-link: rgb(51, 68, 221);
@@ -74,12 +95,6 @@ $aaa-visited: rgb(128, 65, 128);
 // Gallery image hover
 $gallery-image-hover-opacity: 0.7;
 $gallery-image-hover-color: $medium-gray;
-
-// Borders
-$base-border-color: $medium-gray;
-$base-border: 1px solid $base-border-color;
-$base-border-radius: 3px !default;
-
 // navigation
 $navigation-padding: 1em;
 $navigation-background: $kbgray;
@@ -107,3 +122,34 @@ $dropdown-arrow-top-distance: 0;
 $form-box-shadow: inset 0 1px 3px rgba(rgb(0, 0, 0), 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
 
+
+
+// Neat Breakpoints
+/*$medium-screen: em(640);
+$large-screen: em(860);
+
+$medium-screen-up: new-breakpoint(min-width $medium-screen 4);
+$large-screen-up: new-breakpoint(min-width $large-screen 8);
+*/
+// breakpoints - still required?
+
+//$small: 480px;
+//$medium: 768px;
+//$large: 960px;
+
+// converted to Neat 2
+$medium: (
+  columns: 5,
+  gutter: 2rem,
+  media: "(min-width: 768px)",
+);
+$small: (
+  columns: 1,
+  gutter: 2rem,
+  media: "(min-width: 488px)",
+);
+$large: (
+  columns: 8,
+  gutter: 2rem,
+  media: "(min-width: 960px)",
+);

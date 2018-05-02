@@ -191,7 +191,7 @@
 }
 /// RESPONSIVE
 
-@include media ($medium) {
+@include grid-media ($medium) {
   .flex-direction-nav .flex-prev {
     opacity: 1;
     left: 10px;

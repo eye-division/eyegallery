@@ -5,7 +5,7 @@
 .front {
 
     .page-content {
-        @include outer-container(100%);
+        @include grid-container;
     }
     .scrim {
         padding: 0 0 20em 0;

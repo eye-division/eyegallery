@@ -3,10 +3,8 @@
 Eye Gallery from [Eye Division][ed] is a (work in progress) base theme and configuration for [Jekyll](http://jekyllrb.com/), based on Bourbon and Neat. It is a fork of the [Centratrium][centrarium] custom theme by [Ben Centra][bencentra].
 
 Built with these awesome libraries: 
-* [Bourbon][bourbon] 
-* [Neat][neat]
-* [Bitters][bitters]
-* [Refills][refills]
+* [Bourbon][bourbon] v5 - May 2018
+* [Neat][neat] - v 2.1.0 - May 2018
 * [Font Awesome][fontawesome]
 * [HighlightJS][highlightjs]
 * [Lightbox2][lightbox]
@@ -32,7 +30,6 @@ This theme comes with a number of features, including:
 * Better Bourbon Buttons Neato add-on
 * Designed for use on CloudCannon hosting for customer editing
 * uses imgIX as image CDN on staging and production
-
 
 
 ## Installation
@@ -76,7 +73,7 @@ Here are the important variables from `base/_variables.scss` you can tweak to cu
 
 * `$base-font-family`: The font-family of the body text. Make sure to `@import` any new fonts!
 * `$heading-font-family`: The font-family of the headers. Make sure to `@import` any new fonts!
-* `$base-font-size`: The base font-size. Defaults to $em-base from Bourbon (`bourbon/settings/_px-to-em.scss`).
+* `$base-font-size`: The base font-size. 
 * `$base-font-color`: The color for the body text.
 * `$action-color`: The color for links in the body text. 
 * `$highlight-color`: The color for the footer and page headers (when no cover image provided).
