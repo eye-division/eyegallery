@@ -1,9 +1,9 @@
 # Eye Gallery
 
-Eye Gallery from [Eye Division][ed] is a (work in progress) base theme and configuration for [Jekyll](http://jekyllrb.com/), based on Bourbon and Neat. It is a fork of the [Centratrium][centrarium] custom theme by [Ben Centra][bencentra].
+Eye Gallery from [Eye Division][ed] is a (work in progress) base theme and configuration for [Jekyll](http://jekyllrb.com/), based on Bourbon and Neat. It is a fork of the [Centratrium][centrarium] custom theme by [Ben Centra][bencentra]. Props to [Neil C Smith](neilcsmith) for the original forkage.
 
 Built with these awesome libraries: 
-* [Bourbon][bourbon] v5 - May 2018
+* [Bourbon][bourbon] v 5 - May 2018
 * [Neat][neat] - v 2.1.0 - May 2018
 * [Font Awesome][fontawesome]
 * [HighlightJS][highlightjs]
@@ -48,7 +48,7 @@ Don't forget to install Jekyll and other dependencies:
 cd eyegallery
 # install Bundler if you don't have it already
 gem install bundler
-# install jekyll, jekyll-archives, and jekyll-sitemap
+# install jekyll and jekyll-sitemap
 bundle install
 ```
 
@@ -97,8 +97,6 @@ All configuration options can be found in `_config.yml`.
 ### Build Settings
 
 * __markdown:__ Markdown parsing engine. Default is kramdown.
-* __paginate:__ Number of posts to include on one page.
-* __paginate_path:__ URL structure for pages.
 * __inter_post_navigation:__ Whether to render links to the next and previous post on each post.
 
 A sitemap is also generated using [jekyll-sitemap][sitemap].
@@ -171,7 +169,7 @@ Usage:
 
 ## License
 
-MIT. See [LICENSE.MD](https://github.com/eye-division/neat-whiskey/blob/master/LICENSE.md).
+MIT. See [LICENSE.MD](https://github.com/eye-division/eyegallery/blob/master/LICENSE.md).
 
 [centrarium]: https://github.com/bencentra/centrarium
 [bencentra]: http://bencentra.com
@@ -182,15 +180,14 @@ MIT. See [LICENSE.MD](https://github.com/eye-division/neat-whiskey/blob/master/L
 [neat]: http://neat.bourbon.io/
 [bitters]: http://bitters.bourbon.io/
 [refills]: http://refills.bourbon.io/
-[fontawesome]: http://fortawesome.github.io/Font-Awesome/
 [highlightjs]: https://highlightjs.org/
 [im]: https://icomoon.io/
 [ix]: https://www.imgix.com/
 [lightbox]: http://lokeshdhakar.com/projects/lightbox2/
 [cover]: https://www.flickr.com/photos/79666107@N00/3796678503/in/photolist-6MuYfc-61Rtft-8XzPmY-a6Cozm-54eSMs-6oMJmk-aepZQq-9YkPHp-fiAEGE-dVP4Z5-oxPyJP-atKUFJ-9YHWA5-9YF2f2-9YF2gR-9YHVGN-9YHVvs-qZYYQ6-4JqP2i-a2peGy-9YHVUm-9YHVF7-9YHVCL-9YF3NK-cYteMo-aiPmb9-69dtAi-9YF21x-4aWpmn-7SLiUL-77pqVX-8vXbYv-4HGDSH-a2h5P1-8LsZrQ-9aj1ez-auPZ7q-9YHVMd-9YF2bi-9YF23D-8LpWpn-9an6KL-9YHVZL-dqZ3Cz-2GuvnX-9YHWUo-9YHVWd-p5Roh5-i1zTbv-6sYrUT
+[neilcsmith]: https://www.neilcsmith.net/
 [disqus]: https://disqus.com/
 [ga]: https://www.google.com/analytics/
 [gr]: https://www.google.com/recaptcha/admin#list
-[archives]: https://github.com/jekyll/jekyll-archives
 [sitemap]: https://github.com/jekyll/jekyll-sitemap
 [sass]: https://sass-guidelin.es/

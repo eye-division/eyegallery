@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2016 Neil C Smith - Eye Division Ltd.
+Copyright (c) 2016 Alun Ward & Neil C Smith - Eye Division Ltd
 Copyright (c) 2015 Ben Centra
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
