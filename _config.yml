@@ -1,9 +1,10 @@
 # External gems - updated to plugins in jekyll v3.6
 plugins:
  # - jekyll-archives # Sorry, not GitHub pages friendly!
-  - jekyll-sitemap
-  - jekyll-assets
-  - autoprefixer-rails
+ # - jekyll-assets
+ # - autoprefixer-rails
+   - jekyll-seo-tag
+   - jekyll-sitemap
 
 #exclude:
 #  - "/vendor/"
@@ -95,16 +96,16 @@ social:
 
   - name: Facebook
     icon: icon-facebook_sign
-    username: eyedivision
+    username: 'eyedivision'
     url: https://www.facebook.com/eyedivision
-    desc: Like on Facebook
+    desc: Like us on Facebook
     share: true
 
   - name: Instagram
     icon: icon-instagram
     username: '@eyedivision'
     url: https://instagram.com/eyedivision
-    desc: Follow me on Instagram
+    desc: Follow us on Instagram
     share: false
 
   - name: Twitter
@@ -116,9 +117,16 @@ social:
 
   - name: Pinterest
     icon: icon-pinterest
-    username:
-    url: http://uk.pinterest.com/
-    desc: Follow me on Pinterest
+    username: 'eyediv'
+    url: https://www.pinterest.co.uk/eyediv/
+    desc: Follow us on Pinterest
+    share: true
+
+  - name: linkedin
+    icon: icon-linkedin_sign
+    username: 'eye-division-ltd'
+    url: https://www.linkedin.com/company/eye-division-ltd/
+    desc: Connect with us on LinkedIn
     share: true
 
 # Social sharing protocols

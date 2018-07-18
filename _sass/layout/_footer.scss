@@ -2,8 +2,9 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 
-.site-footer {
+.site--footer {
     @include grid-container;
+    @include grid-visual;
     padding: 1em;
     background-color: $white;
     .wrapper {
@@ -26,7 +27,7 @@
 
 ///  Site Navigation (left)
 
-.site-navigation {
+.site--navigation {
     @include grid-column(12);
     @include grid-media ($small) {
         @include grid-column(6);
@@ -39,11 +40,11 @@
 
 ///   Site Description/Signature (right)
 
-.site-signature {
+.site--signature {
     margin-top: 1em;
     text-align: center;
     @include grid-column(12);
-    @include grid-media ($medium) {
+    @include grid-media ($small) {
         @include grid-column(6);
         margin-right: 0;
         margin-top: 0;
@@ -56,7 +57,7 @@
 
 ///   Contact Info (center)
 
-.site-contact {
+.site--contact {
     margin-top: 1em;
     @include grid-column(12);
     @include grid-media ($small) {
@@ -74,7 +75,7 @@
         @extend %default-ul !optional;
     }
 }
-.site-copyright {
+.site--copyright {
     margin-top: 1em;
     text-align: center;
 }

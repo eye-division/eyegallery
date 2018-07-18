@@ -5,8 +5,6 @@
 /// logo
 .logo {
     display: block;
-    color: $base-font-color;
-    text-shadow: 0 2px 1px rgba(0,0,0,0.8) !important;
     //background: rgba($navigation-color, 0.8);
     padding: 0 0.5em;
     //float: left;
@@ -15,24 +13,34 @@
     span {
         font-size: 1.25em;
     }
-    h1 {
-        margin-bottom: 0;
-    }
-    .subtitle {
-        color: $base-font-color;
-        font-family: $subheading-font-family;
-        font-weight: 400;
-        font-style: italic;
-        font-size: modular-scale(3);
-    }
+
     &:active,
     &:focus,
     &:hover {
         text-decoration: none;
-        //color: shade($link-color, 10%);
+        color: $navigation-color-hover;
     }
     &:active,
     &:focus {
         outline: none;
     }
+}
+.logo--header {
+    font-family: $site-title-font-family;
+    color: $medium-gray;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: modular-scale(2);
+    @include grid-media ($small) {
+        font-size: modular-scale(5);
+    }
+}
+.subtitle {
+    color: $base-font-color;
+    font-family: $subheading-font-family;
+    font-weight: 400;
+    font-style: italic;
+    font-size: modular-scale(3);
 }

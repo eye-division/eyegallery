@@ -8,10 +8,15 @@
     width: 100%;
 
 }
-.has-cover {
+.has--cover {
     background-position: 50% 50%;
-    background-size: cover;
-    .title {
-        font-size: modular-scale(4);
-    }
+    background-size: contain;
+
+}
+.cover--title {
+   font-size: modular-scale(4);
+   font-family: $site-title-font-family;
+   color: $black;
+   font-weight: 700;
+   padding-top: 0.8em;
 }

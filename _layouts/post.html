@@ -2,89 +2,105 @@
 layout: default
 ---
 <div class="page">
-  <header id="content-header">
-    <section id="page-title">
-      <h2>{{ page.title }}</h2>
+  <header>
+    <section>
+      <h1 class="post--title">{{ page.title }}</h1>
+      {% if page.showdate %}
+        <div class="post--date">
+         {{ page.date | date: "%B %-d, %Y" }}
+        </div>
+      {% endif %}
     </section>
   </header>
+ 
+  {% if page.main_image_path %}
+    <figure>
+    {% assign alt_text = page.title %}
+    {% if page.image_caption %} {% assign alt_text = page.image_caption %} {% endif %}
+    {% include img.html src=page.main_image_path alt=alt_text %}
+    </figure>
+  {% endif %}
 
-  <section id="content">
+    <section class="main--content">
+      {{ content | markdownify }}
 
-    <section class="main-content">
-      {{ content }}
     </section>
 
-
     {% if page.images[0].image_path %}
+   
     <section class="gallery">
+      
       {% for image in page.images %}
 
         {% if image.image_path %}
-        <div class="gallery-box {% cycle 'alpha', '', 'last' %}">
-        {% include img.html src=image.image_path alt=image.description %}
-        <caption>{{ image.image_title }}</caption>
-      </div>
-      {% endif %}
-      {% endfor %}
-    </section>
-    {% endif %}
+        <div class="gallery--box {% cycle 'alpha', '', 'last' %}">
+            {% include img.html src=image.image_path alt=image.description %}
+            <caption>{{ image.image_title }}</caption>
+            </div>
+        {% endif %}
 
-  </section>
+      {% endfor %}
+
+    </section>
+    
+    {% endif %}
 
   <section class="rss">
-  <p class="rss-subscribe text"><strong>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></strong></p>
-</section>
+    <p class="rss-subscribe text"><strong>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></strong></p>
+  </section>
 
-<section class="share">
-  <span>Share: </span>
-  {% for social in site.social %}
-    {% capture full_url %}{{ site.url }}{{ site.baseurl }}{{ page.url }}{% endcapture %}
-    {% if social.name == "Twitter" and social.share == true %}
-      <a href="//twitter.com/share?text={{ page.title | cgi_escape }}&url={{ full_url | cgi_escape}}&via={{social.username}}"
-        onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
-        <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
+  <section class="share">
+    
+    <span>Share: </span>
+    {% for social in site.social %}
+      {% capture full_url %}{{ site.url }}{{ site.baseurl }}{{ page.url }}{% endcapture %}
+      {% if social.name == "Twitter" and social.share == true %}
+        <a href="//twitter.com/share?text={{ page.title | cgi_escape }}&url={{ full_url | cgi_escape}}&via={{social.username}}"
+          onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;" class="link--share">
+          <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
 
-      </a>
-    {% endif %}
-    {% if social.name == "Facebook" and social.share == true %}
-      <a href="//www.facebook.com/sharer.php?t={{ page.title | cgi_escape }}&u={{ full_url | cgi_escape}}"
-        onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
-        <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
-      </a>
-    {% endif %}
-    {% if social.name == "Google+" and social.share == true %}
-      <a href="//plus.google.com/share?title={{ page.title | cgi_escape }}&url={{ full_url | cgi_escape}}"
-        onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
-        <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
-      </a>
-    {% endif %}
-    {% if social.name == "LinkedIn" and social.share == true %}
-      <a href="//www.linkedin.com/shareArticle?mini=true&url={{ full_url | cgi_escape}}"
-        onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
-        <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
-      </a>
-    {% endif %}
-    {% if social.name == "Pinterest" and social.share == true %}
-      <a href="//www.pinterest.com/pin/create/button/?description={{ page.title | cgi_escape }}&url={{ full_url | cgi_escape}}&media={{ site.url }}{% if page.cover %}{{ page.cover | prepend: site.baseurl  }}{% elsif site.cover %}{{ site.cover | prepend: site.baseurl }}{% else %}{{ site.logo | prepend: site.baseurl }}{% endif %}"
-        onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;">
-        <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
-      </a>
-    {% endif %}
-    {% if social.name == "Reddit" and social.share == true %}
-      <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('{{ full_url }}') + '&title={{page.title}}'; return false">
-        <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
-      </a>
-    {% endif %}
-    {% if social.name == "Hacker News" and social.share == true %}
-      <a href="//news.ycombinator.com/submitlink" onclick="window.location = '//news.ycombinator.com/submitlink?u=' + encodeURIComponent('{{ full_url }}') + '&t={{page.title}}'; return false">
-        <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
-      </a>
-    {% endif %}
-  {% endfor %}
-</section>
+        </a>
+      {% endif %}
+      {% if social.name == "Facebook" and social.share == true %}
+        <a href="//www.facebook.com/sharer.php?t={{ page.title | cgi_escape }}&u={{ full_url | cgi_escape}}"
+          onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;" class="link--share">
+          <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
+        </a>
+      {% endif %}
+      {% if social.name == "Google+" and social.share == true %}
+        <a href="//plus.google.com/share?title={{ page.title | cgi_escape }}&url={{ full_url | cgi_escape}}"
+          onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;" class="link--share">
+          <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
+        </a>
+      {% endif %}
+      {% if social.name == "LinkedIn" and social.share == true %}
+        <a href="//www.linkedin.com/shareArticle?mini=true&url={{ full_url | cgi_escape}}"
+          onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;" class="link--share">
+          <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
+        </a>
+      {% endif %}
+      {% if social.name == "Pinterest" and social.share == true %}
+        <a href="//www.pinterest.com/pin/create/button/?description={{ page.title | cgi_escape }}&url={{ full_url | cgi_escape}}&media={{ site.url }}{% if page.cover %}{{ page.cover | prepend: site.baseurl  }}{% elsif site.cover %}{{ site.cover | prepend: site.baseurl }}{% else %}{{ site.logo | prepend: site.baseurl }}{% endif %}"
+          onclick="window.open(this.href, '{{ social.icon }}-share', 'width=550,height=255');return false;" class="link--share">
+          <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
+        </a>
+      {% endif %}
+      {% if social.name == "Reddit" and social.share == true %}
+        <a href="//www.reddit.com/submit" onclick="window.location = '//www.reddit.com/submit?url=' + encodeURIComponent('{{ full_url }}') + '&title={{page.title}}'; return false" class="link--share">
+          <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
+        </a>
+      {% endif %}
+      {% if social.name == "Hacker News" and social.share == true %}
+        <a href="//news.ycombinator.com/submitlink" onclick="window.location = '//news.ycombinator.com/submitlink?u=' + encodeURIComponent('{{ full_url }}') + '&t={{page.title}}'; return false" class="link--share">
+          <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </section>
+
 {% if site.inter_post_navigation == true %}
-  <section class="post-navigation">
-    <span class="prev-post">
+  <section class="post--navigation">
+    <span class="prev--post">
       {% if page.previous.url %}
         <a href="{{page.previous.url | prepend: site.baseurl}}">
           <span class="fa-stack fa-lg">
@@ -94,7 +110,7 @@ layout: default
         </a>
       {% endif %}
     </span>
-    <span class="next-post">
+    <span class="next--post">
       {% if page.next.url %}
         <a href="{{page.next.url | prepend: site.baseurl}}">
           <span class="page-number">{{page.next.title}}</span>
@@ -121,8 +137,8 @@ layout: default
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
   </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </section>
 {% endunless %}
 {% endif %}

@@ -2,8 +2,9 @@
 $base-font-family: $font-stack-system;
 $heading-font-family: $base-font-family;
 $subheading-font-family: ('Lato', 'Helvetica Neue', 'Helvetica', 'verdana', 'Arial', sans-serif);
+$site-title-font-family: $subheading-font-family;
 
-// Line height
+$base-font-size: 1.25em;
 $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
@@ -61,13 +62,16 @@ $soundcloud: rgb(255, 58, 0);
 // Font Colors
 $base-font-color: $dark-gray;
 $action-color: $blue;
+$action-hover-color: $orange;
 
 // Border
 $base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
+$base-border-radius: 3px !default;
 
 // Background Colors
 $viewport-background-color: #fff;
+$base-background-color: rgb(255, 255, 255);
 
 // Focus
 $focus-outline-color: transparentize($action-color, 0.4);
@@ -84,7 +88,7 @@ $base-timing: ease;
 $base-background-color: rgb(255, 255, 255);
 $base-font-color: $dark-gray;
 
-$base-border-radius: 3px !default;
+
 
 $highlight-color: tint($action-color, 33%);
 // Accessible link colours
@@ -95,16 +99,17 @@ $aaa-visited: rgb(128, 65, 128);
 // Gallery image hover
 $gallery-image-hover-opacity: 0.7;
 $gallery-image-hover-color: $medium-gray;
+
 // navigation
 $navigation-padding: 1em;
-$navigation-background: $kbgray;
 $navigation-height: 30px;
 $navigation-submenu-padding: 1em;
 $navigation-submenu-width: 15em;
-// navigation colours
-$navigation-color: $black;
-$navigation-color-hover: $medium-gray;
-$navigation-active-link-color: transparentize(white, 0.5);
+
+$navigation-background: $white;
+$navigation-color: $dark-gray;
+$navigation-color-hover: $black;
+$navigation-active-link-color: $black;
 
 // drop down variables
 $dropdown-color: $base-font-color;
@@ -121,35 +126,3 @@ $dropdown-arrow-top-distance: 0;
 /// Forms
 $form-box-shadow: inset 0 1px 3px rgba(rgb(0, 0, 0), 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
-
-
-
-// Neat Breakpoints
-/*$medium-screen: em(640);
-$large-screen: em(860);
-
-$medium-screen-up: new-breakpoint(min-width $medium-screen 4);
-$large-screen-up: new-breakpoint(min-width $large-screen 8);
-*/
-// breakpoints - still required?
-
-//$small: 480px;
-//$medium: 768px;
-//$large: 960px;
-
-// converted to Neat 2
-$medium: (
-  columns: 5,
-  gutter: 2rem,
-  media: "(min-width: 768px)",
-);
-$small: (
-  columns: 1,
-  gutter: 2rem,
-  media: "(min-width: 488px)",
-);
-$large: (
-  columns: 8,
-  gutter: 2rem,
-  media: "(min-width: 960px)",
-);

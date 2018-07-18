@@ -1,3 +1,15 @@
+// Neat 2 grid
+$neat-grid: (
+  columns: 4,
+  gutter: 10px,
+);
+
+$small: (
+  columns: 4,
+  gutter: 10px,
+  media: 488px,
+);
+
 html {
   background-color: $viewport-background-color;
   box-sizing: border-box;
@@ -17,3 +29,51 @@ body {
 body {
   margin: 0;
 }
+
+.navigation, .site--footer {
+    //@include flex(none);
+    //@include flex(1 0 auto);
+}
+.navigation {
+    //grid-area: header;
+}
+.site--footer {
+    //grid-area: footer;
+}
+
+
+section {
+
+}
+
+.page--content {
+  @include grid-container;
+  @include grid-visual;
+  max-width: 1200px;
+  padding: 0;
+  background-color: $white;
+  margin: 1em auto;
+
+  .page {
+     padding: 0 1em;
+     max-width: 48em;
+     margin: 1em auto;
+  }
+  /// index.html
+  .site-header-container {
+      color: $white;
+      text-shadow: 0 2px 1px rgba(0,0,0,0.33);
+      background-color: $highlight-color;
+      .site--header{
+          .title {
+              font-size: modular-scale(6);
+          }
+          .subtitle {
+              font-style: italic;
+              font-size: modular-scale(1);
+          }
+      }
+  }
+
+}
+

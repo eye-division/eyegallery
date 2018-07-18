@@ -3,11 +3,12 @@
 // -----------------------------------------------------------------------------
 
 /// 100% Gallery blocks
-.gallery-cover {
+.gallery--cover {
     margin: 0 auto 1em auto;
     max-width: 1200px;
     a {
         color: $action-color;
+        text-decoration: none;
         &:active,
         &:focus,
         &:hover {
@@ -19,8 +20,14 @@
         }
     }
 }
+.gallery--feature {
+  // featured image on gallery page
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 1em;
+}
 
-.gallery {
+.gallery--list {
     /// make it a flexbox so items can be aligned vertically
     /*@include display(flex);
     @include align-items(flex-start);
@@ -33,7 +40,7 @@
 
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 
 
     a {
@@ -62,43 +69,47 @@
         }
     }
 }
+.gallery--front {
+    padding: 0 1em 1em;
+    background: rgba(255,255,255,0.8);
+}
 
-.gallery-box,
-.gallery-box-large {
+.gallery--box,
+.gallery--box-large {
     padding-bottom: 1em;
     text-align: center;
-    @include grid-media ($medium) {
-        @include grid-column(4);
+    @include grid-media ($small) {
+        @include grid-column(2);
     }
 }
-.gallery-box-50 {
+.gallery--box-50 {
     padding-bottom: 1em;
     text-align: center;
-    @include grid-media ($medium) {
-        @include grid-column(6);
+    @include grid-media ($small) {
+        @include grid-column(2);
     }
 }
-.gallery-box-home {
-    @include grid-media ($medium) {
-        @include grid-column(6);
+.gallery--box-home {
+    @include grid-media ($small) {
+        @include grid-column(2);
     }
 }
 .alpha {
-    @include grid-media ($medium) {
+    @include grid-media ($small) {
         clear: both;
     }
 }
 .last {
-    @include grid-media ($medium) {
+    @include grid-media ($small) {
         //@include omega();
     }
 }
 /// Remove widths for grids
 @supports (display: grid) {
-  .gallery-box-50,
-  .gallery-box,
-  .gallery-box-large,
-  .gallery-box-home {
+  .gallery--box-50,
+  .gallery--box,
+  .gallery--box-large,
+  .gallery--box-home {
     width: auto;
   }
 }

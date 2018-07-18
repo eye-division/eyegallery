@@ -10,7 +10,7 @@
     z-index: 99; // to cover over flexslider
 }
 /// Nav menu
-.navigation-wrapper {
+.navigation--wrapper {
     //@include grid-container;
     @include clearfix;
     position: relative;
@@ -41,24 +41,24 @@
             fill : tint($navigation-color,20%);
         }
     }
-    @include grid-media ($medium) {
+    @include grid-media ($small) {
         display: none;
     }
 }
-.menu-title {
+.menu--title {
     font-size: 0.9em;
     font-weight: 400;
 }
 
 nav {
     float: right;
-    @include grid-media ($medium) {
+    @include grid-media ($small) {
         float: none;
         line-height: 1.5em;
     }
 }
 
-ul.navigation-menu {
+.navigation--menu {
     clear: both;
     text-align: center;
     display: none;
@@ -66,7 +66,7 @@ ul.navigation-menu {
     overflow: visible;
     padding: 0;
     width: 100%;
-    @include grid-media ($medium) {
+    @include grid-media ($small) {
         display: block;
         margin: 0;
         padding: 0;
@@ -78,12 +78,12 @@ ul.navigation-menu {
 
 /// Nav items
 
-li.nav-link {
+.nav--link {
     display: block;
     text-align: right;
     width: 100%;
     padding: 0.25em 0;
-    @include grid-media ($medium) {
+    @include grid-media ($small) {
         background: transparent;
         display: inline;
         text-decoration: none;
@@ -92,7 +92,7 @@ li.nav-link {
     a {
         color: $navigation-color;
         display: inline-block;
-        @include grid-media ($medium) {
+        @include grid-media ($small) {
             padding-right: 1.5em;
         }
         &:hover {
@@ -102,12 +102,12 @@ li.nav-link {
     }
 
     &:last-child a {
-        @include grid-media ($medium) {
+        @include grid-media ($small) {
             padding-right: 1em;
         }
     }
 }
-li.nav-link.active,
+.nav--link.active,
 li.active {
     a {
         color: $black;
@@ -139,7 +139,7 @@ li.active {
   margin: 0;
   padding: 0 ($dropdown-padding / 2) 0 $dropdown-padding;
 
-  @include grid-media($large) {
+  @include grid-media($small) {
     font-size: 1em;
   }
 }
@@ -152,7 +152,7 @@ li.active {
   padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
   position: relative;
 
-  @include grid-media($large) {
+  @include grid-media($small) {
     font-size: 1em;
     padding: 0 ($dropdown-padding * 2.5) 0 ($dropdown-padding / 2);
   }
@@ -169,7 +169,7 @@ li.active {
   position: absolute;
   right: $dropdown-padding;
   top: $dropdown-arrow-top-distance;
-  @include grid-media($large) {
+  @include grid-media($small) {
     right: $dropdown-padding / 2;
   }
 }
@@ -200,7 +200,7 @@ li.active {
     pointer-events: none;
     text-shadow: 0 -2px 2px transparentize(black, 0.7);
     top: -0.7em - $dropdown-padding / 2;
-    @include grid-media($large) {
+    @include grid-media($small) {
       right: 1em;
       top: -0.8em;
     }
