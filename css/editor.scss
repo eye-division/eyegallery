@@ -1,29 +1,23 @@
+@charset "utf-8";
+
 // -----------------------------------------------------------------------------
-// This file contains styles that are specific to CloudCannon
+// Styles for Cloudcannon editor
 // -----------------------------------------------------------------------------
 
-/// Editor link
+/// https://docs.cloudcannon.com/editing/options/
 
-.editor-link {
-  display: none;
+
+
+span.big-purple-text { /* Can be applied to inline content */
+  font-size: 2rem;
+  color: rgb(114, 113, 160);
 }
 
-.cms-editor-active .editor-link {
-  display: block;
-}
-
-/// used in editor.scss for CloudCannon editing interface
-
-.callout { /* Can be applied to blocks of content */
+p.callout { /* Can be applied to blocks of content?? */
   margin: 10px;
   padding: 10px;
   border: 1px solid rgb(114, 113, 160);
   background-color: #eee;
-}
-
-.big-purple-text { /* Can be applied to inline content */
-  font-size: 2rem;
-  color: rgb(114, 113, 160);
 }
 
 .center-this-text { /* Excluded from style dropdown, used as center class described below */

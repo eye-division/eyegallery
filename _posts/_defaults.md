@@ -3,6 +3,7 @@ layout: post
 title:
 date:
 main_image_path:
+comments: true
 images:
   - image_path:
     description:
