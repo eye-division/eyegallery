@@ -12,7 +12,7 @@ layout: default
       {% endif %}
     </section>
   </header>
- 
+
   {% if page.main_image_path %}
     <figure>
     {% assign alt_text = page.title %}
@@ -27,9 +27,9 @@ layout: default
     </section>
 
     {% if page.images[0].image_path %}
-   
+
     <section class="gallery">
-      
+
       {% for image in page.images %}
 
         {% if image.image_path %}
@@ -42,7 +42,7 @@ layout: default
       {% endfor %}
 
     </section>
-    
+
     {% endif %}
 
   <section class="rss">
@@ -50,7 +50,7 @@ layout: default
   </section>
 
   <section class="share">
-    
+
     <span>Share: </span>
     {% for social in site.social %}
       {% capture full_url %}{{ site.url }}{{ site.baseurl }}{{ page.url }}{% endcapture %}
@@ -90,11 +90,7 @@ layout: default
           <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
         </a>
       {% endif %}
-      {% if social.name == "Hacker News" and social.share == true %}
-        <a href="//news.ycombinator.com/submitlink" onclick="window.location = '//news.ycombinator.com/submitlink?u=' + encodeURIComponent('{{ full_url }}') + '&t={{page.title}}'; return false" class="link--share">
-          <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
-        </a>
-      {% endif %}
+
     {% endfor %}
   </section>
 
@@ -124,22 +120,38 @@ layout: default
 {% endif %}
 
 {% if site.disqus_shortname %}
-{% unless page.disqus_disabled %}
-<section class="disqus">
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    var disqus_shortname = '{{ site.disqus_shortname }}';
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
-{% endunless %}
+  {% if page.comments %}
+
+    <section class="disqus">
+
+      <div id="disqus_thread"></div>
+
+      <script>
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+        var disqus_shortname = '{{ site.disqus_shortname }}';
+        var pageurl = '{{ site.url }}' + '{{ page.url }}';
+        var disqus_config = function () {
+        this.page.url = pageurl;  // Replace PAGE_URL with your page's canonical URL variable
+        //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    </section>
+
+
+  {% endif %}
+
 {% endif %}
 </div>

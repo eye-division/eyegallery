@@ -19,7 +19,10 @@ description: Demo Eye Gallery site
 # root of your server.
 baseurl: ""
 # the base hostname & protocol for your site
-url: "http://black-hare.cloudvent.net"
+url: "https://black-hare.cloudvent.net"
+# https://gnarly-stone.cloudvent.net/ for Jekyll3 branch -
+# apt-loris.cloudvent.net for Jekyll3 sync
+
 logo: "/assets/logo.png"
 email: a.ward@eyedivision.com
 
@@ -32,7 +35,7 @@ highlightjs_theme: "monokai-sublime"
 
 # Image CDN
 imagecdn:
-  staging: "https://ed-eyegallery-dev.imgix.net"
+  staging: "https://ed-eyegallery-dev.imgix.net" # apt-loris.cloudvent.net
   production: "https://ed-eyegallery.imgix.net"
 
 # Collections Example
@@ -109,7 +112,7 @@ _options:
 # paypal_id:
 
 # Disqus comments
-# disqus_shortname:
+disqus_shortname: alun-ward
 
 # Google analytics
 #ga_tracking_id: ""
