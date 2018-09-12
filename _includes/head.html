@@ -4,12 +4,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  
+
   {% if site.name %}
   <meta name="author" content="{{ site.name }}">
   <meta name="copyright" content="&copy; {{ site.name }} {{ site.time | date: '%Y' }}">
   {% endif %}
- {% if site.ga_tracking_id %}
+  {% if site.ga_tracking_id %}
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_tracking_id }}"></script>
   <script>
@@ -23,9 +23,10 @@
     });
   </script>
   {% endif %}
-  <!-- External libraries -->
- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ site.highlightjs_theme }}.min.css">  
- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/lightbox2@2.10.0/dist/css/lightbox.min.css">
+
+ <!-- External libraries -->
+ <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ site.highlightjs_theme }}.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/lightbox2@2.10.0/dist/css/lightbox.min.css">
   <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
   <link rel="shortcut icon" href="{{ "/assets/icons/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
   <link rel="icon" href="{{ "/assets/icons/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
@@ -47,10 +48,7 @@
   <meta name="msapplication-TileImage" content="{{ "/assets/icons/ms-icon-144x144.png" | prepend: site.baseurl }}">
   <meta name="theme-color" content="#ffffff">
 
-
-
   {% include svg/symbol-defs.svg %}
-
 
   <!-- Site styles -->
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
@@ -58,7 +56,7 @@
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
 
   <script
-        src="//code.jquery.com/jquery-2.2.4.min.js"
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
 

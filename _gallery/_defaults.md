@@ -11,7 +11,7 @@ display_title: true
 images:
   - image_path:
     image_title:
-    image_description:
+    image_description_markdown:
 _options:
   image_path:
     width: 1200
@@ -28,7 +28,7 @@ _comments:
   permalink: Be careful editing this
   main_image_path: Image used to represent your gallery
   images: Add and edit your gallery images here
-  image_description: Might only be shown in the close up of an image
+  image_description_markdown: Might only be shown in the close up of an image
   archive: Not used yet!
   frontpage: Show this gallery on the homepage
   homepage_description_markdown: Text used on homepage if shown

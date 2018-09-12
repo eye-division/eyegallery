@@ -1,4 +1,219 @@
 // -----------------------------------------------------------------------------
 // Plain demo theme for Eye Gallery
 // -----------------------------------------------------------------------------
+/* Bourbon overrides - files in base/ */
 
+/* _variables.scss - needed first */
+// Google Fonts
+@import url(//fonts.googleapis.com/css?family=Roboto+Condensed|Lato:300,400);
+
+// Typography
+$base-font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+// OR use ? $font-stack-system;
+$heading-font-family: ('Roboto Condensed', 'Helvetica Neue', 'Helvetica', 'verdana', 'Arial', sans-serif);
+$subheading-font-family: ('Roboto Condensed', 'Helvetica Neue', 'Helvetica', 'verdana', 'Arial', sans-serif);
+$site-title-font-family: $heading-font-family;
+
+// Line height
+$base-font-size: 1.25em;
+
+/// Colors
+$black: rgb(17, 17, 17);
+$dark-gray: rgb(51, 51, 51);
+$medium-gray: rgb(153, 153, 153);
+$light-gray: rgb(237, 237, 237);
+
+$white: rgb(255, 255, 255);
+$kbgray: rgb(229, 229, 229);
+// Flat UI Colors. For more, see http://flatuicolors.com/
+$turquoise: rgb(26, 188, 156);  // Turqoise
+$green: rgb(39, 174, 96);     // Nephritis
+$blue: rgb(41, 128, 185);       // Belize Hole
+$purple: rgb(142, 68, 173);     // Wisteria
+$orange: rgb(211, 84, 0);     // Pumpkin
+$red: rgb(192, 57, 43);       // Pomegranate
+$gray: rgb(127, 140, 141);        // Asbestos
+$dark-gray: rgb(51, 51, 51) !default;
+
+// Social Media Brand Colors */
+$twitter: rgb(0, 172, 237);
+$facebook: rgb(59, 89, 152);
+$googleplus: rgb(221, 75, 57);
+$pinterest: rgb(203, 32, 39);
+$linkedin: rgb(0, 123, 182);
+$youtube: rgb(187, 0, 0);
+$vimeo: rgb(26, 183, 234);
+$tumblr: rgb(50, 80, 109);
+$instagram: rgb(188, 42, 141);
+$flickr: rgb(255, 0, 132);
+$dribbble: rgb(234, 76, 137);
+$quora: rgb(168, 36, 0);
+$foursquare: rgb(0, 114, 177);
+$forrst: rgb(91, 154, 104);
+$vk: rgb(69, 102, 142);
+$wordpress: rgb(33, 117, 155);
+$stumbleupon: rgb(235, 72, 35);
+$yahoo: rgb(123, 0, 153);
+$blogger: rgb(251, 143, 61);
+$soundcloud: rgb(255, 58, 0);
+
+// Accessible link colours
+$aaa-link: rgb(51, 68, 221);
+$aaa-hover: rgb(181, 0, 16);
+$aaa-visited: rgb(128, 65, 128);
+
+// Font Colors
+$base-font-color: $black;
+$action-color: darken($base-font-color,20%);
+$action-hover-color: $aaa-hover;
+
+// Border
+$base-border-radius: 3px !default;
+// Background Colors
+$viewport-background-color: $white;
+$base-background-color: $white;
+$page-background-color: $white;
+
+
+// OLD THINGS to be removed
+
+$highlight-color: tint($action-color, 33%);
+
+// Gallery image hover
+$gallery-image-hover-opacity: 0.7;
+$gallery-image-hover-color: $medium-gray;
+
+// navigation
+$navigation-padding: 1em;
+$navigation-height: 30px;
+$navigation-submenu-padding: 1em;
+$navigation-submenu-width: 15em;
+
+$navigation-background: $white;
+$navigation-color: $dark-gray;
+$navigation-color-hover: $orange;
+$navigation-active-link-color: $orange;
+
+// footer
+$footer-background: $white;
+$footer-color: $dark-gray;
+$footer-color-hover: $action-hover-color;
+$footer-active-link-color: $action-color;
+
+// drop down variables
+$dropdown-color: $base-font-color;
+$dropdown-description-color: lighten($dropdown-color, 40%);
+$dropdown-border: 1px solid silver;
+$dropdown-background: $base-background-color;
+$dropdown-background-hover: darken($dropdown-background, 3%);
+$dropdown-inner-border: 1px solid silver;
+$dropdown-height: 40px;
+$dropdown-padding: 1em;
+$dropdown-distance-from-menu: 50px;
+$dropdown-arrow-top-distance: 0;
+
+/// Forms
+$form-box-shadow: inset 0 1px 3px rgba(rgb(0, 0, 0), 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+/* _layout overrides */
+
+// Neat 2 grid
+$neat-grid: (
+  columns: 4,
+  gutter: 10px,
+);
+
+$small: (
+  columns: 4,
+  gutter: 10px,
+  media: 488px,
+);
+$large: (
+  columns: 4,
+  gutter: 10px,
+  media: 960px,
+);
+
+body {
+  background-color: $base-background-color;
+}
+.page--content {
+  @include grid-container;
+  //@include grid-visual;
+  max-width: 1200px;
+  padding: 0;
+  padding-bottom: 120px;
+  margin: 0 auto;
+  //background: url('/assets/images/leaf.png') bottom -30px left -30px no-repeat, $page-background-color;
+  //background-color: $page-background-color;
+  border-right: 1px solid $light-gray;
+  border-left: 1px solid $light-gray;
+  @include grid-media ($small) {
+    //background: url('/assets/images/leaf.png') top 10px right 10px no-repeat, url('/assets/images/leaf.png') bottom -30px left -30px no-repeat, $page-background-color;
+  }
+  /// index.html
+  .site-header-container {
+      color: $white;
+      text-shadow: 0 2px 1px rgba(0,0,0,0.33);
+      background-color: $highlight-color;
+      .site--header{
+          .title {
+              font-size: modular-scale(6);
+          }
+          .subtitle {
+              font-style: italic;
+              font-size: modular-scale(1);
+          }
+      }
+  }
+
+}
+
+.page {
+   padding: 1em;
+   max-width: 48em;
+   margin: 0 auto;
+
+}
+
+/* _lists.scss */
+ol.default {
+    @extend %default-ol !optional;
+}
+
+ul.default {
+    @extend %default-ul !optional;
+}
+.list--horizontal {
+  display: inline;
+  padding-right: 1em;
+}
+.list--bulleted {
+  list-style-type: none;
+  list-style-position: inside;
+  margin-left: 15px;
+  margin-bottom: 10px;
+
+  li::before {
+    content: "•";
+    color: $action-color;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+}
+
+
+
+.textright {
+    text-align: right;
+}
+blockquote {
+  padding: 1em 0;
+  border-bottom: 1px solid $action-color;
+  font-style: italic;
+}
+
+strong {
+  color: $action-color;
+}

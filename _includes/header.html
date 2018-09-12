@@ -1,50 +1,36 @@
 <header class="navigation" role="banner">
   <div class="navigation--wrapper">
-    <a href="{{ site.baseurl }}/" class="logo" title="Return home">
+    <a href="{{ site.baseurl }}/" class="header--wrapper" title="Return home">
       {% if site.logo %}
-        {% include img.html src=site.logo width=600 alt=site.title %}
-      <!-- <img src="{{ site.logo | prepend: site.baseurl }}" alt="{{ site.title }}"> -->
-      {% else %}
-      <h1>{{ site.title }}</h1>
-      <div class="subtitle">{{ site.subtitle }}</div>
+        {% include img.html src=site.logo width=150 class="header--logo" alt=site.title %}
       {% endif %}
+      <h1 class="header--title">{{ site.title }}</h1>
+
     </a>
+
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
-      <span class="menu--title">MENU</span> <svg class="icon icon-menu"><use xlink:href="#icon-reorder" /></svg>
+      <span class="menu--title">MENU</span> <svg class="icon icon--menu"><use xlink:href="#icon-reorder" /></svg>
     </a>
     <nav role="navigation">
       <ul id="js-navigation-menu" class="dropdown navigation--menu show">
 
         {% for link in site.data.nav %}
 
-          {% if link.subcategories != null %}
-
-          <!-- Drop down v2 -->
-          <li class="nav--link{% if page.url == link.href %} active{% endif %} dropdown-container">
-
-              <a href="#menu" class="dropdown-button">{{ link.title }}</a>
-
-              <ul class="dropdown-menu dropdown-select">
-
-                {% for subcategory in link.subcategories %}
-
-                     <li><a href="{{ subcategory.subhref | prepend: site.baseurl }}">{{ subcategory.subtitle }}</a></li>
-
-                {% endfor %}
-
-              </ul>
-
-
-          </li>
-
-          {% else %}
-
-          <li class="nav--link{% if page.url == link.href %} active{% endif %} {% if link.subcategories != null %} more{%endif %}">
+          <li class="nav--link{% if page.url == link.href %} active{% endif %}">
             <a href="{{ link.href | prepend: site.baseurl }}"  class="">{{ link.title }}</a>
           </li>
 
-          {% endif %}
+        {% endfor %}
 
+        {% for social in site.social %}
+          {% if social.url != null %}
+
+          <li class="nav--link">
+            <a href="{{ social.url }}" title="{{ social.desc }}">
+              <svg class="icon {{ social.icon }} icon--light"><use xlink:href="#{{ social.icon }}" /></svg>
+            </a>
+          </li>
+          {% endif %}
         {% endfor %}
 
       </ul>

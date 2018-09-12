@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 
-.product-description {
+.product--description {
   @include grid-media ($small) {
     width: 400px;
   }
@@ -11,17 +11,17 @@
   margin: 25px;
   background-color: lighten($action-color,60%);
 }
-.paypal-add-item {
+.paypal--add-item {
   background-color: $action-color;
 }
-.paypal-add-item:hover {
+.paypal--add-item:hover {
   box-shadow: 0px 3px 5px #888888;
 }
 
-.paypal-add-item:active {
+.paypal--add-item:active {
   box-shadow: 0 0 0 0;
 }
-.product-details {
+.product--details {
   @include grid-media ($small) {
     /*display: flex;
     flex-direction: row;*/

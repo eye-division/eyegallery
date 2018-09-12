@@ -1,29 +1,29 @@
-<footer class="site-footer">
+<footer class="site--footer">
 
   <div class="wrapper">
 
-    <div class="site-contact">
+    <div class="site--contact">
 
       <ul class="social-media-list">
 
         {% for social in site.social %}
           {% if social.url != null %}
-          <li>
+          <li class="list--horizontal">
             <a href="{{ social.url }}" title="{{ social.desc }}">
-              <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
-              <span class="username">{% if social.username %}{{ social.username }}{% else %}{{ social.name }}{% endif %}</span>
+              <svg class="icon {{ social.icon }} icon--light"><use xlink:href="#{{ social.icon }}" /></svg>
             </a>
           </li>
           {% endif %}
         {% endfor %}
 
       </ul>
+
     </div>
 
 
-    <div class="site-signature">
-      <p class="text">&copy; All work is copyright the artist, no reproduction without permission.<br />
-      <a href="https://eyedivision.com">{% include img.html src="/assets/eyegallery-box-trans.png" alt="Eye Division site" %}</a><br />site by <a href="https://eyedivision.com">Eye Division</a></p>
+    <div class="site--signature">
+      <p class="text">&copy; All work is copyright the artist, no reproduction without permission.
+        <br />site by <a href="https://eyedivision.com">Eye Division</a></p>
     </div>
 
 

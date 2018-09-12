@@ -2,41 +2,61 @@
 // This file contains all styles related to the header
 // -----------------------------------------------------------------------------
 
-/// logo
-.logo {
-    display: block;
-    //background: rgba($navigation-color, 0.8);
-    padding: 0 0.5em;
-    //float: left;
-    //height: 6em;
-
-    span {
-        font-size: 1.25em;
-    }
+.header--wrapper {
+    /* flex horizontal centering */
+    /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    flex-flow: row wrap;
 
     &:active,
     &:focus,
     &:hover {
         text-decoration: none;
-        color: $navigation-color-hover;
+        //color: shade($link-color, 10%);
     }
     &:active,
     &:focus {
         outline: none;
     }
 }
-.logo--header {
+.header--logo {
+
+}
+
+.header--title {
+    align-self: center; // flex centered
+
     font-family: $site-title-font-family;
     color: $medium-gray;
     text-transform: uppercase;
     text-decoration: none;
     margin-top: 0;
     margin-bottom: 0;
+
     font-size: modular-scale(2);
+
     @include grid-media ($small) {
         font-size: modular-scale(5);
     }
 }
+
+/// And now, with the grid
+/* https://gridbyexample.com/ */
+@supports (display: grid) {
+    .header--wrapper {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, auto);
+    }
+    .header--logo {
+        justify-self: end;
+        width: auto;
+        max-width: 150px;
+    }
+}
+
 .subtitle {
     color: $base-font-color;
     font-family: $subheading-font-family;

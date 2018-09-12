@@ -26,6 +26,8 @@ url: "https://black-hare.cloudvent.net"
 logo: "/assets/logo.png"
 email: a.ward@eyedivision.com
 
+show_carousel: true
+
 # Build settings
 markdown: kramdown
 
