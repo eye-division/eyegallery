@@ -58,16 +58,21 @@ defaults:
 
 # https://docs.cloudcannon.com/editing/options/
 _options:
-  #_text:            # text =
+  _text:            # text =
+    link: true
+    
   _block:           # block = editable blocks within pages
     link: true
+    bold: true
+    italic: true
+    removeformat: true
     left: align-left
     center: center-this-text
     right: align-right
     justify: full-width-text
     undo: true
     redo: true
-    format: p h2 h3 h4 div
+    format: p h2 h3 h4 h5 h6 div
     numberedlist: true
     bulletedlist: true
     blockquote: true
