@@ -56,6 +56,7 @@ defaults:
         values:
             layout: "gallery"
 
+# https://docs.cloudcannon.com/editing/options/
 _options:
   _text:
     italic: true
@@ -90,6 +91,7 @@ _options:
     format: p h1 h2 h3 h4 div
     numberedlist: true
     bulletedlist: true
+    link: true
     indent: true
     outdent:  true
     blockquote: true
