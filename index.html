@@ -19,9 +19,14 @@ _comments:
   caption: optional caption
 ---
 
-    <div class="editable">
-    <p>This is the demo editable first paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, in magnam placeat. Ex illo ipsa libero voluptatem necessitatibus modi fugit odit omnis. Sequi voluptatem mollitia voluptatum ipsum placeat, quaerat laudantium!</p>
-    </div>
+<div class="editable">
+          <p>This is the demo editable first paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, in magnam placeat. Ex illo ipsa libero voluptatem necessitatibus modi fugit odit omnis. Sequi voluptatem mollitia voluptatum ipsum placeat, quaerat laudantium!</p>
+          <ol>
+            <li>one</li>
+            <li>two</li>
+          </ol>
+          <p>&nbsp;</p>
+        </div>
 
     {% if site.show_carousel and page.carousel %}
     <!-- <div class="two-thirds no-gutter"> -->
@@ -66,11 +71,11 @@ _comments:
                   <h2 class="title">{{ section.frontpagetitle }}</h2>
                 </header>
                 {% if section.homepage_description_markdown %}
-                  {{ section.homepage_description_markdown  | markdownify }}<br>
+                  {{ section.homepage_description_markdown  | markdownify }}<br />
                   <span class="readmore">Read more <span>{{nextPost.title}} <svg class="icon"><use xlink:href="#icon-double_angle_right" /></svg></span>
 
                 {% endif %}
-            </article>
+            </span></article>
           </div>
           </a>
         </section>
@@ -98,3 +103,4 @@ _comments:
       </section>
       {% endif %}
     {% endfor %}
+</section>
