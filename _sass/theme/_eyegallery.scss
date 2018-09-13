@@ -64,8 +64,10 @@ $aaa-visited: rgb(128, 65, 128);
 
 // Font Colors
 $base-font-color: $black;
-$action-color: darken($base-font-color,20%);
+$action-color: darken($orange,20%);
 $action-hover-color: $aaa-hover;
+
+$cta-color: darken($orange,20%);
 
 // Border
 $base-border-radius: 3px !default;
