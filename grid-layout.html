@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Galleries"
-permalink: /gallery/
+title: "Grid layout gallery"
+permalink: /grid-layout/
 main_image_path:
 main_image_caption:
 frontpage: false
@@ -24,29 +24,25 @@ _comments:
 ---
 
 <div class="editable">
-  <p class="strapline">Grid layout. See also the <a href="/grid-layout/">grid layout</a></p>
+  <p class="strapline">Grid layout. See also the <a href="/gallery/">block layout</a></p>
   <p>Check <a href="/gallery/cropped/">Cropped gallery</a> for an example of the cropped thumbnail layout. Other galleries default to full format thumbnails. Either is possible, on a per gallery basis.</p>
 </div>
 
-<div class="gallery">
+<section class="gallery--list">
 
 <!-- order galleries by date -->
 {% assign galleries = site.gallery | sort: '_gallery_date' | reverse %}
 
 {% for gallery in galleries %}
 
-     <section class="gallery--cover {% if gallery.main_image_path %}has--cover{% endif %}" {% if gallery.main_image_path %}style="background-image: url({{ gallery.main_image_path | prepend: gallery.baseurl }});"{% endif %}>
-          <a href="{{ gallery.url }}">
-            <div class="scrim {% if gallery.main_image_path %}has--cover{% endif %}">
-            <article class="gallery--front">
-              <header class="gallery--header">
-                <h2 class="title mb0">{{ gallery.title }}</h2>
-              </header>
+ <div class="gallery--box{% cycle ' alpha', '', ' last' %}">
 
-          </article>
-          </div>
-        </a>
-      </section>
+      <a href="{{ gallery.permalink }}" title="{{ gallery.title }}" class="galleryphoto">
+        {% include img.html src=gallery.main_image_path width=600 fit=clip alt=gallery.title %}
+        <h4 class="mb0">{{ gallery.title }}</h4>
+      </a>
+
+ </div>
 
 {% endfor %}
-</div>
+</section>

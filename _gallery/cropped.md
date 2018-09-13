@@ -1,13 +1,14 @@
 ---
-title: Test 2
+title: Cropped gallery
 description_markdown: Testing images
 homepage_description_markdown: 
 _gallery_date:
 frontpage: true
-permalink: /gallery/test2/
+permalink: /gallery/cropped/
 display_title: true
 archive: false
 main_image_path: /assets/images/IMG_3317.jpg
+thumb_crop: true
 images:
   - image_path: '/assets/images/Keen of Hamar, Unst.jpg'
     image_title: Sky wall

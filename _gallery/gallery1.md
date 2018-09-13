@@ -11,6 +11,7 @@ permalink: /gallery/test/
 archive: false
 display_title: true
 main_image_path: /assets/images/e-la-nave-va_21390829511_o.jpg
+thumb_crop: false
 images:
   - image_path: /assets/images/advert-customers.jpg
     image_title: Graveyard

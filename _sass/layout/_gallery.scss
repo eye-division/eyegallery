@@ -70,10 +70,13 @@
     }
 }
 .gallery--front {
-    padding: 0 1em 1em;
-    background: rgba(255,255,255,0.8);
+    padding: 0 0 2em 0;
 }
 
+.gallery--header {
+    padding: 1em;
+    background: rgba(255,255,255,0.9);
+}
 .gallery--box,
 .gallery--box-large {
     padding-bottom: 1em;

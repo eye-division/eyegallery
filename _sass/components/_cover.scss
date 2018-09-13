@@ -8,10 +8,15 @@
     width: 100%;
 
 }
+.scrim {
+    padding: 0 0 20em 0;
+}
 .has--cover {
-    background-position: 50% 50%;
-    background-size: contain;
-
+  background-position: 50% 50%;
+  background-size: contain;
+  .title {
+        font-size: modular-scale(4);
+    }
 }
 .cover--title {
    font-size: modular-scale(4);

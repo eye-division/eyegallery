@@ -21,6 +21,10 @@
 
 // 5. Components
 @import	'better-bourbon-buttons/bbb';
+@import 'components/header';
+@import 'components/page';
+@import 'components/list';
+@import 'components/margins';
 @import 'components/post';
 @import 'components/carousel';
 @import 'components/media';
