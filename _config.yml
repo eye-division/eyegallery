@@ -74,6 +74,7 @@ _options:
     undo: true
     redo: true
     format: p h1 h2 h3 h4 div
+    link: true
     numberedlist: true
     bulletedlist: true
     indent: true
