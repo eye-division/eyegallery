@@ -68,20 +68,7 @@ _options:
     strike: true
   _block:
     link: true
-    left: align-left
-    center: center-this-text
-    right: align-right
-    justify: full-width-text
-    undo: true
-    redo: true
-    format: p h1 h2 h3 h4 div
-    numberedlist: true
-    bulletedlist: true
-    indent: true
-    outdent:  true
-    blockquote: true
-    image: true
-    styles: /css/editor.scss
+
   content:
     left: align-left
     center: center-this-text
