@@ -4,7 +4,7 @@
 
 .site--footer {
     @include grid-container;
-    @include grid-visual;
+    //@include grid-visual;
     padding: 1em;
     background-color: $white;
     .wrapper {

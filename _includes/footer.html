@@ -10,7 +10,7 @@
           {% if social.url != null %}
           <li class="list--horizontal">
             <a href="{{ social.url }}" title="{{ social.desc }}">
-              <svg class="icon {{ social.icon }} icon--light"><use xlink:href="#{{ social.icon }}" /></svg>
+              <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
             </a>
           </li>
           {% endif %}
@@ -43,4 +43,3 @@
 {% if site.disqus_shortname %}
 <script id="dsq-count-scr" src="//{{ site.disqus_shortname }}.disqus.com/count.js" async></script>
 {% endif %}
-
