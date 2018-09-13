@@ -58,17 +58,6 @@ defaults:
 
 # https://docs.cloudcannon.com/editing/options/
 _options:
-  _text:
-    italic: true
-    bold: true
-    link: true
-    undo: true
-    redo: true
-    underline: true
-    strike: true
-  _block:
-    link: true
-
   content:
     left: align-left
     center: center-this-text
