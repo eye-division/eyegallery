@@ -117,10 +117,13 @@ _options:
 disqus_shortname: alun-ward
 
 # Google analytics
-#ga_tracking_id: ""
+# ga_tracking_id: ""
 
-# Google Recaptcha used for contact form
+# Google Recaptcha used for contact form - used by seo-tag
 recaptcha_site_key: "6LcNYBQUAAAAAALGOjCFo1CKxb65aFTFelMJo1YF"
+
+# Google Site verification if required
+# google_site_verification: ""
 
 # Social icons and sharing options
 #

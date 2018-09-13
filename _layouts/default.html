@@ -4,8 +4,10 @@
   {% include head.html %}
 
   {% assign section = page.url | split: '/' %}
-  
+
   <body class="{% if section[1] %}{{section[1]}}{% else %}front{% endif %}">
+
+    {% include svg/symbol-defs.svg %}
 
     {% include header.html %}
 

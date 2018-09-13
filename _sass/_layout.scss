@@ -1,9 +1,12 @@
 
 // 1. Configuration and helpers
-  // Bourbon and Neat and Bitters are already imported
+  // Bourbon and Neat and Bitters are already imported in /css/main.scss
 
+// 2. Eye Gallery theme and client custom file
+@import  'theme/eyegallery';
+@import  'theme/vanilla';
 
-// 2. Vendors
+// 3. Vendors
 @import 'vendor/flexslider';
 @import 'vendor-extensions/flexslider';
 @import 'vendor-extensions/lightbox';
@@ -30,5 +33,5 @@
 @import	'pages/home';
 
 
-// 8. Shame
+// 7. Shame - nowhere found for this yet
 @import 'shame';

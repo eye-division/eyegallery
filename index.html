@@ -55,14 +55,14 @@ _comments:
       {% if section.frontpage %}
 
         {% if section.main_image_path %}
-          <section class="gallery-cover has-cover" style="background-image: url({{ section.main_image_path }});">
+          <section class="gallery--cover has--cover" style="background-image: url({{ section.main_image_path }});">
         {% else %}
-          <section class="gallery-cover has-cover" style="background-image: url('http://placekitten.com/g/1200/300');">
+          <section class="gallery--cover has--cover" style="background-image: url('http://placekitten.com/g/1200/300');">
         {% endif %}
           <a href="{{ section.url | prepend: site.baseurl }}">
-            <div class="scrim has-cover">
+            <div class="scrim has--cover">
               <article class="gallery--front">
-                <header class="gallery-header">
+                <header class="gallery--header">
                   <h2 class="title">{{ section.frontpagetitle }}</h2>
                 </header>
                 {% if section.homepage_description_markdown %}
@@ -82,11 +82,11 @@ _comments:
       <!-- Galleries -->
     {% for gallery in site.gallery %}
       {% if gallery.frontpage %}
-        <section class="gallery-cover {% if gallery.main_image_path %}has-cover{% endif %}" {% if gallery.main_image_path %}style="background-image: url({{ gallery.main_image_path | prepend: gallery.baseurl }});"{% endif %}>
+        <section class="gallery--cover {% if gallery.main_image_path %}has--cover{% endif %}" {% if gallery.main_image_path %}style="background-image: url({{ gallery.main_image_path | prepend: gallery.baseurl }});"{% endif %}>
           <a href="{{ gallery.url }}">
-            <div class="scrim {% if gallery.main_image_path %}has-cover{% endif %}">
+            <div class="scrim {% if gallery.main_image_path %}has--cover{% endif %}">
             <article class="gallery--front">
-              <header class="gallery-header">
+              <header class="gallery--header">
                 <h2 class="title">{{ gallery.title }}</h2>
               </header>
               {% if gallery.homepage_description_markdown %}
