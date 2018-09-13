@@ -67,6 +67,7 @@ _options:
     underline: true
     strike: true
   _block:
+    link: true
     left: align-left
     center: center-this-text
     right: align-right
@@ -74,7 +75,6 @@ _options:
     undo: true
     redo: true
     format: p h1 h2 h3 h4 div
-    link: true
     numberedlist: true
     bulletedlist: true
     indent: true
