@@ -58,7 +58,8 @@ defaults:
 
 # https://docs.cloudcannon.com/editing/options/
 _options:
-  _block:
+  #_text:            # text =
+  _block:           # block = editable blocks within pages
     link: true
     left: align-left
     center: center-this-text
@@ -76,6 +77,8 @@ _options:
 
   #content:
     #link: true
+
+
 # Payment settings
 # Environment settings
 #appurl:

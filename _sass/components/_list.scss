@@ -3,15 +3,37 @@
 // -----------------------------------------------------------------------------
 
 ol.default {
-    @extend %default-ol !optional;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 ul.default {
-    @extend %default-ul !optional;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  margin-left: 15px;
+  margin-bottom: 15px;
 }
 .list--horizontal {
-  display: inline;
-  padding-right: 1em;
+  list-style-type: none;
+  margin: 0;
+  //display: inline;
+
+  li {
+    display: inline;
+    padding-right: 1em;
+  }
 }
 .list--bulleted {
   list-style-type: none;

@@ -4,7 +4,7 @@
 
 /// 100% Gallery blocks
 .gallery--cover {
-    margin: 0 auto 1em auto;
+    margin: 0 auto 2em auto;
     max-width: 1200px;
     a {
         color: $action-color;
@@ -71,11 +71,11 @@
 }
 .gallery--front {
     padding: 0 0 2em 0;
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .gallery--header {
-    padding: 1em;
-    background: rgba(255,255,255,0.9);
+    padding: 1em 0;
 }
 .gallery--box,
 .gallery--box-large {

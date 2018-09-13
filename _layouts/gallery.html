@@ -19,7 +19,7 @@ layout: default
         <a href="{% include imgpath.html src=page.main_image_path max-w=1280 %}" class="galleryphoto" data-lightbox="gallery" data-title="{{ page.main_image_caption }}">
           {% include img.html src=page.main_image_path alt=alt_text %}
         </a>
-      <figcaption>{{ alt_text }}</figcaption>
+      {% if page.main_image_caption %}<figcaption>{{ alt_text }}</figcaption>{% endif %}
       </figure>
     {% endif %}
 
