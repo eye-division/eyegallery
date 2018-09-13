@@ -70,10 +70,9 @@ _options:
     format: p h2 h3 h4 div
     numberedlist: true
     bulletedlist: true
-    indent: true
-    outdent:  true
     blockquote: true
     image: true
+    styles: /css/editor.scss
 
   #content:
     #link: true
