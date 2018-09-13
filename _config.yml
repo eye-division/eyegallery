@@ -58,8 +58,10 @@ defaults:
 
 # https://docs.cloudcannon.com/editing/options/
 _options:
-
-
+  _block:
+    link: true
+  #content:
+    #link: true
 # Payment settings
 # Environment settings
 #appurl:
