@@ -60,7 +60,9 @@ defaults:
 _options:
   _text:            # text =
     link: true
-    
+    bold: true
+    italic: true
+    removeformat: true
   _block:           # block = editable blocks within pages
     link: true
     bold: true
@@ -78,9 +80,23 @@ _options:
     blockquote: true
     image: true
     styles: /css/editor.scss
-
-  #content:
-    #link: true
+  content:
+    link: true
+    bold: true
+    italic: true
+    removeformat: true
+    left: align-left
+    center: center-this-text
+    right: align-right
+    justify: full-width-text
+    undo: true
+    redo: true
+    format: p h2 h3 h4 h5 h6 div
+    numberedlist: true
+    bulletedlist: true
+    blockquote: true
+    image: true
+    styles: /css/editor.scss
 
 
 # Payment settings
