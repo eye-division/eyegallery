@@ -28,14 +28,15 @@
 .header--title {
     align-self: center; // flex centered
 
-    font-family: $site-title-font-family;
-    color: $medium-gray;
+    font-family: $logo-font-family;
+    color: $dark-gray;
     text-transform: uppercase;
     text-decoration: none;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
+    margin-bottom: 1em;
 
-    font-size: modular-scale(2);
+    font-size: modular-scale(3);
 
     @include grid-media ($small) {
         font-size: modular-scale(5);
@@ -48,10 +49,10 @@
     .header--wrapper {
         display: grid;
         grid-gap: 10px;
-        grid-template-columns: repeat(2, auto);
+        justify-items: center;
     }
     .header--logo {
-        justify-self: end;
+        justify-self: center;
         width: auto;
         max-width: 150px;
     }

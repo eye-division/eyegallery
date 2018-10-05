@@ -1,9 +1,11 @@
 <header class="navigation" role="banner">
   <div class="navigation--wrapper">
     <a href="{{ site.baseurl }}/" class="header--wrapper" title="Return home">
-      <!-- {% if site.logo %}
+
+      {% if site.logo and site.show_logo %}
         {% include img.html src=site.logo width=150 class="header--logo" alt=site.title %}
-      {% endif %} -->
+      {% endif %}
+
       <h1 class="header--title">{{ site.title }}</h1>
 
 
@@ -13,7 +15,7 @@
       <span class="menu--title">MENU</span> <svg class="icon icon--menu"><use xlink:href="#icon-reorder" /></svg>
     </a>
     <nav role="navigation">
-      <ul id="js-navigation-menu" class="dropdown navigation--menu show">
+      <ul id="js-navigation-menu" class="navigation--menu show">
 
         {% for link in site.data.nav %}
 

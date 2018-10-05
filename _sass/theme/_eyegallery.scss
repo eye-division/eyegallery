@@ -13,9 +13,10 @@ $base-font-family: "Lato", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $heading-font-family: ('Roboto Condensed', 'Helvetica Neue', 'Helvetica', 'verdana', 'Arial', sans-serif);
 $subheading-font-family: ('Roboto Condensed', 'Helvetica Neue', 'Helvetica', 'verdana', 'Arial', sans-serif);
 $site-title-font-family: $heading-font-family;
+$logo-font-family: $heading-font-family;
 
 // Line height
-$base-font-size: 1.25em;
+$base-font-size: 1.25em; //16px
 
 /// Colors
 $black: rgb(17, 17, 17);
@@ -64,10 +65,10 @@ $aaa-visited: rgb(128, 65, 128);
 
 // Font Colors
 $base-font-color: $black;
-$action-color: darken($orange,20%);
-$action-hover-color: $aaa-hover;
+$action-color: $orange;
+$action-hover-color: darken($action-color,5%);
 
-$cta-color: darken($orange,20%);
+$cta-color: darken($orange,0%);
 
 // Border
 $base-border-radius: 3px !default;
@@ -141,8 +142,20 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
 }
+a {
+  color: $action-color;
+  text-decoration-skip: ink;
+  transition: color $base-duration $base-timing;
 
+  &:hover {
+    color: $action-hover-color;
+  }
 
+  &:focus {
+    outline: $focus-outline;
+    outline-offset: $focus-outline-offset;
+  }
+}
 .textright {
     text-align: right;
 }

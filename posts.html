@@ -4,49 +4,77 @@ title: "Posts"
 main_image_path:
 main_image_caption:
 permalink: /posts/
+posts_number: 4
 _options:
   layout:
+    hidden: true
+  permalink:
     hidden: true
   main_image_path:
     width: 1200
     height: 1200
     resize_style: "contain"
     mime_type: "image/jpeg"
+_comments:
+  main_image_path: Image used to represent your page
+  homepage_description_markdown: Text used on homepage if shown
+  frontpagetitle: Alternative title for home page use
+  images: Add and edit images here
 ---
 
-  <section class="blog">
+<section class="">
 
-      {% for post in site.posts limit: 4 %}
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          <h4>{{ post.title }}</h4>
+  <ul class="posts--list">
+
+    {% for post in site.posts limit: posts_number %}
+
+      <li class="post--inlist">
+
+        <a href="{{ post.url | prepend: site.baseurl }}" class="post--image">
+
+
+          <figure>
+            {% assign image = site.post_default_image %}
+            {% if post.main_image_path %}
+              {% assign image = post.main_image_path %}
+            {% endif %}
+
+            {% assign alt_text = post.title %}
+            {% if post.main_image_caption %} {% assign alt_text = post.main_image_caption %} {% endif %}
+            {% include img.html src=image alt=alt_text %}
+          </figure>
+
         </a>
 
-        {% if post.main_image_path %}
-          <figure class="featured--col">
-            <a href="{{ post.url | prepend: site.baseurl }}">
-            {% assign alt_text = post.title %}
-            {% if post.image_caption %} {% assign alt_text = post.image_caption %} {% endif %}
-            {% include img.html src=post.main_image_path width=200 alt=alt_text %}
-            </a>
+        <div class="post--content">
+          <a href="{{ post.url | prepend: site.baseurl }}" class="post--title">
+            <h4>{{ post.title }}</h4>
+          </a>
+          <p>
+          {{ post.content | strip_html | truncatewords: 50 }} <a href="{{ post.url | prepend: site.baseurl }}">read more&nbsp;&raquo;</a>
 
-          </figure>
-        {% endif %}
+          {% if site.disqus_shortname %}
 
-        {% if post.main_image_path %}<p class="with--feature">{% else %}<p>{% endif %}
-        {{ post.content | strip_html | truncatewords: 50 }} <a href="{{ post.url | prepend: site.baseurl }}">read more</a>
-        {% if site.disqus_shortname %}
-          {% if post.comments %}
-            <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread"></a>
+            {% if post.comments %}
+              <a href="{{ post.url | prepend: site.baseurl }}#disqus_thread"></a>
+
+            {% endif %}
 
           {% endif %}
-        {% endif %}
-        </p>
+          </p>
 
-        <div class="post-meta">
-          <!-- <div class="post-date">{{ post.date | date: "%B %-d, %Y" }}</div> -->
-          <!-- Editor Link -->
-          <a href="cloudcannon:collections/{{ post.path }}" class="editor-link">Edit post</a>
+          <div class="post--meta">
+            <span class="post--date">{{ post.date  | date: "%-d %B %Y" }}</span>
+            <!-- Editor Link -->
+            <a href="cloudcannon:collections/{{ post.path }}" class="editor-link">Edit post</a>
+          </div>
+
         </div>
 
-      {% endfor %}
-  </section>
+      </li>
+
+    {% endfor %}
+
+  </ul>
+
+</section>

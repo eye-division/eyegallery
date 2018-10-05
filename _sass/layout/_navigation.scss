@@ -90,6 +90,7 @@ nav {
         width: auto;
     }
     a {
+        text-decoration: none;
         color: $navigation-color;
         display: inline-block;
         @include grid-media ($small) {
@@ -117,3 +118,18 @@ li.active {
 .show--menu {
   display: block;
 }
+
+/// layout things
+
+// flexbox navigation--menu
+.navigation--menu {
+  @include grid-media ($small) {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center; // space-around;
+
+    }
+}
+
+/// grid css navigation--menu ?? not required really

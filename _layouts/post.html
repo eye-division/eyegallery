@@ -44,7 +44,7 @@ layout: default
     <p class="rss-subscribe text"><strong>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></strong></p>
   </section>
 
-  <section class="share">
+  <section class="post--share">
 
     <span>Share: </span>
     {% for social in site.social %}
@@ -94,7 +94,7 @@ layout: default
     <span class="prev--post">
       {% if page.previous.url %}
         <a href="{{page.previous.url | prepend: site.baseurl}}">
-          <span class="fa-stack fa-lg">
+          <span class="">
             <svg class="icon icon--readmore"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-double_angle_left" /></svg>
           </span>
           <span class="page-number">{{page.previous.title}}</span>
@@ -105,7 +105,7 @@ layout: default
       {% if page.next.url %}
         <a href="{{page.next.url | prepend: site.baseurl}}">
           <span class="page-number">{{page.next.title}}</span>
-          <span class="fa-stack fa-lg">
+          <span class="">
             <svg class="icon icon--readmore"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-double_angle_right" /></svg>
           </span>
         </a>

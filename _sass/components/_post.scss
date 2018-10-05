@@ -4,75 +4,44 @@
 
 .posts--list {
     @extend %default-ul !optional;
-    //@include grid-container;
-    //@include grid-visual;
 }
 
 .post--inlist {
     border-bottom: 1px solid $action-color;
     //padding: modular-scale(-4);
     padding: 1em 0;
-    @include grid-container;
+    @include grid-media($large) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+}
+.post--image {
+    @include grid-media($large) {
+      flex: 0 1 30%;
+    }
+}
+.post--content { // position right with neat
+    @include grid-media($large) {
+      padding-top: 0;
+      flex: 0 1 65%;
+    }
+}
+// grid stuff
+@supports (display: grid) {
 
-    @supports (display: grid) {
+  @include grid-media($large) {
+    .post--inlist {
       display: grid;
       grid-template-columns: 1fr 2fr;
       grid-gap: 1rem;
     }
-}
-.post {
-  padding: 1em 0;
-  @include grid-container;
+    .post--image,
+    .post--content {
+      width: auto;
 
-  @supports (display: grid) {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 1rem;
-  }
-  ul {
-    margin-bottom: 1em;
-  }
-
-  .tags {
-      font-size: 0.9em;
-  }
-  .rss {
-      margin: 1em 0 0 0;
-      @include grid-column(12);
-      @include grid-media ($small) {
-          margin: 1em 0;
-          @include grid-column(2);
-      }
-  }
-  .disqus {
-      @include grid-column(12);
-  }
-}
-.post--columns {
-    @include grid-media($small) { // half page width on 488px and above
-        @include grid-column(2);
     }
-}
-.post--caption {
-    @include grid-media($small) { // half page width on 488px and above
-        @include grid-column(3);
-    }
-}
-.post--image {
-    @include grid-media($small) { // half page width on 488px and above
-        @include grid-column(1);
-        @supports (display: grid) {
-          width: auto;
-        }
-    }
-}
-.post--content { // position right with neat
-    @include grid-media($small) { // half page width on 488px and above
-        @include grid-column(3);
-        @supports (display: grid) {
-          width: auto;
-        }
-    }
+  }
 }
 
 .pagination {
@@ -86,6 +55,7 @@
 .link--share {
  text-decoration: none;
 }
+
 ///   Full Posts
 .post--header-container {
     .scrim {
@@ -95,12 +65,12 @@
 .post--meta {
     padding-bottom: 1em;
 }
-.post--content {
-    padding: 1em 0;
-}
+
 
 .post--title {
   margin-bottom: 0.2em;
+  text-decoration: none;
+  color: $action-color;
 }
 
 .post--navigation {
@@ -124,12 +94,6 @@
 .post--share {
     font-weight: bold;
     margin: 0 0 1em 0;
-    @include grid-column(12);
-    @include grid-media ($small) {
-        @include grid-column(2);
-        margin: 1em 0;
-        text-align: right;
-    }
     a {
         width: 1em;
         padding: 0 0.25em;

@@ -10,9 +10,9 @@ plugins:
 #  - "/vendor/"
 
 # Site settings
-title: A Painter
+title: An artist
 subtitle: Great artist
-name: A Painter
+name: An artist
 description: Demo Eye Gallery site
 # Base URL of site (i.e. /blog). It should always start with a slash,
 # and never end with a slash. Set it to a blank value if hosting at the
@@ -23,9 +23,11 @@ url: "https://black-hare.cloudvent.net"
 # apt-loris.cloudvent.net for Jekyll3
 
 logo: "/assets/logo.png"
+show_logo: false
 email: a.ward@eyedivision.com
 
 show_carousel: true
+default_post_image: "/assets/images/road_closed.jpg"
 
 # Build settings
 markdown: kramdown

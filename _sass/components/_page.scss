@@ -2,26 +2,26 @@
 // This file contains styles that are specific to pages
 // -----------------------------------------------------------------------------
 
-/// basic grid CSS layout for header, page--content and footer
+// flexbox page layout
+
+/// basic grid CSS layout for header, page--content and footer - works without it
+
 @supports (display: grid) {
   body {
     display: grid;
     //grid-template-columns: 3fr 1fr;
-    grid-template-rows: repeat(3,auto);
+    grid-template-rows: repeat(3,auto); // header page--content footer
     grid-gap: 1rem;
   }
 }
+
 .page--content {
-  @include grid-container;
+  //@include grid-container;
   //@include grid-visual;
   max-width: 1200px;
   padding: 0;
   padding-bottom: 120px;
   margin: 0 auto;
-
-  @include grid-media ($small) {
-
-  }
 
 }
 
