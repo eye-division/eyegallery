@@ -9,6 +9,8 @@ homepage_description_markdown:
 frontpagetitle:
 archive:
 _options:
+  layout:
+    hidden: true
   main_image_path:
     width: 1200
     height: 1200
@@ -31,7 +33,7 @@ _comments:
 <div class="gallery">
 
 <!-- order galleries by date -->
-{% assign galleries = site.gallery | sort: '_gallery_date' | reverse %}
+{% assign galleries = site.gallery | sort: 'gallery_date' | reverse %}
 
 {% for gallery in galleries %}
 

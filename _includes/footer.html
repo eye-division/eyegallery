@@ -1,14 +1,14 @@
 <footer class="site--footer">
 
-  <div class="wrapper">
+  <div class="footer--wrapper">
 
     <div class="site--contact">
 
-      <ul class="social-media-list">
+      <ul class="social-media-list list--horizontal">
 
         {% for social in site.social %}
           {% if social.url != null %}
-          <li class="list--horizontal">
+          <li class="">
             <a href="{{ social.url }}" title="{{ social.desc }}">
               <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
             </a>

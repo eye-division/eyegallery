@@ -47,3 +47,6 @@ a svg {
 .icon--light {
     fill: $white;
 }
+a:hover .icon--light { /// hover colour
+    fill: shade($white, 20%);
+}

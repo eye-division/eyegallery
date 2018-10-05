@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------
 // Plain demo theme for Eye Gallery
 // -----------------------------------------------------------------------------
-/* Bourbon overrides - files in base/ */
+/* Bourbon Bitters overrides - files in base - eventually ditch base directory and move all in here  */
 
 /* _variables.scss - needed first */
 // Google Fonts
@@ -138,73 +138,9 @@ $large: (
 
 body {
   background-color: $base-background-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
 }
-.page--content {
-  @include grid-container;
-  //@include grid-visual;
-  max-width: 1200px;
-  padding: 0;
-  padding-bottom: 120px;
-  margin: 0 auto;
-  //background: url('/assets/images/leaf.png') bottom -30px left -30px no-repeat, $page-background-color;
-  //background-color: $page-background-color;
-  border-right: 1px solid $light-gray;
-  border-left: 1px solid $light-gray;
-  @include grid-media ($small) {
-    //background: url('/assets/images/leaf.png') top 10px right 10px no-repeat, url('/assets/images/leaf.png') bottom -30px left -30px no-repeat, $page-background-color;
-  }
-  /// index.html
-  .site-header-container {
-      color: $white;
-      text-shadow: 0 2px 1px rgba(0,0,0,0.33);
-      background-color: $highlight-color;
-      .site--header{
-          .title {
-              font-size: modular-scale(6);
-          }
-          .subtitle {
-              font-style: italic;
-              font-size: modular-scale(1);
-          }
-      }
-  }
-
-}
-
-.page {
-   padding: 1em;
-   max-width: 48em;
-   margin: 0 auto;
-
-}
-
-/* _lists.scss */
-ol.default {
-    @extend %default-ol !optional;
-}
-
-ul.default {
-    @extend %default-ul !optional;
-}
-.list--horizontal {
-  display: inline;
-  padding-right: 1em;
-}
-.list--bulleted {
-  list-style-type: none;
-  list-style-position: inside;
-  margin-left: 15px;
-  margin-bottom: 10px;
-
-  li::before {
-    content: "•";
-    color: $action-color;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-  }
-}
-
 
 
 .textright {

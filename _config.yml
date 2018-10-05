@@ -20,8 +20,7 @@ description: Demo Eye Gallery site
 baseurl: ""
 # the base hostname & protocol for your site
 url: "https://black-hare.cloudvent.net"
-# https://gnarly-stone.cloudvent.net/ for Jekyll3 branch -
-# apt-loris.cloudvent.net for Jekyll3 sync
+# apt-loris.cloudvent.net for Jekyll3
 
 logo: "/assets/logo.png"
 email: a.ward@eyedivision.com

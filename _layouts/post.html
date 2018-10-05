@@ -2,27 +2,22 @@
 layout: default
 ---
 <div class="page">
-  <header>
-    <section>
-      <h1 class="post--title">{{ page.title }}</h1>
-      {% if page.showdate %}
-        <div class="post--date">
-         {{ page.date | date: "%B %-d, %Y" }}
-        </div>
-      {% endif %}
-    </section>
+
+  <header class="post--header">
+    <h1 class="post--title">{{ page.title }}</h1>
   </header>
 
   {% if page.main_image_path %}
     <figure>
     {% assign alt_text = page.title %}
-    {% if page.image_caption %} {% assign alt_text = page.image_caption %} {% endif %}
+    {% if page.main_image_caption %} {% assign alt_text = page.main_image_caption %} {% endif %}
     {% include img.html src=page.main_image_path alt=alt_text %}
     </figure>
   {% endif %}
 
     <section class="main--content">
-      {{ content | markdownify }}
+
+     {{ content | markdownify }}
 
     </section>
 

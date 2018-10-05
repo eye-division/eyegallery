@@ -13,6 +13,40 @@
     //padding: modular-scale(-4);
     padding: 1em 0;
     @include grid-container;
+
+    @supports (display: grid) {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      grid-gap: 1rem;
+    }
+}
+.post {
+  padding: 1em 0;
+  @include grid-container;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1rem;
+  }
+  ul {
+    margin-bottom: 1em;
+  }
+
+  .tags {
+      font-size: 0.9em;
+  }
+  .rss {
+      margin: 1em 0 0 0;
+      @include grid-column(12);
+      @include grid-media ($small) {
+          margin: 1em 0;
+          @include grid-column(2);
+      }
+  }
+  .disqus {
+      @include grid-column(12);
+  }
 }
 .post--columns {
     @include grid-media($small) { // half page width on 488px and above
@@ -27,6 +61,17 @@
 .post--image {
     @include grid-media($small) { // half page width on 488px and above
         @include grid-column(1);
+        @supports (display: grid) {
+          width: auto;
+        }
+    }
+}
+.post--content { // position right with neat
+    @include grid-media($small) { // half page width on 488px and above
+        @include grid-column(3);
+        @supports (display: grid) {
+          width: auto;
+        }
     }
 }
 
@@ -54,32 +99,10 @@
     padding: 1em 0;
 }
 
-.post {
-  
-  ul {
-      margin-bottom: 1em;
-  }
-  
-  .tags {
-      font-size: 0.9em;
-  }
-  .rss {
-      margin: 1em 0 0 0;
-      @include grid-column(12);
-      @include grid-media ($small) {
-          margin: 1em 0;
-          @include grid-column(2);
-      }
-  }
-  
-  .disqus {
-      @include grid-column(12);
-  }
-
-}
 .post--title {
   margin-bottom: 0.2em;
 }
+
 .post--navigation {
     font-size: 0.9em;
     display: block;

@@ -6,7 +6,7 @@ description_markdown: >-
   expedita rerum autem vel est pariatur, quibusdam consectetur, aliquam!
 homepage_description_markdown: 
 frontpage: true
-_gallery_date: 2016-05-01 00:00:00
+gallery_date: 2016-05-01 00:00:00
 permalink: /gallery/test/
 archive: false
 display_title: true

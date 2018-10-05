@@ -2,7 +2,7 @@
 title: Cropped gallery
 description_markdown: Testing images
 homepage_description_markdown: 
-_gallery_date:
+gallery_date:
 frontpage: true
 permalink: /gallery/cropped/
 display_title: true

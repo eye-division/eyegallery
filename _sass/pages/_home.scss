@@ -4,7 +4,7 @@
 
 .front {
 
-    .page-content {
+    .page--content {
         @include grid-container;
          @include grid-media ($small) {
 
