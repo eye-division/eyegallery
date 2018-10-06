@@ -7,9 +7,10 @@ main_image_caption:
 frontpage: false
 homepage_description_markdown:
 frontpagetitle:
-archive:
 _options:
   layout:
+    hidden: true
+  permalink:
     hidden: true
   main_image_path:
     width: 1200
@@ -18,15 +19,14 @@ _options:
     mime_type: "image/jpeg"
 _comments:
   title: Gallery title
-  permalink: Be careful editing this
   main_image_path: Image used to represent your gallery
-  archive: Not used yet!
   frontpage: Show this gallery on the homepage
   homepage_description_markdown: Text used on homepage if shown
 ---
 
 <div class="editable">
-  <p class="strapline">Block layout. See also the <a href="/grid-layout/">grid layout</a></p>
+  <p class="strapline">This is an example of the full-width block layout, where promoted galleries and pages take up the full-width of the page. See also the <a href="/grid-layout/">grid layout</a></p>
+
   <p>Check <a href="/gallery/cropped/">Cropped gallery</a> for an example of the cropped thumbnail layout. Other galleries default to full format thumbnails. Either is possible, on a per gallery basis.</p>
 </div>
 
@@ -42,9 +42,11 @@ _comments:
             <div class="scrim {% if gallery.main_image_path %}has--cover{% endif %}">
             <article class="gallery--front">
               <header class="gallery--header">
-                <h2 class="title mb0">{{ gallery.title }}</h2>
+                <h2 class="cover--title mb0">{{ gallery.title }}</h2>
               </header>
-
+              {% if gallery.homepage_description_markdown %}
+                  {{ gallery.homepage_description_markdown | markdownify }}  <span class="readmore">View gallery <span> <svg class="icon"><use xlink:href="#icon-double_angle_right" /></svg></span>
+                {% endif %}
           </article>
           </div>
         </a>

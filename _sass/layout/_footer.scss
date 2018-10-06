@@ -91,6 +91,10 @@
 
 /// And now, with the grid
 @supports (display: grid) {
+    .site--footer {
+        grid-row-start: 3; // positioning of main body grid
+        grid-row-end: 4;
+    }
     .footer--wrapper {
         @include grid-media ($small) {
             display: grid;  // this is the container

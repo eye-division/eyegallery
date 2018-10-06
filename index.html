@@ -3,7 +3,8 @@ layout: home
 main_image_path:
 main_image_caption:
 show_carousel: false
-show_blog: false
+show_blog: true
+posts_number: 2
 carousel:
   - image: /assets/images/advert-customers.jpg
     caption: "A test caption"
@@ -28,6 +29,9 @@ _comments:
   main_image_path: Cover image
   main_image_caption: Alt text for cover image
   carousel: Edit the slideshow
+  show_carouse: Show the slideshow
+  show_blog: Show your latest posts on the homepage
+  posts_number: How many posts to show
   alink: Optional web link from the slide
   caption: optional caption
 ---
@@ -43,16 +47,10 @@ _comments:
 
   <div class="editable">
     <p>This is the demo editable first paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, in magnam placeat. Ex illo ipsa libero voluptatem necessitatibus modi fugit odit omnis. Sequi voluptatem mollitia voluptatum ipsum placeat, quaerat laudantium!</p>
-    <ol>
-      <li>one</li>
-    </ol>
-    <ul>
-      <li>two</li>
-    </ul>
-    <p>&nbsp;</p>
+
   </div>
 
-    {% if site.show_carousel and page.carousel %}
+    {% if page.show_carousel and page.carousel %}
     <section class="slideshow">
       <h2>This is a demo slideshow</h2>
       <div class="flexslider">
@@ -92,10 +90,10 @@ _comments:
             <div class="scrim has--cover">
               <article class="gallery--front">
                 <header class="gallery--header">
-                  <h2 class="title mb0">{{ section.frontpagetitle }}</h2>
+                  <h2 class="cover--title mb0">{{ section.frontpagetitle }}</h2>
                 </header>
                 {% if section.homepage_description_markdown %}
-                  {{ section.homepage_description_markdown  | markdownify }}
+                  {{ section.homepage_description_markdown | markdownify }}
                   <span class="readmore">Read more <span> <svg class="icon"><use xlink:href="#icon-double_angle_right" /></svg></span>
 
                 {% endif %}
@@ -120,10 +118,10 @@ _comments:
             <div class="scrim {% if gallery.main_image_path %}has--cover{% endif %}">
               <article class="gallery--front">
                 <header class="gallery--header">
-                  <h2 class="title mb0">{{ gallery.title }}</h2>
+                  <h2 class="cover--title mb0">{{ gallery.title }}</h2>
                 </header>
                 {% if gallery.homepage_description_markdown %}
-                  {{ gallery.homepage_description_markdown | markdownify }}
+                  {{ gallery.homepage_description_markdown | markdownify }} <span class="readmore">View gallery <span> <svg class="icon"><use xlink:href="#icon-double_angle_right" /></svg></span>
                 {% endif %}
               </article>
             </div>
@@ -137,9 +135,13 @@ _comments:
 {% if page.show_blog %}
     <section class="blog blog--home">
 
+      <div class="editable">
+        <h2>Latest news</h2>
+      </div>
+
       <ul class="posts--list">
 
-        {% for post in site.posts limit:2 %}
+        {% for post in site.posts limit:posts_number %}
 
          {% unless post.categories contains 'Archive' %}
 

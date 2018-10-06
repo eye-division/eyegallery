@@ -13,7 +13,7 @@
         &:focus,
         &:hover {
             text-decoration: none;
-            color: $highlight-color;
+            color: darken($highlight-color,10%);
             .gallery {
                 background: rgba(255,255,255,1);
             }
@@ -62,7 +62,7 @@
         &:focus,
         &:hover {
             text-decoration: none;
-            color: shade($action-color, 20%);
+            color: darken($action-color, 20%);
             h3 {
                 //color: $camouflage;
             }
@@ -70,7 +70,7 @@
     }
 }
 .gallery--front {
-    padding: 0 0 2em 0;
+    padding: 0 1em 2em;
     background: rgba(255, 255, 255, 0.9);
 }
 

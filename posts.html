@@ -20,6 +20,7 @@ _comments:
   homepage_description_markdown: Text used on homepage if shown
   frontpagetitle: Alternative title for home page use
   images: Add and edit images here
+  posts_number: Number of posts to show on this page
 ---
 
 <section class="">
@@ -31,7 +32,6 @@ _comments:
       <li class="post--inlist">
 
         <a href="{{ post.url | prepend: site.baseurl }}" class="post--image">
-
 
           <figure>
             {% assign image = site.post_default_image %}

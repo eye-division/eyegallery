@@ -7,8 +7,11 @@ main_image_caption:
 frontpage: false
 homepage_description_markdown:
 frontpagetitle:
-archive:
 _options:
+  layout:
+    hidden: true
+  permalink:
+    hidden: true
   main_image_path:
     width: 1200
     height: 1200
@@ -16,22 +19,20 @@ _options:
     mime_type: "image/jpeg"
 _comments:
   title: Gallery title
-  permalink: Be careful editing this
   main_image_path: Image used to represent your gallery
-  archive: Not used yet!
   frontpage: Show this gallery on the homepage
   homepage_description_markdown: Text used on homepage if shown
 ---
 
 <div class="editable">
-  <p class="strapline">Grid layout. See also the alternative <a href="/gallery/">block layout</a></p>
+  <p class="strapline">This is an example of the Grid layout, where galleries run across and down the screen. See also the alternative <a href="/gallery/">block layout</a></p>
   <p>Check <a href="/gallery/cropped/">Cropped gallery</a> for an example of the cropped thumbnail layout. Other galleries default to full format thumbnails. Either is possible, on a per gallery basis.</p>
 </div>
 
 <section class="gallery--list">
 
 <!-- order galleries by date -->
-{% assign galleries = site.gallery | sort: '_gallery_date' | reverse %}
+{% assign galleries = site.gallery | sort: 'gallery_date' | reverse %}
 
 {% for gallery in galleries %}
 
@@ -39,7 +40,7 @@ _comments:
 
       <a href="{{ gallery.permalink }}" title="{{ gallery.title }}" class="galleryphoto">
         {% include img.html src=gallery.main_image_path width=600 fit=clip alt=gallery.title %}
-        <h4 class="mb0">{{ gallery.title }}</h4>
+        <h4 class="cover--title mb0">{{ gallery.title }}</h4>
       </a>
 
  </div>

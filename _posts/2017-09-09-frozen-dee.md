@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Impregnable Fortress
+title: "Frozen Dee"
 date: 2017-09-09 15:21:00
-main_image_path: /assets/images/26643129558_40c11dc5da_o.jpg
-main_image_caption:
+main_image_path: "/assets/images/26643129558_40c11dc5da_o.jpg"
+main_image_caption: "The Dee in winter"
 comments: true
 tags: clients
 images:

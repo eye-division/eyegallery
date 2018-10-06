@@ -26,7 +26,6 @@ logo: "/assets/logo.png"
 show_logo: false
 email: a.ward@eyedivision.com
 
-show_carousel: true
 default_post_image: "/assets/images/road_closed.jpg"
 
 # Build settings

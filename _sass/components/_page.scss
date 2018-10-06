@@ -1,23 +1,37 @@
 // -----------------------------------------------------------------------------
-// This file contains styles that are specific to pages
+// This file contains styles that are global to all pages
 // -----------------------------------------------------------------------------
 
-// flexbox page layout
+/// 1. fallback to flexbox page layout
+body {
+  display: flex;
+  flex-direction: column;
+}
+.page--content {
+  flex: 1 0 auto;
+}
+.site--footer {
+  flex-shrink: 0; // footer sticks to bottom of page
+}
 
-/// basic grid CSS layout for header, page--content and footer - works without it
+/// 2. basic grid CSS layout for header, page--content and footer - works without it
 
 @supports (display: grid) {
   body {
     display: grid;
-    //grid-template-columns: 3fr 1fr;
-    grid-template-rows: repeat(3,auto); // header page--content footer
+    grid-template-rows: max-content auto auto;
+
+    // 1. header.page--header
+    // 2. div.page--content
+    // 3. footer.site--footer
+
     grid-gap: 1rem;
+    align-items: start;
   }
 }
 
+
 .page--content {
-  //@include grid-container;
-  //@include grid-visual;
   max-width: 1200px;
   padding: 0;
   padding-bottom: 120px;
@@ -30,6 +44,9 @@
    max-width: 48em;
    margin: 0 auto;
 
+}
+.page--header {
+  padding-bottom: 1.5em;
 }
 .page--title {
   margin-bottom: 0.2em;
