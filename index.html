@@ -149,9 +149,9 @@ _comments:
 
           <a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}" class="post--image">
             {% if post.main_image_path %}
-                {% include img.html src=post.main_image_path max-w=400 %}
+                {% include img.html src=post.main_image_path %}
             {% else %}
-                {% include img.html src=site.placeholder_image width=150 %}
+                {% include img.html src=site.placeholder_image %}
             {% endif %}
           </a>
 
