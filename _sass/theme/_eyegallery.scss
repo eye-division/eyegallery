@@ -3,7 +3,8 @@
 // -----------------------------------------------------------------------------
 /* Bourbon Bitters overrides - files in base - eventually ditch base directory and move all in here  */
 
-/* _variables.scss - needed first */
+/* _variables.scss - called BEFORE this */
+
 // Google Fonts
 @import url(//fonts.googleapis.com/css?family=Roboto+Condensed|Lato:300,400);
 
@@ -137,17 +138,36 @@ $large: (
   media: 960px,
 );
 
+// reset these now we've added new variables
+html {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: 100%;
+  line-height: $base-line-height;
+}
+
 body {
   background-color: $base-background-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: modular-scale(1);
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
 }
 a {
   color: $action-color;
   text-decoration-skip: ink;
   transition: color $base-duration $base-timing;
 
-  &:hover {
+  &:hover, &:active {
     color: $action-hover-color;
   }
 

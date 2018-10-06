@@ -11,13 +11,14 @@
 .has--cover {
   background-position: 50% 50%;
   background-size: cover;
+  color: $base-font-color;
   .title {
     font-size: modular-scale(4);
   }
 }
 .cover--title {
-   font-size: modular-scale(4);
-   font-family: $site-title-font-family;
+   //font-size: modular-scale(4);
+   //font-family: $site-title-font-family;
    color: $black;
    font-weight: 700;
 }

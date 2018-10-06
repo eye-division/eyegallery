@@ -94,7 +94,7 @@ _comments:
                 </header>
                 {% if section.homepage_description_markdown %}
                   {{ section.homepage_description_markdown | markdownify }}
-                  <span class="readmore">Read more <span> <svg class="icon"><use xlink:href="#icon-double_angle_right" /></svg></span>
+                  <span class="post--readmore">Read more <span> <svg class="icon icon--post"><use xlink:href="#icon-double_angle_right" /></svg></span>
 
                 {% endif %}
             </span>
@@ -121,7 +121,7 @@ _comments:
                   <h2 class="cover--title mb0">{{ gallery.title }}</h2>
                 </header>
                 {% if gallery.homepage_description_markdown %}
-                  {{ gallery.homepage_description_markdown | markdownify }} <span class="readmore">View gallery <span> <svg class="icon"><use xlink:href="#icon-double_angle_right" /></svg></span>
+                  {{ gallery.homepage_description_markdown | markdownify }} <span class="post--readmore">View gallery <span> <svg class="icon icon--post"><use xlink:href="#icon-double_angle_right" /></svg></span>
                 {% endif %}
               </article>
             </div>

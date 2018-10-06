@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .site--footer {
-    @include grid-container;
+    //@include grid-container;
     //@include grid-visual;
     padding: 1em;
     background-color: $white;
@@ -27,6 +27,7 @@
 }
 ///  Site Navigation (left)
 
+/* not used in this site
 .site--navigation {
     @include grid-column(12);
     @include grid-media ($small) {
@@ -36,19 +37,20 @@
     ul {
         @extend %default-ul !optional;
     }
-}
+}*/
 
 ///   Site Description/Signature (right)
-
 .site--signature {
     margin-top: 1em;
     text-align: center;
+    /*
     @include grid-column(12);
     @include grid-media ($small) {
         @include grid-column(6);
         margin-right: 0;
         margin-top: 0;
     }
+    */
     font-size: 0.9em;
     a {
         text-decoration: underline;
@@ -56,24 +58,24 @@
 }
 
 .social-media-list {
-    //@include grid-container;
-    //text-align: center;
     padding: 1em 0;
     a {
         text-decoration: none;
     }
 }
 
-///   Contact Info (center)
+///   Contact Info (left)
 
 .site--contact {
     margin-top: 1em;
+    /*
     @include grid-column(12);
     @include grid-media ($small) {
         @include grid-column(6);
         margin-top: 0;
         margin-right: 0;
     }
+    */
 
     font-size: 0.9em;
     i {
@@ -91,15 +93,19 @@
 
 /// And now, with the grid
 @supports (display: grid) {
+
     .site--footer {
-        grid-row-start: 3; // positioning of main body grid
+        // positioning of main body grid - push down to bottom of page
+        grid-row-start: 3;
         grid-row-end: 4;
     }
+
     .footer--wrapper {
-        @include grid-media ($small) {
-            display: grid;  // this is the container
-            grid-gap: 10px;
-            grid-template-columns: repeat(3, 33% [col-start]);
-        }
+        display: grid;  // this is the container
+        grid-gap: 10px;
+        justify-items: center;
+        // how many columns in this grid?
+        // NONE!
+        //grid-template-columns: repeat(3, 33% [col-start]);
     }
 }

@@ -39,7 +39,6 @@
     .post--image,
     .post--content {
       width: auto;
-
     }
   }
 }
@@ -68,7 +67,12 @@
 .post--meta {
     padding-bottom: 1em;
 }
-
+.post--readmore {
+  color: $action-color;
+  &:hover, &:active {
+    color: $action-hover-color;
+  }
+}
 
 .post--title {
   margin-bottom: 0.2em;
