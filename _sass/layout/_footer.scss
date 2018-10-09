@@ -3,11 +3,9 @@
 // -----------------------------------------------------------------------------
 
 .site--footer {
-    //@include grid-container;
-    //@include grid-visual;
     padding: 1em;
     background-color: $white;
-
+    text-align: center;
     a {
         //color: $link-color;
         &:active,

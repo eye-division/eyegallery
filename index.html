@@ -145,28 +145,7 @@ _comments:
 
          {% unless post.categories contains 'Archive' %}
 
-        <li class="post--inlist">
-
-          <a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}" class="post--image">
-            {% if post.main_image_path %}
-                {% include img.html src=post.main_image_path %}
-            {% else %}
-                {% include img.html src=site.placeholder_image %}
-            {% endif %}
-          </a>
-
-          <div class="post--caption">
-              <h3>{{ post.title }}</h3>
-              <p>{{ post.excerpt | markdownify }}
-              <a href="{{ post.url }}" title="{{ post.title }}">Read more&nbsp;&raquo;</a></p>
-            <div class="post--meta">
-              <div class="post--date">{{ post.date | date: "%B %Y" }}</div>
-              <!-- Editor Link -->
-              <a href="cloudcannon:collections/{{ post.path }}" class="editor-link">Edit post</a>
-            </div>
-          </div>
-
-        </li>
+        {% include post_excerpt.html %}
 
         {% endunless %}
 
