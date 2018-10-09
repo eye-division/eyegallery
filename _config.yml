@@ -27,6 +27,7 @@ show_logo: false
 email: a.ward@eyedivision.com
 
 default_post_image: "/assets/images/road_closed.jpg"
+default_gallery_image: "/assets/images/road_closed.jpg"
 
 # Build settings
 markdown: kramdown

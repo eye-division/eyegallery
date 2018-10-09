@@ -14,24 +14,24 @@ main_image_path: "/assets/images/IMG_3317.jpg"
 main_image_caption: "Condensation on window"
 thumb_crop: true
 images:
-  - image_path: '/assets/images/Keen of Hamar, Unst.jpg'
-    image_title: Sky wall
+  - image_path: "/assets/images/lauder.jpg"
+    image_title: "Sky wall"
     image_description_markdown: sky wall
-  - image_path: /assets/images/advert-customers.jpg
-    image_title: Graveyard
-    image_description_markdown: These customers didn't choose Eye Division
-  - image_path: /assets/images/clevedon-pools.jpg
-    image_title: Clevedon Pools
+  - image_path: "/assets/images/advert-customers.jpg"
+    image_title: "Graveyard"
+    image_description_markdown: "These customers didn't choose Eye Division"
+  - image_path: "/assets/images/clevedon-pools.jpg"
+    image_title: "Clevedon Pools"
     image_description_markdown: Experience an ocean of bliss
-  - image_path: /assets/images/advert-impregnable.jpg
-    image_title: Fortress
+  - image_path: "/assets/images/advert-impregnable.jpg"
+    image_title: "Fortress"
     image_description_markdown: Your site is our impregnable fortress
-  - image_path: '/assets/images/Keen of Hamar, Unst.jpg'
-    image_title: Test resized image
+  - image_path: "/assets/images/Keen of Hamar, Unst.jpg"
+    image_title: "Test resized image"
     image_description_markdown: Test resized
   - image_path: '/assets/images/Keen of Hamar, Unst.jpg'
-    image_title: Resized to 600
-    image_description_markdown: Resized to 600 square max
+    image_title: "Resized to 600"
+    image_description_markdown: "Resized to 600 square max"
 _options:
   image_path:
     width: 1200

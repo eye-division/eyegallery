@@ -141,11 +141,11 @@ _comments:
 
       <ul class="posts--list">
 
-        {% for post in site.posts limit:posts_number %}
+        {% for post in site.posts limit:page.posts_number %}
 
          {% unless post.categories contains 'Archive' %}
 
-        {% include post_excerpt.html %}
+          {% include post_excerpt.html %}
 
         {% endunless %}
 

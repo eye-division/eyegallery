@@ -19,6 +19,8 @@ layout: default
 
       <a href="{% include imgpath.html src=page.main_image_path max-w=1280 %}" class="galleryphoto" data-lightbox="gallery" data-title="{{ page.main_image_caption }}">
         {% include img.html src=page.main_image_path alt=alt_text %}
+
+
       </a>
 
       {% if page.main_image_caption %}
@@ -33,36 +35,40 @@ layout: default
 
     <section class="gallery--list">
 
-      {% for image in page.images %}
+      {% for thisimage in page.images %}
 
-        {% if image.image_path %}
+        {% assign image = site.default_gallery_image %}
+        {% if thisimage.image_path %}
+          {% assign image = thisimage.image_path %}
+        {% endif %}
 
           <div class="gallery--box">
 
-            <a href="{% include imgpath.html src=image.image_path max-w=1280 %}" class="galleryphoto" data-lightbox="gallery" data-title="{{ image.image_title }} - {{ image.image_description_markdown | markdownify }}">
+            <a href="{% include imgpath.html src=image max-w=1280 %}" class="galleryphoto" data-lightbox="gallery" data-title="{{ thisimage.image_title }} - {{ thisimage.image_description_markdown | markdownify }}">
 
               {% if page.thumb_crop %}
 
                 <!-- cropped square images -->
-                {% include img.html src=image.image_path width=200 height=200 fit=crop alt=image.image_title %}
+                {% include img.html src=image width=200 height=200 fit=crop alt=thisimage.image_title %}
                 <!-- end cropped square -->
 
               {% else %}
 
                 <!-- full format images -->
-                {% include img.html src=image.image_path width=600 fit=clip alt=image.image_title %}
+                {% include img.html src=image width=600 fit=clip alt=thisimage.image_title %}
                  <!-- end format images -->
                {% endif %}
 
+               {% if page.display_title %}
+                  <figcaption class="gallery--caption">{{ thisimage.image_title }}</figcaption>
+              {% endif %}
+
             </a>
 
-            {% if page.display_title %}
-              <figcaption class="gallery--caption">{{ image.image_title }}</figcaption>
-            {% endif %}
+
 
           </div>
 
-        {% endif %}
 
       {% endfor %}
 
