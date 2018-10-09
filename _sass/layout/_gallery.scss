@@ -32,14 +32,14 @@
     /// make it a flexbox so items can be aligned vertically
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
 
     // now grid it
-    @supports (display: grid) {
+    /*@supports (display: grid) {
         display: grid;
         grid-gap: 10px;
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
+    }*/
 
 
     a {
@@ -79,9 +79,9 @@
 .gallery--box,
 .gallery--box-large {
     @include grid-media ($small) {
-        flex-basis: 20%;
+        flex: 0 1 25%;
     }
-    padding-bottom: 1em;
+    margin: 1em;
     text-align: center;
 }
 
