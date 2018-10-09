@@ -9,7 +9,9 @@ gallery_date: 2016-05-01 00:00:00
 permalink: /gallery/test/
 archive: false
 display_title: true
+display_image: true
 main_image_path: /assets/images/e-la-nave-va_21390829511_o.jpg
+main_image_caption: "Ocean liner in Venice"
 thumb_crop: false
 images:
   - image_path: /assets/images/advert-customers.jpg
@@ -42,6 +44,8 @@ _comments:
   title: Gallery title
   permalink: Be careful editing this
   main_image_path: Image used to represent your gallery
+  display_image: Show the featured image at the top of the gallery
+  display_title: Show the title at the top of the page
   images: Add and edit your gallery images here
   image_description_markdown: Might only be shown in the close up of an image
   thumb_crop: Crop thumbnail images to a consistent size

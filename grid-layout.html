@@ -31,19 +31,20 @@ _comments:
 
 <section class="gallery--list">
 
-<!-- order galleries by date -->
-{% assign galleries = site.gallery | sort: 'gallery_date' | reverse %}
+  <!-- order galleries by date -->
+  {% assign galleries = site.gallery | sort: 'gallery_date' | reverse %}
 
-{% for gallery in galleries %}
+  {% for gallery in galleries %}
 
- <div class="gallery--box{% cycle ' alpha', '', ' last' %}">
+     <div class="gallery--box">
 
-      <a href="{{ gallery.permalink }}" title="{{ gallery.title }}" class="galleryphoto">
-        {% include img.html src=gallery.main_image_path width=600 fit=clip alt=gallery.title %}
-        <h4 class="cover--title mb0">{{ gallery.title }}</h4>
-      </a>
+          <a href="{{ gallery.permalink }}" title="{{ gallery.title }}" class="galleryphoto">
+            {% include img.html src=gallery.main_image_path width=600 fit=clip alt=gallery.title %}
+            <h4 class="cover--title mb0">{{ gallery.title }}</h4>
+          </a>
 
- </div>
+     </div>
 
-{% endfor %}
+  {% endfor %}
+
 </section>

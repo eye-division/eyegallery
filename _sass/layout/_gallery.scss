@@ -2,7 +2,7 @@
 // This file contains styles for gallery elements
 // -----------------------------------------------------------------------------
 
-/// 100% Gallery blocks
+/// 100% width Gallery blocks
 .gallery--cover {
     margin: 0 auto 2em auto;
     max-width: 1200px;
@@ -28,19 +28,18 @@
 }
 
 .gallery--list {
+
     /// make it a flexbox so items can be aligned vertically
-    /*@include display(flex);
-    @include align-items(flex-start);
-    @include flex-direction(row);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 
-    // align-items: flex-end; // align bottom
-    @include flex-wrap(wrap);*/
-
-    // now, woah there, make it a grid like it's 2017
-
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    // now grid it
+    @supports (display: grid) {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
 
 
     a {
@@ -79,36 +78,16 @@
 }
 .gallery--box,
 .gallery--box-large {
+    @include grid-media ($small) {
+        flex-basis: 20%;
+    }
     padding-bottom: 1em;
     text-align: center;
-    @include grid-media ($small) {
-        @include grid-column(2);
-    }
 }
-.gallery--box-50 {
-    padding-bottom: 1em;
-    text-align: center;
-    @include grid-media ($small) {
-        @include grid-column(2);
-    }
-}
-.gallery--box-home {
-    @include grid-media ($small) {
-        @include grid-column(2);
-    }
-}
-.alpha {
-    @include grid-media ($small) {
-        clear: both;
-    }
-}
-.last {
-    @include grid-media ($small) {
-        //@include omega();
-    }
-}
+
 /// Remove widths for grids
 @supports (display: grid) {
+
   .gallery--box-50,
   .gallery--box,
   .gallery--box-large,
