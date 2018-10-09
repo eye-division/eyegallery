@@ -17,10 +17,16 @@ _options:
     height: '1200'
     resize_style: contain
     mime_type: image/jpeg
+  image_path:
+    width: '1200'
+    height: '1200'
+    resize_style: "contain"
+    mime_type: "image/jpeg"   
 _comments:
   title: Post title
   main_image_path: Featured image
   images: Add and edit images here
+  tags: use tags to link posts to each other
 ---
 
-Our company is impregnable, unless you have the power of flight. Update.
+Our company is impregnable, unless you have the power of flight.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic at modi omnis aspernatur similique perferendis sapiente provident suscipit beatae laboriosam doloribus vel ipsam reprehenderit, ullam, dolores eum cumque, repellat et!

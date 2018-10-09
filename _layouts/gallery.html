@@ -44,7 +44,7 @@ layout: default
 
           <div class="gallery--box">
 
-            <a href="{% include imgpath.html src=image max-w=1280 %}" class="galleryphoto" data-lightbox="gallery" data-title="{{ thisimage.image_title }} - {{ thisimage.image_description_markdown | markdownify }}">
+            <a href="{% include imgpath.html src=image max-w=1280 %}" class="gallery--link" data-lightbox="gallery" data-title="{{ thisimage.image_title }} - {{ thisimage.image_description_markdown | markdownify }}">
 
               {% if page.thumb_crop %}
 

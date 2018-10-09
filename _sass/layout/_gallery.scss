@@ -26,7 +26,9 @@
   text-align: center;
   padding-bottom: 1em;
 }
-
+.gallery--link {
+    text-decoration: none;
+}
 .gallery--list {
 
     /// make it a flexbox so items can be aligned vertically

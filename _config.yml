@@ -5,9 +5,8 @@ plugins:
  # - autoprefixer-rails
    - jekyll-seo-tag
    - jekyll-sitemap
-
-#exclude:
-#  - "/vendor/"
+   - jekyll/tagging
+   - jekyll-tagging-related_posts
 
 # Site settings
 title: An artist

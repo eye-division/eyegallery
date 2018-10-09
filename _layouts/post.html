@@ -16,13 +16,19 @@ layout: default
     </figure>
   {% endif %}
 
-    <section class="main--content">
+  <section class="main--content">
 
-     {{ content | markdownify }}
+   {{ content | markdownify }}
 
-    </section>
+   <div class="post--meta">
+      <span class="post--date">{{ page.date | date: "%-d %B %Y" }}</span>
+      <!-- Editor Link -->
+      <a href="cloudcannon:collections/{{ page.path }}" class="editor-link">Edit post</a>
+    </div>
 
-    {% if page.images[0].image_path %}
+  </section>
+
+  {% if page.images[0].image_path %}
 
     <section class="gallery">
 
@@ -39,9 +45,28 @@ layout: default
 
     </section>
 
-    {% endif %}
+  {% endif %}
 
-  <section class="rss">
+  {% if site.related_posts.size >= 1 %}
+
+    <section class="post--related">
+
+        <h3>You may also enjoy:</h3>
+
+        <ul class="default-ul">
+
+        {% for related_post in site.related_posts limit: 5 %}
+
+        <li><a href="{{ related_post.url }}">{{ related_post.title }}</a>  <span class="post--date">{{ related_post.date | date: "%-d %B %Y" }}</span></li>
+
+        {% endfor %}
+
+        </ul>
+
+    </section>
+  {% endif %}
+
+  <section class="post--rss">
     <p class="rss-subscribe text"><strong>Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></strong></p>
   </section>
 
@@ -120,6 +145,8 @@ layout: default
   {% if page.comments %}
 
     <section class="disqus">
+
+      <h3>Comment</h3>
 
       <div id="disqus_thread"></div>
 
