@@ -33,7 +33,7 @@
 </footer>
 
 <!-- Scripts -->
-{% if site.recaptcha_site_key %}
+{% if site.recaptcha_site_key and jekyll.environment == 'production' %}
 <script src="//www.google.com/recaptcha/api.js" async defer></script>
 {% endif %}
 <script defer src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js"></script>

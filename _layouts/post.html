@@ -21,7 +21,7 @@ layout: default
    {{ content | markdownify }}
 
    <div class="post--meta">
-      <span class="post--date">{{ page.date | date: "%-d %B %Y" }}</span>
+      <span class="post--date">{{ page.post_date | date: "%-d %B %Y" }}</span>
       <!-- Editor Link -->
       <a href="cloudcannon:collections/{{ page.path }}" class="editor-link">Edit post</a>
     </div>
@@ -57,7 +57,7 @@ layout: default
 
         {% for related_post in site.related_posts limit: 5 %}
 
-        <li><a href="{{ related_post.url }}">{{ related_post.title }}</a>  <span class="post--date">{{ related_post.date | date: "%-d %B %Y" }}</span></li>
+        <li><a href="{{ related_post.url }}">{{ related_post.title }}</a>  <span class="post--date">{{ related_post.post_date | date: "%-d %B %Y" }}</span></li>
 
         {% endfor %}
 

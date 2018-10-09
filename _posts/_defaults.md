@@ -1,7 +1,7 @@
 ---
 layout: post
 title:
-date:
+post_date:
 main_image_path:
 main_image_caption:
 comments: true
