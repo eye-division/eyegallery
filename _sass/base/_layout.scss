@@ -1,6 +1,10 @@
 html {
   background-color: $viewport-background-color;
   box-sizing: border-box;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: 100%;
+  line-height: $base-line-height;
 }
 
 *,
@@ -16,4 +20,34 @@ body {
 
 body {
   margin: 0;
+  background-color: $base-background-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
+
+/// 1. fallback to flexbox page layout
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center; // centers horizontally
+}
+
+.site--footer {
+  flex-shrink: 0; // footer sticks to bottom of page
+}
+
+/// 2. basic grid CSS layout for header, page--content and footer - works without it
+
+@supports (display: grid) {
+  body {
+    display: grid;
+    grid-template-rows: max-content auto auto;
+
+    // 1. header.page--header
+    // 2. div.page--content
+    // 3. footer.site--footer
+
+    grid-gap: 1rem;
+    align-items: start;
+  }
 }

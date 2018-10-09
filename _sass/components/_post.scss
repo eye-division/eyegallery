@@ -12,7 +12,7 @@
 .post--inlist {
     border-bottom: 1px solid $action-color;
     //padding: modular-scale(-4);
-    padding: 1em 0;
+    padding: 0 0 1em 0;
     @include grid-media($large) {
       display: flex;
       justify-content: space-between;
@@ -65,6 +65,7 @@
 }
 
 ///   Full Posts
+
 .post--header-container {
     .scrim {
         padding: 2em 1em 1em 1em;
@@ -78,6 +79,9 @@
   &:hover, &:active {
     color: $action-hover-color;
   }
+}
+.post--header {
+  padding-bottom: 1.5em;
 }
 
 .post--title {

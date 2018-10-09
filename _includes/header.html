@@ -1,4 +1,5 @@
 <header class="navigation" role="banner">
+
   <div class="navigation--wrapper">
     <a href="{{ site.baseurl }}/" class="header--wrapper" title="Return home">
 
@@ -8,36 +9,48 @@
 
       <h1 class="header--title">{{ site.title }}</h1>
 
-
     </a>
 
     <a href="javascript:void(0)" class="navigation--menu-button" id="js--mobile-menu">
       <span class="menu--title">MENU</span> <svg class="icon icon--menu"><use xlink:href="#icon-reorder" /></svg>
     </a>
+
     <nav role="navigation">
 
       <ul id="js--navigation-menu" class="navigation--menu show">
 
         {% for link in site.data.nav %}
 
-          <li class="nav--link{% if page.url == link.href %} active{% endif %}">
-            <a href="{{ link.href | prepend: site.baseurl }}"  class="">{{ link.title }}</a>
-          </li>
+          {% unless link.href == "/" and page.url == "/" %}
+            <li class="nav--link{% if page.url == link.href %} active{% endif %}">
+              <a href="{{ link.href | prepend: site.baseurl }}"  class="">{{ link.title }}</a>
+            </li>
+          {% endunless %}
 
         {% endfor %}
 
+      </ul>
+
+    {% if site.show_social_top %}
+
+      <ul class="navigation--social-menu">
         {% for social in site.social %}
+
           {% if social.url != null %}
 
-          <li class="nav--link">
+          <li class="nav--link nav--social-media-link">
             <a href="{{ social.url }}" title="{{ social.desc }}">
               <svg class="icon {{ social.icon }}"><use xlink:href="#{{ social.icon }}" /></svg>
             </a>
           </li>
           {% endif %}
+
         {% endfor %}
 
       </ul>
+
+    {% endif %}
+
     </nav>
   </div>
 </header>

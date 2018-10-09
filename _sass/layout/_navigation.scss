@@ -62,21 +62,18 @@ nav {
     overflow: visible;
     padding: 0;
     width: 100%;
+    &.show {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     @include grid-media ($small) {
-        display: block;
-        margin: 0;
-        padding: 0;
         display: flex;
         flex-wrap: wrap;
         list-style: none;
         justify-content: center; // space-around;
     }
-    &.show {
-        display: block;
-        display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+
 }
 
 /// Nav items
@@ -109,11 +106,29 @@ nav {
             padding-right: 1em;
         }
     }
+    &.active a {
+        a {
+            color: $action-hover-color
+        }
+    }
 }
-.nav--link.active,
+
+.navigation--social-menu {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center; // space-around;
+}
+.nav--social-media-link {
+    flex: 1 1 0;
+    @include grid-media ($small) {
+        flex: 0 1 auto;
+    }
+}
+
 li.active {
     a {
-        color: $black;
+        color: $action-hover-color
     }
 }
 

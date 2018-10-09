@@ -1,10 +1,10 @@
 # Eye Gallery
 
-Eye Gallery from [Eye Division][ed] is a (work in progress) base theme and configuration for [Jekyll](http://jekyllrb.com/), based on Bourbon and Neat. It is a fork of the [Centratrium][centrarium] custom theme by [Ben Centra][bencentra]. Props to [Neil C Smith](neilcsmith) for the original forkage.
+Eye Gallery from [Eye Division][ed] is a (work in progress) base theme and configuration for [Jekyll](http://jekyllrb.com/) version 3.6, based on Bourbon and Neat. It is a fork of the [Centratrium][centrarium] custom theme by [Ben Centra][bencentra]. Props to [Neil C Smith](neilcsmith) for the original forkage.
 
 Built with these awesome libraries: 
 * [Bourbon][bourbon] v 5 - May 2018
-* [Neat][neat] - v 2.1.0 - May 2018
+* [Neat][neat] - v 3.0.0 - May 2018 - TO BE DEGRADED
 * [Font Awesome][fontawesome]
 * [HighlightJS][highlightjs]
 * [Lightbox2][lightbox]
@@ -30,7 +30,6 @@ This theme comes with a number of features, including:
 * Better Bourbon Buttons Neato add-on
 * Designed for use on CloudCannon hosting for customer editing
 * uses imgIX as image CDN on staging and production
-
 
 ## Installation
 
@@ -140,10 +139,6 @@ social:
     desc: Follow me on Twitter            # Description to display as link title, etc
     share: true                           # Include in the "Share" section of posts
 ```
-
-### Social Protocols
-
-Using the Open Graph Protocol or Twitter Card metadata, you can automatically set the images and text used when people share your site on Twitter or Facebook. These take a bit of setup, but are well worth it. The relevant fields are at the end of the `_config.yml` file.
 
 ### Category Descriptions
 

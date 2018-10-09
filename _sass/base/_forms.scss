@@ -94,3 +94,33 @@ select {
     outline-offset: $focus-outline-offset;
   }
 }
+
+
+input {
+    @include grid-media ($small) {
+        width: 50%;
+    }
+}
+
+/// Shopping cart
+
+form.cart {
+  margin:0;
+  display:inline-block;
+  float:none;
+  padding:0;
+  fieldset {
+    border: none;
+    margin: 0;
+    padding: 0.5em 1em;
+  }
+  legend {
+    font-size: inherit;
+  }
+  input {
+    width: 100%;
+  }
+  input[type="submit"] {
+    background-color: $action-color;
+  }
+}
