@@ -3,7 +3,10 @@
 // -----------------------------------------------------------------------------
 
 .posts--list {
-    @extend %default-ul !optional;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
 }
 
 .post--inlist {
@@ -49,7 +52,6 @@
 .post--rss {
 
 }
-
 .pagination {
     padding-top: 2em;
     text-align: center;
