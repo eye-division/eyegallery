@@ -91,6 +91,10 @@ $focus-outline-offset: 2px;
 $base-duration: 150ms;
 $base-timing: ease;
 
+// lightbox colours
+$lightbox-background: rgba($black, 0.8);
+$lightbox-color: $white;
+
 // OLD THINGS to be removed
 
 $highlight-color: tint($action-color, 33%);
