@@ -65,7 +65,7 @@ _comments:
                 </a>
               {% endif %}
               {% if slides.caption %}
-                <p class="flex-caption">{% if slides.alink %}<a href="{{ site.baseurl }}{{ slides.alink }}" title="View project">{% endif %}{{ slides.caption }}{% if slides.alink %}&nbsp;<svg class="icon icon__white icon--readmore"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-double_angle_right" /></svg></a>{% endif %}</p>
+                <p class="flex-caption">{% if slides.alink %}<a href="{{ site.baseurl }}{{ slides.alink }}" title="View project">{% endif %}{{ slides.caption }}{% if slides.alink %}&nbsp;<svg class="icon icon__white icon--readmore"><use xmlns:xlink="https://www.w3.org/1999/xlink" xlink:href="#icon-double_angle_right" /></svg></a>{% endif %}</p>
               {% endif %}
             </li>
             {% endfor %}
@@ -82,7 +82,7 @@ _comments:
         {% if section.main_image_path %}
           <section class="gallery--cover has--cover" style="background-image: url({{ section.main_image_path }});">
         {% else %}
-          <section class="gallery--cover has--cover" style="background-image: url('http://placekitten.com/g/1200/300');">
+          <section class="gallery--cover has--cover" style="background-image: url('https://placekitten.com/g/1200/300');">
         {% endif %}
 
           <a href="{{ section.url | prepend: site.baseurl }}">
