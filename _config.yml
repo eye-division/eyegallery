@@ -20,6 +20,7 @@ baseurl: ""
 # the base hostname & protocol for your site
 url: "https://black-hare.cloudvent.net"
 # apt-loris.cloudvent.net for Jekyll3
+asset_url: "/assets/"
 
 logo: "/assets/logo.png"
 show_logo: false

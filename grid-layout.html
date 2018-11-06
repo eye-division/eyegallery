@@ -26,7 +26,7 @@ _comments:
 
 <div class="editable">
   <p class="strapline">This is an example of the Grid layout, where galleries run across and down the screen. See also the alternative <a href="/gallery/">block layout</a></p>
-  <p>Check <a href="/gallery/cropped/">Cropped gallery</a> for an example of the cropped thumbnail layout. Other galleries default to full format thumbnails. Either is possible, on a per gallery basis.</p>
+
 </div>
 
 <section class="gallery--list">
@@ -39,7 +39,7 @@ _comments:
      <div class="gallery--box">
 
           <a href="{{ gallery.permalink }}" title="{{ gallery.title }}" class="gallery--link">
-            {% include img.html src=gallery.main_image_path width=600 fit=clip alt=gallery.title %}
+            {% include img.html src=gallery.main_image_path width=200 height=200 fit=crop alt=gallery.title %}
             <h4 class="cover--title mb0">{{ gallery.title }}</h4>
           </a>
 
