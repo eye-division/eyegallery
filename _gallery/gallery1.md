@@ -17,19 +17,19 @@ display_thumb_title: true
 images:
   - image_path: /assets/images/advert-customers.jpg
     image_title: Graveyard
-    image_description_markdown: These customers didn't choose Eye Division
+    image_description: These customers didn't choose Eye Division
   - image_path: /assets/images/clevedon-pools.jpg
     image_title: Clevedon Pools
-    image_description_markdown: Experience an ocean of bliss
+    image_description: Experience an ocean of bliss
   - image_path: /assets/images/advert-impregnable.jpg
     image_title: Fortress
-    image_description_markdown: Your site is our impregnable fortress
+    image_description: Your site is our impregnable fortress
   - image_path: '/assets/images/Keen of Hamar, Unst.jpg'
     image_title: Test resized image
-    image_description_markdown: Test resized
+    image_description: Test resized
   - image_path: '/assets/images/Keen of Hamar, Unst.jpg'
     image_title: Resized to 600
-    image_description_markdown: Resized to 600 square max
+    image_description: Resized to 600 square max
 archive: false
 _options:
   image_path:
@@ -50,7 +50,7 @@ _comments:
   display_thumb_title: Show titles with image thumbnails
   display_title: Show title at the top of the gallery
   images: Add and edit your gallery images here
-  image_description_markdown: Usually only shown in the close up of an image
+  image_description: Usually only shown in the close up of an image
   thumb_crop: Crop thumbnail images to a consistent size
   archive: Hide gallery from public view
   frontpage: Show this gallery on the homepage

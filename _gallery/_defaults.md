@@ -6,7 +6,7 @@ gallery_date:
 description_markdown: 
 frontpage: true
 homepage_description_markdown: 
-frontpagetitle: "Books"
+frontpagetitle: 
 display_image: false
 main_image_path:
 main_image_caption:
@@ -15,7 +15,7 @@ display_thumb_title: true
 images:
   - image_path:
     image_title:
-    image_description_markdown:
+    image_description:
 archive: false
 _options:
   image_path:

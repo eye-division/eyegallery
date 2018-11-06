@@ -111,6 +111,7 @@ _comments:
     {% for gallery in site.gallery %}
 
       {% if gallery.frontpage %}
+
         <section class="gallery--cover {% if gallery.main_image_path %}has--cover{% endif %}" {% if gallery.main_image_path %}style="background-image: url({{ gallery.main_image_path | prepend: gallery.baseurl }});"{% endif %}>
 
           <a href="{{ gallery.url }}">
@@ -118,7 +119,7 @@ _comments:
             <div class="scrim {% if gallery.main_image_path %}has--cover{% endif %}">
               <article class="gallery--front">
                 <header class="gallery--header">
-                  <h2 class="cover--title mb0">{{ gallery.title }}</h2>
+                  <h2 class="cover--title mb0">{{ gallery.frontpagetitle }}</h2>
                 </header>
                 {% if gallery.homepage_description_markdown %}
                   {{ gallery.homepage_description_markdown | markdownify }} <span class="post--readmore">View gallery  <svg class="icon icon--post"><use xlink:href="#icon-double_angle_right" /></svg></span>
@@ -127,6 +128,7 @@ _comments:
             </div>
           </a>
         </section>
+
       {% endif %}
 
     {% endfor %}

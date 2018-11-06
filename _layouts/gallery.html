@@ -4,9 +4,11 @@ layout: default
 
 <div class="page">
 
+  {% if page.display_title %}
   <header class="page--header">
     <h1 class="page--title">{{ page.title }}</h1>
   </header>
+  {% endif %}
 
   <article>
 
@@ -44,7 +46,7 @@ layout: default
 
           <div class="gallery--box">
 
-            <a href="{% include imgpath.html src=image max-w=1280 %}" class="gallery--link" data-lightbox="gallery" data-title="{{ thisimage.image_title }} - {{ thisimage.image_description_markdown | markdownify }}">
+            <a href="{% include imgpath.html src=image max-w=1280 %}" class="gallery--link" data-lightbox="gallery" data-title="{{ thisimage.image_title }} - {{ thisimage.image_description }}">
 
               {% if page.thumb_crop %}
 
@@ -59,9 +61,9 @@ layout: default
                  <!-- end format images -->
                {% endif %}
 
-               {% if page.display_title %}
+               {% if page.display_thumb_title %}
                   <figcaption class="gallery--caption">{{ thisimage.image_title }}</figcaption>
-              {% endif %}
+                {% endif %}
 
             </a>
 
