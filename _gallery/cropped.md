@@ -3,11 +3,13 @@ title: Cropped gallery
 display_title: false
 permalink: /gallery/cropped/
 description_markdown: >-
-  This is an example of a gallery with all thumbnails cropped to appear the same size. You can change this with the setting: thumb_crop
+  This is an example of a gallery with all thumbnails cropped to appear the same
+  size. You can change this with the setting: thumb\_crop
 frontpage: true
-frontpagetitle: "Gallery"
+frontpagetitle: Gallery
 homepage_description_markdown: >-
-  This is an example of a gallery with all thumbnails cropped to appear the same size. You can change this with the setting: thumb_crop
+  This is an example of a gallery with all thumbnails cropped to appear the same
+  size. You can change this with the setting: thumb\_crop
 gallery_date: 2018-05-01 00:00:00
 display_image: false
 main_image_path: "/assets/images/IMG_3317.jpg"
@@ -33,6 +35,9 @@ images:
   - image_path: '/assets/images/Keen of Hamar, Unst.jpg'
     image_title: "Resized to 600"
     image_description: "Resized to 600 square max"
+  - image_path: /uploads/observers-scattered.jpg
+    image_title: Resized to 1200 square
+    image_description: Resized to 1200 square max
 archive: false
 _options:
   image_path:
@@ -48,15 +53,16 @@ _options:
 _comments:
   title: Gallery title
   permalink: Edit the web address here - letters and hyphen only
-  main_image_path: Image used to represent your gallery
   display_image: Show featured image at the top of the gallery
-  display_title: Show title at the top of the gallery
-  display_thumb_title: Show titles with image thumbnails
+  display_title: Show the title at the top of the gallery
+  display_thumb_title: Show titles with image thumbnails 
+  main_image_path: Image used to represent your gallery
   images: Add and edit your gallery images here
-  archive: Hide gallery from public view
-  image_description: Usually only shown in the close up of an image
+  image_description: Usually only shown in the image close up
   thumb_crop: Crop thumbnail images to a consistent size
+  archive: Hide gallery from public view
   frontpage: Show this gallery on the homepage
   frontpagetitle: Title for homepage display
   homepage_description_markdown: Text used on homepage if shown
 ---
+

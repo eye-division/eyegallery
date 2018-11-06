@@ -36,7 +36,7 @@ _comments:
   display_thumb_title: Show titles with image thumbnails 
   main_image_path: Image used to represent your gallery
   images: Add and edit your gallery images here
-  image_description_markdown: Usually only shown in the image close up
+  image_description: Usually only shown in the image close up
   thumb_crop: Crop thumbnail images to a consistent size
   archive: Hide gallery from public view
   frontpage: Show this gallery on the homepage
