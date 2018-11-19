@@ -50,7 +50,7 @@ p {
 
 a {
   color: $action-color;
-  text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
   transition: color $base-duration $base-timing;
 
   &:hover {
@@ -58,8 +58,8 @@ a {
   }
 
   &:focus {
-    outline: $focus-outline;
-    outline-offset: $focus-outline-offset;
+    //outline: $focus-outline;
+    //outline-offset: $focus-outline-offset;
   }
 }
 
