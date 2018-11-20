@@ -33,15 +33,19 @@ images:
 archive: false
 _options:
   image_path:
+    uploads_dir: "assets/images/:year"
     width: 1200
     height: 1200
-    resize_style: "contain"
-    mime_type: "image/jpeg"
+    resize_style: contain
+    mime_type: image/jpeg
   main_image_path:
+    uploads_dir: "assets/images/:year"
     width: 1200
-    height: 800
-    resize_style: "contain"
-    mime_type: "image/jpeg"
+    height: 1200
+    resize_style: contain
+    mime_type: image/jpeg
+  content:
+    uploads_dir: "assets/:year"
 _comments:
   title: Gallery title
   permalink: Edit the web address here - letters and hyphen only
