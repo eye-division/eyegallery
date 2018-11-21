@@ -19,9 +19,9 @@ layout: default
 
       {% if page.main_image_caption %} {% assign alt_text = page.main_image_caption %} {% endif %}
 
-      <a href="{% include imgpath.html src=page.main_image_path max-w=1280 %}" class="galleryphoto" data-lightbox="gallery" data-title="{{ page.main_image_caption }}">
-        {% include img.html src=page.main_image_path alt=alt_text %}
+      <a href="{% include imgpath.html src=page.main_image_path %}" class="galleryphoto" data-lightbox="gallery" data-title="{{ page.main_image_caption }}">
 
+        {% include img.html src=page.main_image_path alt=alt_text %}
 
       </a>
 
@@ -46,7 +46,7 @@ layout: default
 
           <div class="gallery--box">
 
-            <a href="{% include imgpath.html src=image max-w=1280 %}" class="gallery--link" data-lightbox="gallery" data-title="{{ thisimage.image_title }} - {{ thisimage.image_description }}">
+            <a href="{% include imgpath.html src=image %}" class="gallery--link" data-lightbox="gallery" data-title="{{ thisimage.image_title }} - {{ thisimage.image_description }}">
 
               {% if page.thumb_crop %}
 
