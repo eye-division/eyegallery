@@ -3,7 +3,6 @@ title:
 display_title: true
 permalink:
 gallery_date: 
-description_markdown: 
 frontpage: true
 homepage_description_markdown: 
 frontpagetitle: 

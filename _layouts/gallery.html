@@ -78,11 +78,14 @@ layout: default
 
     {% endif %}
 
-    {% if page.description_markdown %}
     <section class="main--content">
-      {{ page.description_markdown | markdownify }}
+
+      {% if content %}
+
+        {{ content }}
+
+      {% endif %}
     </section>
-    {% endif %}
 
     {% if page.videos %}
 

@@ -2,9 +2,6 @@
 title: Cropped gallery
 display_title: false
 permalink: /gallery/cropped/
-description_markdown: >-
-  This is an example of a gallery with all thumbnails cropped to appear the same
-  size. You can change this with the setting: thumb\_crop
 frontpage: true
 frontpagetitle: Gallery
 homepage_description_markdown: >-
