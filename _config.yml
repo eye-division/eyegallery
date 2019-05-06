@@ -192,14 +192,11 @@ social:
     title: LinkedIn icon
     share: true
 
-# Social sharing protocols
-# These are for automatically generating sharing metadata for FB and Twitter
+fb_image: "/og-image.jpg"
+fb_image_width: 1103
+fb_image_height: 577
+fb_description: A Jekyll based artist image management system brought to you by Eye Division
+fb_title: Eye Gallery
 
-protocols:
-    fb_image: "/assets/logo.png"
-    fb_image_width: 612
-    fb_image_height: 605
-    fb_image_type: "image/png"
-
-    twitter_image: "/assets/logo.png"
+twitter_image: "/assets/logo.png"
 
