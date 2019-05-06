@@ -41,24 +41,23 @@ _comments:
   </div>
 
 {% if page.show_form %}
-    <h4>Send an email</h4>
     <form action="/thanks/" method="post">
 
+      <legend>Send email</legend>
     <fieldset>
-      <input type="text" name="_gotcha" style="display:none" />
-      <input type="hidden" name="_to" value="support@eyedivision.com">
+      <input type="hidden" name="_to" value="{{ site.email }}">
       <input type="hidden" name="_subject" value="Web form">
       <p>
       <label for="name">Name:</label>
-      <input type="text" name="name">
+      <input type="text" name="name" id="name">
       </p>
       <p>
       <label for="_replyto">Email:</label>
-      <input type="email" name="_replyto">
+      <input type="email" name="_replyto" id="_replyto">
       </p>
       <p>
-      <label>Message</label>
-      <textarea name="message"></textarea>
+     <label for="message">Message</label>
+      <textarea name="message" id="message"></textarea>
       </p>
       {% if site.recaptcha_site_key and jekyll.environment == 'production' %}
         <div class="g-recaptcha" data-sitekey="{{ site.recaptcha_site_key }}"></div>

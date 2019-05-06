@@ -15,33 +15,26 @@
       justify-content: space-between;
       align-items: flex-start;
     }
-}
-.post--image {
-    @include grid-media($large) {
-      flex: 0 1 30%;
-    }
-}
-.post--content { // position right with neat
-    @include grid-media($large) {
-      padding-top: 0;
-      flex: 0 1 65%;
-    }
-}
-// grid stuff
-@supports (display: grid) {
-
-  @include grid-media($large) {
-    .post--inlist {
+    /*@supports (display: grid) {
       display: grid;
       grid-template-columns: 1fr 2fr;
       grid-gap: 1rem;
-    }
-    .post--image,
-    .post--content {
-      width: auto;
-    }
-  }
+    }*/
 }
+.post--image {
+    @include grid-media($large) {
+      flex: 1 100%;
+    }
+
+}
+.post--content { // position right with neat
+    @include grid-media($large) {
+      padding-left: 1em;
+      flex: 1 100%;
+    }
+
+}
+
 .post--date {
   font-style: italic;
 

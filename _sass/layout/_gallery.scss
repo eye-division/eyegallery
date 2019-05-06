@@ -30,15 +30,15 @@
 
     /// make it a flexbox so items can be aligned vertically
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-flow: row wrap;
 
-    // now grid it
-    @supports (display: grid) {
+    // now grid it -- is this really necessary?
+    /*@supports (display: grid) {
         display: grid;
         grid-gap: 10px;
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
+    }*/
 
 
     a {
@@ -75,26 +75,17 @@
 .gallery--header {
     padding: 1em 0;
 }
-.gallery--box,
-.gallery--box-large {
+.gallery--box {
+
     @include grid-media ($small) {
-        flex: 0 1 25%;
+        flex: 0 1 auto;
     }
     margin: 1em;
     text-align: center;
+
 }
 
 .gallery--caption {
     font-style: normal;
 }
 
-/// Remove widths for grids
-@supports (display: grid) {
-
-  .gallery--box-50,
-  .gallery--box,
-  .gallery--box-large,
-  .gallery--box-home {
-    width: auto;
-  }
-}
