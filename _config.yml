@@ -195,8 +195,7 @@ social:
 fb_image: "/og-image.jpg"
 fb_image_width: 1103
 fb_image_height: 577
-fb_description: A Jekyll based artist image management system brought to you by Eye Division
-fb_title: Eye Gallery
+# title, URL and description set in seo plugin above
 
 twitter_image: "/assets/logo.png"
 
