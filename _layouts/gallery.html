@@ -63,7 +63,8 @@ layout: default
               {% if page.thumb_crop %}
 
                 <!-- cropped square images WAS width=200 height=200 -->
-                {% include img.html src=image width=400 ar=square fit=crop alt=thisimage.image_title %}
+                <img src="{{site.imagecdn[jekyll.environment]}}{{ image }}?fit=crop&width=400&ar=1%3A1&crop=focalpoint&auto=format" alt="{{ thisimage.image_title }}" data-sizes="auto" width="400" class=""/>
+
                 <!-- end cropped square -->
 
               {% else %}
