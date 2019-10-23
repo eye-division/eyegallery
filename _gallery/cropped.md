@@ -1,12 +1,11 @@
 ---
-title: Cropped gallery
+title: Cropped layout
 display_title: false
 permalink: /gallery/cropped/
 frontpage: true
-frontpagetitle: Gallery
+frontpagetitle: "Cropped layout"
 homepage_description_markdown: >-
-  This is an example of a gallery with all thumbnails cropped to appear the same
-  size. You can change this with the setting: thumb\_crop
+  This is an example of a gallery with all thumbnails cropped to appear the same size. You can change this with the setting: thumb\_crop
 gallery_date: 2018-05-01 00:00:00
 display_image: false
 main_image_path: "/assets/images/IMG_3317.jpg"
@@ -18,7 +17,7 @@ images:
     image_title: "Sky wall"
     image_description: sky wall
   - image_path: "/assets/images/advert-customers.jpg"
-    image_title: "Graveyard"
+    image_title: "Graveyard with a long title to test it"
     image_description: "These customers didn't choose Eye Division"
   - image_path: "/assets/images/clevedon-pools.jpg"
     image_title: "Clevedon Pools"
@@ -67,3 +66,4 @@ _comments:
   homepage_description_markdown: Text used on homepage if shown
 ---
 
+This is an example of a gallery with all thumbnails cropped to appear the same square size. You can change this with the setting: 'thumb_crop' when editing.

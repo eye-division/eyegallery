@@ -1,9 +1,9 @@
 ---
-title: Gallery 1
+title: "Original layout"
 display_title: true
-permalink: /gallery/test/
+permalink: /gallery/original/
 frontpage: true
-frontpagetitle: "Gallery 1"
+frontpagetitle: "Original layout"
 homepage_description_markdown: >-
   This is an example of a gallery with thumbnails in their original format - landscape or portrait, exactly as you upload them. 
 gallery_date: 2016-05-01 00:00:00
@@ -60,4 +60,4 @@ _comments:
   homepage_description_markdown: Text used on homepage if shown
 ---
 
-Content goes here okay...
+This layout shows your images in your original format, but in rows, so you sometimes get odd spaces in the layout. Try the ['colcade' layout](/gallery/colcade/)  for another option.

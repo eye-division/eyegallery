@@ -1,9 +1,9 @@
 ---
-title: Colcade test
+title: Colcade layout
 display_title: true
 permalink: /gallery/colcade/
 frontpage: true
-frontpagetitle: "Gallery 1"
+frontpagetitle: "Colcade layout"
 homepage_description_markdown: >-
   This is an example of a gallery with thumbnails in their original format - landscape or portrait, exactly as you upload them. 
 gallery_date: 2016-05-01 00:00:00
@@ -61,4 +61,4 @@ _comments:
   homepage_description_markdown: Text used on homepage if shown
 ---
 
-Content goes here okay...
+This page demonstrates a popular page layout option for images of differing formats where you need show the full image, whatever the format. Compare this with the  [default layout](/gallery/original/) for another option.
