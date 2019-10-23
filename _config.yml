@@ -50,6 +50,10 @@ imagecdn:
   staging: "https://ed-eyegallery-dev.imgix.net" # apt-loris.cloudvent.net
   production: "https://ed-eyegallery.imgix.net"
 
+imagecdnshort:
+    staging: "ed-eyegallery-dev.imgix.net"
+    production: "ed-eyegallery.imgix.net"
+
 # Collections Example
 collections:
     gallery:
