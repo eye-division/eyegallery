@@ -35,6 +35,12 @@
       touch: true
     });
 
+    // colcade
+    $('.grid').colcade({
+      columns: '.grid-col',
+      items: '.grid-item'
+    });
+
   }); // end doc ready
 
 })(jQuery); // End of use strict

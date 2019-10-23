@@ -32,7 +32,9 @@
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
-
+    @include grid-media ($small) {
+        justify-content: space-between;
+    }
     // now grid it -- is this really necessary?
     /*@supports (display: grid) {
         display: grid;
@@ -88,4 +90,44 @@
 .gallery--caption {
     font-style: normal;
 }
+
+/// Colcade masonry type layout
+/* with flexbox */
+* { box-sizing: border-box; }
+
+.grid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.grid-col {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-right: 2%;
+}
+
+.grid-col--4 { margin-right: 0; }
+
+/* hide two middle */
+.grid-col--2, .grid-col--3 { display: none; }
+
+@include grid-media ($small) {
+  .grid-col--2 { display: block; } /* show column 2 */
+}
+
+@include grid-media ($large) {
+  .grid-col--3 { display: block; } /* show column 3 */
+}
+
+.grid-item {
+  margin-bottom: 20px;
+}
+
+.grid-item--a { height:  80px; }
+.grid-item--b { height: 140px; }
+.grid-item--c { height: 300px; }
 
