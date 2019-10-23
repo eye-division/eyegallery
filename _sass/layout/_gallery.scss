@@ -80,7 +80,11 @@
 .gallery--box {
 
     @include grid-media ($small) {
-        flex: 0 1 auto;
+      width: 45%;
+      // Previously: flex: 0 1 auto;
+    }
+    @include grid-media ($large) {
+      width: calc(100% / 3.6);
     }
     margin: 1em;
     text-align: center;

@@ -33,6 +33,23 @@ images:
   - image_path: '/assets/images/Keen of Hamar, Unst.jpg'
     image_title: Resized to 600
     image_description: Resized to 600 square max
+  - image_path: "/assets/images/lauder.jpg"
+    image_title: "Sky wall"
+    image_description: sky wall
+  - image_path: "/assets/images/advert-customers.jpg"
+    image_title: "Graveyard with a long title to test it"
+    image_description: "These customers didn't choose Eye Division"
+  - image_path: "/assets/images/clevedon-pools.jpg"
+    image_title: "Clevedon Pools"
+    image_description: Experience an ocean of bliss
+  - image_path: "/assets/images/advert-impregnable.jpg"
+    image_title: "Fortress"
+    image_description: Your site is our impregnable fortress
+  - image_path: "/assets/images/Keen of Hamar, Unst.jpg"
+    image_title: "Test resized image"
+    image_description: Test resized
+  - image_path: '/assets/images/Keen of Hamar, Unst.jpg'
+    image_title: "Resized to 600"
 archive: false
 _options:
   image_path:

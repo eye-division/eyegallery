@@ -62,8 +62,8 @@ layout: default
 
               {% if page.thumb_crop %}
 
-                <!-- cropped square images -->
-                {% include img.html src=image width=200 height=200 fit=crop alt=thisimage.image_title %}
+                <!-- cropped square images WAS width=200 height=200 -->
+                {% include img.html src=image max-w=400 max-h=400 fit=crop alt=thisimage.image_title %}
                 <!-- end cropped square -->
 
               {% else %}
