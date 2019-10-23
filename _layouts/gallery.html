@@ -63,7 +63,13 @@ layout: default
               {% if page.thumb_crop %}
 
                 <!-- cropped square images WAS width=200 height=200 -->
-                <img src="{{site.imagecdn[jekyll.environment]}}{{ image }}?fit=crop&width=400&ar=1%3A1&crop=focalpoint&auto=format" alt="{{ thisimage.image_title }}" data-sizes="auto" width="400" class=""/>
+                <img ix-src="{{site.imagecdn[jekyll.environment]}}{{ image }}?fit=crop&amp;ar=1%3A1&amp;crop=focalpoint&amp;auto=format"
+                size="(min-width:768px) 400px, 100vw"
+                alt="{{ thisimage.image_title }}"
+                data-sizes="auto"
+                class="lazyload"/>
+                <!--<img ix-src="{{site.imagecdn[jekyll.environment]}}{{ image }}?fit=crop&amp;width=400&amp;ar=1%3A1&amp;crop=focalpoint&amp;auto=format" alt="{{ thisimage.image_title }}" data-sizes="auto" width="400" class="lazyload"/>
+                -->
 
                 <!-- end cropped square -->
 
