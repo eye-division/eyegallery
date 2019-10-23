@@ -24,15 +24,15 @@ images:
   - image_path: /assets/images/advert-impregnable.jpg
     image_title: Fortress
     image_description: Your site is our impregnable fortress
+  - image_path: /assets/images/unnamed.jpg
+    image_title: Duncan Ross ceramic
+    image_description: Example tall image
   - image_path: '/assets/images/Keen of Hamar, Unst.jpg'
     image_title: Test resized image
     image_description: Test resized
   - image_path: '/assets/images/Keen of Hamar, Unst.jpg'
     image_title: Resized to 600
     image_description: Resized to 600 square max
-  - image_path: /assets/images/unnamed.jpg
-    image_title: Duncan Ross ceramic
-    image_description: Example tall image
 archive: false
 _options:
   image_path:
