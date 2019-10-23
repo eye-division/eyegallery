@@ -2,29 +2,33 @@
 layout: page
 title: About
 permalink: /about/
-main_image_path: "/assets/images/e-la-nave-va_21390829511_o.jpg"
-main_image_caption: "La Nave Va - an ocean liner passing St Mark's, Venice"
-frontpage: true
+main_image_path:
+main_image_caption:
+frontpage: false
 homepage_description_markdown: >-
   All about the Eye Gallery painter
 frontpagetitle: About
 images:
   - image_path:
-    image_title: ""
+    image_title:
     image_description:
 _options:
   layout:
     hidden: true
-  main_image_path:
-    width: 1200
-    height: 1200
-    resize_style: "contain"
-    mime_type: "image/jpeg"
   image_path:
+    uploads_dir: "assets/images/:year"
     width: 1200
     height: 1200
-    resize_style: "contain"
-    mime_type: "image/jpeg"
+    resize_style: contain
+    mime_type: image/jpeg
+  main_image_path:
+    uploads_dir: "assets/images/:year"
+    width: 1200
+    height: 1200
+    resize_style: contain
+    mime_type: image/jpeg
+  content:
+    uploads_dir: "assets/:year"
 _comments:
   title: Page title
   permalink: Be careful editing this

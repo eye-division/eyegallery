@@ -9,18 +9,27 @@ _options:
     hidden: true
   permalik:
     hidden: true
-  main_image_path:
+  image_path:
+    uploads_dir: "assets/images/:year"
     width: 1200
     height: 1200
-    resize_style: "contain"
-    mime_type: "image/jpeg"
+    resize_style: contain
+    mime_type: image/jpeg
+  main_image_path:
+    uploads_dir: "assets/images/:year"
+    width: 1200
+    height: 1200
+    resize_style: contain
+    mime_type: image/jpeg
+  content:
+    uploads_dir: "assets/:year"
 _comments:
   title: Page title
   main_image_path: Image used to represent your page
 ---
 
 <section class="editable">
-<p>The purpose of this page is to help determine what default style settings are.</p>
+<p>The purpose of this page is to demonstrate the default style settings.</p>
 
 <hr>
 
@@ -39,13 +48,13 @@ _comments:
 
 <p>Lorem ipsum dolor sit amet, <a href="#" title="test link">test link</a> adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
 
-<blockquote>Lorem ipsum dolor sit amet, <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</blockquote>
+<blockquote>This is a blockquote. Lorem ipsum dolor sit amet, <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</blockquote>
 
 <hr>
 
 <h1 id="list_types">List Types</h1>
 
-<p>Lists are unstyled by defualt. To restore the original styling, add the <code>.default</code> class</p>
+<p>Lists are unstyled by default. To restore the original styling, add the <code>.default</code> class</p>
 
 <h3>Definition List</h3>
 <dl>

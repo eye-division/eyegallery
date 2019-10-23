@@ -15,21 +15,25 @@ carousel:
 _options:
   layout:
     hidden: true
+  image_path:
+    uploads_dir: "assets/images/:year"
+    width: 1200
+    height: 1200
+    resize_style: contain
+    mime_type: image/jpeg
   main_image_path:
+    uploads_dir: "assets/images/:year"
     width: 1200
     height: 1200
     resize_style: contain
     mime_type: image/jpeg
-  image:
-    width: 1200
-    height: 1200
-    resize_style: contain
-    mime_type: image/jpeg
+  content:
+    uploads_dir: "assets/:year"
 _comments:
   main_image_path: Cover image
   main_image_caption: Alt text for cover image
   carousel: Edit the slideshow
-  show_carouse: Show the slideshow
+  show_carousel: Show the slideshow
   show_blog: Show your latest posts on the homepage
   posts_number: How many posts to show
   alink: Optional web link from the slide
@@ -46,7 +50,7 @@ _comments:
   {% endif %}
 
   <div class="editable">
-    <p>This is the demo editable first paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, in magnam placeat. Ex illo ipsa libero voluptatem necessitatibus modi fugit odit omnis. Sequi voluptatem mollitia voluptatum ipsum placeat, quaerat laudantium!</p>
+    <p>This demo front page shows how you can profile individual galleries and pages to appear on the front, with a custom image, introductory title and text for each. This is the standard display with full page-width images and titles underneath, but other options are available.</p>
 
   </div>
 
@@ -111,6 +115,7 @@ _comments:
     {% for gallery in site.gallery %}
 
       {% if gallery.frontpage %}
+
         <section class="gallery--cover {% if gallery.main_image_path %}has--cover{% endif %}" {% if gallery.main_image_path %}style="background-image: url({{ gallery.main_image_path | prepend: gallery.baseurl }});"{% endif %}>
 
           <a href="{{ gallery.url }}">
@@ -118,7 +123,7 @@ _comments:
             <div class="scrim {% if gallery.main_image_path %}has--cover{% endif %}">
               <article class="gallery--front">
                 <header class="gallery--header">
-                  <h2 class="cover--title mb0">{{ gallery.title }}</h2>
+                  <h2 class="cover--title mb0">{{ gallery.frontpagetitle }}</h2>
                 </header>
                 {% if gallery.homepage_description_markdown %}
                   {{ gallery.homepage_description_markdown | markdownify }} <span class="post--readmore">View gallery  <svg class="icon icon--post"><use xlink:href="#icon-double_angle_right" /></svg></span>
@@ -127,6 +132,7 @@ _comments:
             </div>
           </a>
         </section>
+
       {% endif %}
 
     {% endfor %}

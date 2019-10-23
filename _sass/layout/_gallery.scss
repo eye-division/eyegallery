@@ -1,6 +1,3 @@
-// -----------------------------------------------------------------------------
-// This file contains styles for gallery elements
-// -----------------------------------------------------------------------------
 
 /// 100% width Gallery blocks
 .gallery--cover {
@@ -33,15 +30,17 @@
 
     /// make it a flexbox so items can be aligned vertically
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-flow: row wrap;
-
-    // now grid it
-    @supports (display: grid) {
+    @include grid-media ($small) {
+        justify-content: space-between;
+    }
+    // now grid it -- is this really necessary?
+    /*@supports (display: grid) {
         display: grid;
         grid-gap: 10px;
         grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
+    }*/
 
 
     a {
@@ -78,26 +77,57 @@
 .gallery--header {
     padding: 1em 0;
 }
-.gallery--box,
-.gallery--box-large {
+.gallery--box {
+
     @include grid-media ($small) {
-        flex: 0 1 25%;
+        flex: 0 1 auto;
     }
     margin: 1em;
     text-align: center;
+
 }
 
 .gallery--caption {
     font-style: normal;
 }
 
-/// Remove widths for grids
-@supports (display: grid) {
+/// Colcade masonry type layout
+/* with flexbox */
+* { box-sizing: border-box; }
 
-  .gallery--box-50,
-  .gallery--box,
-  .gallery--box-large,
-  .gallery--box-home {
-    width: auto;
-  }
+.grid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
+
+.grid-col {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-right: 2%;
+}
+
+.grid-col--4 { margin-right: 0; }
+
+/* hide two middle */
+.grid-col--2, .grid-col--3 { display: none; }
+
+@include grid-media ($small) {
+  .grid-col--2 { display: block; } /* show column 2 */
+}
+
+@include grid-media ($large) {
+  .grid-col--3 { display: block; } /* show column 3 */
+}
+
+.grid-item {
+  margin-bottom: 20px;
+}
+
+.grid-item--a { height:  80px; }
+.grid-item--b { height: 140px; }
+.grid-item--c { height: 300px; }
+

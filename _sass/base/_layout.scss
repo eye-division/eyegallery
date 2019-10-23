@@ -41,7 +41,7 @@ body {
 @supports (display: grid) {
   body {
     display: grid;
-    grid-template-rows: max-content auto auto;
+    grid-template-rows: max-content 1fr auto; // 1fr makes footer stick to bottom
 
     // 1. header.page--header
     // 2. div.page--content

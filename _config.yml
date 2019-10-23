@@ -20,6 +20,7 @@ baseurl: ""
 # the base hostname & protocol for your site
 url: "https://black-hare.cloudvent.net"
 # apt-loris.cloudvent.net for Jekyll3
+asset_url: "/assets/"
 
 logo: "/assets/logo.png"
 show_logo: false
@@ -37,6 +38,13 @@ markdown: kramdown
 permalink: pretty
 highlightjs_theme: "monokai-sublime"
 
+# allow colcade / masonry layout
+colcade: true
+
+# Colours for favicons etc
+themecolor: #ffffff
+tilecolor: #ffffff
+
 # Image CDN
 imagecdn:
   staging: "https://ed-eyegallery-dev.imgix.net" # apt-loris.cloudvent.net
@@ -47,7 +55,7 @@ collections:
     gallery:
         output: true
         permalink: /gallery/:path/
-        _hide_content: true
+        #_hide_content: true
 
 # Defaults Example
 defaults:
@@ -152,6 +160,7 @@ social:
     username: 'eyedivision'
     url: https://www.facebook.com/eyedivision
     desc: Like us on Facebook
+    title: Facebook icon
     share: true
 
   - name: Instagram
@@ -159,6 +168,7 @@ social:
     username: '@eyedivision'
     url: https://instagram.com/eyedivision
     desc: Follow us on Instagram
+    title: Instagram icon
     share: false
 
   - name: Twitter
@@ -166,6 +176,7 @@ social:
     username: '@EyeDivision'
     url: https://twitter.com/EyeDivision
     desc: Follow us on Twitter
+    title: Twitter icon
     share: true
 
   - name: Pinterest
@@ -173,6 +184,7 @@ social:
     username: 'eyediv'
     url: https://www.pinterest.co.uk/eyediv/
     desc: Follow us on Pinterest
+    title: Pinterest icon
     share: true
 
   - name: linkedin
@@ -180,16 +192,13 @@ social:
     username: 'eye-division-ltd'
     url: https://www.linkedin.com/company/eye-division-ltd/
     desc: Connect with us on LinkedIn
+    title: LinkedIn icon
     share: true
 
-# Social sharing protocols
-# These are for automatically generating sharing metadata for FB and Twitter
+fb_image: "/og-image.jpg"
+fb_image_width: 1103
+fb_image_height: 577
+# title, URL and description set in seo plugin above
 
-protocols:
-    fb_image: "/assets/logo.png"
-    fb_image_width: 612
-    fb_image_height: 605
-    fb_image_type: "image/png"
-
-    twitter_image: "/assets/logo.png"
+twitter_image: "/assets/logo.png"
 

@@ -12,22 +12,31 @@ _options:
     hidden: true
   permalink:
     hidden: true
-  main_image_path:
+  image_path:
+    uploads_dir: "assets/images/:year"
     width: 1200
     height: 1200
-    resize_style: "contain"
-    mime_type: "image/jpeg"
+    resize_style: contain
+    mime_type: image/jpeg
+  main_image_path:
+    uploads_dir: "assets/images/:year"
+    width: 1200
+    height: 1200
+    resize_style: contain
+    mime_type: image/jpeg
+  content:
+    uploads_dir: "assets/:year"
 _comments:
   title: Gallery title
   main_image_path: Image used to represent your gallery
-  frontpage: Show this gallery on the homepage
+  frontpage: Show this gallery on the homepag
+  frontpagetitle: Title for homepage display
   homepage_description_markdown: Text used on homepage if shown
 ---
 
 <div class="editable">
   <p class="strapline">This is an example of the full-width block layout, where promoted galleries and pages take up the full-width of the page. See also the <a href="/grid-layout/">grid layout</a></p>
 
-  <p>Check <a href="/gallery/cropped/">Cropped gallery</a> for an example of the cropped thumbnail layout. Other galleries default to full format thumbnails. Either is possible, on a per gallery basis.</p>
 </div>
 
 <div class="gallery">

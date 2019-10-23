@@ -4,9 +4,11 @@ layout: default
 
 <div class="page">
 
+  {% if page.display_title %}
   <header class="page--header">
     <h1 class="page--title">{{ page.title }}</h1>
   </header>
+  {% endif %}
 
   <article>
 
@@ -17,9 +19,9 @@ layout: default
 
       {% if page.main_image_caption %} {% assign alt_text = page.main_image_caption %} {% endif %}
 
-      <a href="{% include imgpath.html src=page.main_image_path max-w=1280 %}" class="galleryphoto" data-lightbox="gallery" data-title="{{ page.main_image_caption }}">
-        {% include img.html src=page.main_image_path alt=alt_text %}
+      <a href="{% include imgpath.html src=page.main_image_path %}" class="galleryphoto" data-lightbox="gallery" data-title="{{ page.main_image_caption }}">
 
+        {% include img.html src=page.main_image_path alt=alt_text %}
 
       </a>
 
@@ -35,6 +37,18 @@ layout: default
 
     <section class="gallery--list">
 
+      {% if site.colcade and page.masonry %}
+
+        <div class="grid" data-colcade="columns: .grid-col, items: .grid-item">
+
+          <div class="grid-col grid-col--1"></div>
+          <div class="grid-col grid-col--2"></div>
+          <div class="grid-col grid-col--3"></div>
+          <div class="grid-col grid-col--4"></div>
+
+      {% endif %}
+
+
       {% for thisimage in page.images %}
 
         {% assign image = site.default_gallery_image %}
@@ -42,9 +56,9 @@ layout: default
           {% assign image = thisimage.image_path %}
         {% endif %}
 
-          <div class="gallery--box">
+          <div class="{% if site.colcade and page.masonry %}grid-item{% else %}gallery--box{% endif %}">
 
-            <a href="{% include imgpath.html src=image max-w=1280 %}" class="gallery--link" data-lightbox="gallery" data-title="{{ thisimage.image_title }} - {{ thisimage.image_description_markdown | markdownify }}">
+            <a href="{% include imgpath.html src=image %}" class="gallery--link" data-lightbox="gallery" data-title="{{ thisimage.image_title }}{% if thisimage.image_description %} - {{ thisimage.image_description }}{% endif %}">
 
               {% if page.thumb_crop %}
 
@@ -55,20 +69,18 @@ layout: default
               {% else %}
 
                 <!-- full format images -->
-                {% include img.html src=image width=600 fit=clip alt=thisimage.image_title %}
+                {% include img.html src=image width=400 fit=clip alt=thisimage.image_title %}
                  <!-- end format images -->
-               {% endif %}
 
-               {% if page.display_title %}
-                  <figcaption class="gallery--caption">{{ thisimage.image_title }}</figcaption>
+              {% endif %}
+
+              {% if page.display_thumb_title %}
+                <figcaption class="gallery--caption">{{ thisimage.image_title }}</figcaption>
               {% endif %}
 
             </a>
 
-
-
           </div>
-
 
       {% endfor %}
 
@@ -76,11 +88,14 @@ layout: default
 
     {% endif %}
 
-    {% if page.description_markdown %}
     <section class="main--content">
-      {{ page.description_markdown | markdownify }}
+
+      {% if content %}
+
+        {{ content }}
+
+      {% endif %}
     </section>
-    {% endif %}
 
     {% if page.videos %}
 
